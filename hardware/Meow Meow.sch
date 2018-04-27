@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:Meow Meow-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -28,9 +29,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:ATSAMD11C14A-SSUT
-LIBS:ap2112
-LIBS:atsamd11d14a-ssnt
 LIBS:74xgxx
 LIBS:ac-dc
 LIBS:actel
@@ -48,11 +46,9 @@ LIBS:elec-unifil
 LIBS:ESD_Protection
 LIBS:ftdi
 LIBS:gennum
-LIBS:graphic
 LIBS:hc11
 LIBS:ir
 LIBS:Lattice
-LIBS:logo
 LIBS:maxim
 LIBS:mechanical
 LIBS:microchip_dspic33dsc
@@ -88,6 +84,7 @@ LIBS:Worldsemi
 LIBS:Xicor
 LIBS:zetex
 LIBS:Zilog
+LIBS:MeowMeow
 LIBS:Meow Meow-cache
 EELAYER 25 0
 EELAYER END
@@ -137,7 +134,7 @@ F 3 "" H 8765 1490 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L USB_OTG P?
+L USB_OTG-RESCUE-Meow_Meow P?
 U 1 1 5AD95D6E
 P 7580 3415
 F 0 "P?" H 7905 3290 50  0000 C CNN
