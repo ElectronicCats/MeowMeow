@@ -1,5 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:Meow Meow-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -202,7 +201,6 @@ Text Label 7170 3315 0    60   ~ 0
 D-
 Text Label 7170 3415 0    60   ~ 0
 D+
-NoConn ~ 7680 3815
 $Comp
 L C_Small C?
 U 1 1 5AD96739
@@ -841,4 +839,15 @@ Wire Wire Line
 	2520 1300 2430 1300
 Wire Wire Line
 	2430 1300 2430 1230
+$Comp
+L GND #PWR?
+U 1 1 5AE3E770
+P 7680 3815
+F 0 "#PWR?" H 7680 3565 50  0001 C CNN
+F 1 "GND" H 7680 3665 50  0000 C CNN
+F 2 "" H 7680 3815 50  0000 C CNN
+F 3 "" H 7680 3815 50  0000 C CNN
+	1    7680 3815
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
