@@ -860,10 +860,10 @@ Text Label 2315 3455 2    60   ~ 0
 SCK
 Text Label 2315 3255 2    60   ~ 0
 CS
-Text Label 2310 2955 0    60   ~ 0
-TX
-Text Label 2310 3055 0    60   ~ 0
-RX
+Text Label 2310 2955 2    60   ~ 0
+TX/X2
+Text Label 2310 3055 2    60   ~ 0
+RX/X3
 Wire Wire Line
 	2495 3155 2315 3155
 Wire Wire Line
@@ -876,7 +876,7 @@ Text Notes 1305 3180 0    60   ~ 0
 SERCOM4: SPI
 Text Notes 1320 1985 0    60   ~ 0
 SERCOM1: I2C
-Text Notes 1325 2935 0    60   ~ 0
+Text Notes 1205 2935 0    60   ~ 0
 SERCOM2: Serial
 Wire Wire Line
 	2495 2955 2310 2955
