@@ -2,11 +2,11 @@
 
 /*
 /////////////////////////////////////////////////////////////////////////
-// KEY MAPPINGS: WHICH KEY MAPS TO WHICH PIN ON THE MAKEY MAKEY BOARD? //
+// KEY MAPPINGS: WHICH KEY MAPS TO WHICH PIN ON THE MEOW MEOW BOARD? //
 /////////////////////////////////////////////////////////////////////////
   
-  - edit the keyCodes array below to change the keys sent by the MaKey MaKey for each input
-  - the comments tell you which input sends that key (for example, by default 'w' is sent by pin D5)
+  - edit the keyCodes array below to change the keys sent by the Meow Meow for each input
+  - the comments tell you which input sends that key (for example, by default 'w' is sent by pin A6)
   - change the keys by replacing them. for example, you can replace 'w' with any other individual letter,
     number, or symbol on your keyboard
   - you can also use codes for other keys such as modifier and function keys (see the
@@ -17,33 +17,19 @@
 int keyCodes[NUM_INPUTS] = {
   // top side of the makey makey board
  
-  //KEY_UP_ARROW,      // up arrow pad
-  //KEY_DOWN_ARROW,    // down arrow pad
-  //KEY_LEFT_ARROW,    // left arrow pad
-  //KEY_RIGHT_ARROW,   // right arrow pad
+  KEY_UP_ARROW,      // up arrow pad
+  KEY_DOWN_ARROW,    // down arrow pad
+  KEY_LEFT_ARROW,    // left arrow pad
+  KEY_RIGHT_ARROW,   // right arrow pad
   ' ',               // space button pad
-  //MOUSE_LEFT,        // click button pad
+  MOUSE_LEFT,        // click button pad
   
   // female header on the back left side
   
-  'w',                // pin D5
-  'a',                // pin D4
-  's',                // pin D3
-  'd',                // pin D2
-  'f',                // pin D1
-  'g',                // pin D0
-  'e',                // pin D2
-  'r',                // pin D1
-  't',                // pin D0
-  
-  // female header on the back right side
-  
-  //MOUSE_MOVE_UP,      // pin A5
-  //MOUSE_MOVE_DOWN,    // pin A4
-  //MOUSE_MOVE_LEFT,    // pin A3
-  //MOUSE_MOVE_RIGHT,   // pin A2
-  //MOUSE_LEFT,         // pin A1
-  //MOUSE_RIGHT         // pin A0
+  'w',                // pin A6
+  'a',                // pin A7
+  's',                // pin A8
+  'd',                // pin A9
 };
 
 ///////////////////////////
@@ -88,6 +74,13 @@ int keyCodes[NUM_INPUTS] = {
 
 - you can use these codes in the keyCodes array above
 - to get modifier keys, function keys, etc 
+  
+MOUSE_MOVE_UP
+MOUSE_MOVE_DOWN
+MOUSE_MOVE_LEFT
+MOUSE_MOVE_RIGHT
+MOUSE_LEFT      
+MOUSE_RIGHT         
 
 KEY_LEFT_CTRL
 KEY_LEFT_SHIFT    
