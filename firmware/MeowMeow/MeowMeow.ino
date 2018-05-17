@@ -71,6 +71,7 @@ https://github.com/adafruit/Adafruit_FreeTouch
 #define NUM_INPUTS       10    // 6 on the front + 4 on the back
 
 #include "Keyboard.h"
+#include <Mouse.h>
 #include "Adafruit_FreeTouch.h"
 #include "settings.h"
 
@@ -346,9 +347,9 @@ void initializeInputs() {
 
       inputs[i].isMouseMotion = true;
     } 
-    /*else if ((inputs[i].keyCode == MOUSE_LEFT) || (inputs[i].keyCode == MOUSE_RIGHT)) {
+    else if ((inputs[i].keyCode == MOUSE_LEFT) || (inputs[i].keyCode == MOUSE_RIGHT)) {
       inputs[i].isMouseButton = true;
-    } */
+    }
     else {
       inputs[i].isKey = true;
     }
