@@ -177,8 +177,7 @@ void updateMeasurementBuffers() {
 
     // make the new measurement
     long newState = (p[i]->measure());
-    boolean newMeasurement = ((newState > touch)? 1 : 0);
-  
+    boolean newMeasurement = ((newState > touch)? 0 : 1);
 
     #ifdef DEBUG
       Serial.print("Index:");Serial.println(i);
