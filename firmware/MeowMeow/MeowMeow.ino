@@ -22,6 +22,10 @@ por favor comprar una ronda de cervezas!
 
 Distribuido como; no se da ninguna garantía.
 
+Basado en el trabajo de:
+ Eric Rosenbaum, Jay Silver, and Jim Lindblom
+ MIT Media Lab & Sparkfun
+
 ************************************************************/
 
 /************************************************************
@@ -45,6 +49,10 @@ member) at the local, and you've found our code helpful,
 please buy us a round!
 
 Distributed as-is; no warranty is given.
+
+Based in the work by:
+ Eric Rosenbaum, Jay Silver, and Jim Lindblom
+ MIT Media Lab & Sparkfun
 
 Library Adafruit FreeTouch
 https://github.com/adafruit/Adafruit_FreeTouch
