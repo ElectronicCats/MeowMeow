@@ -58,8 +58,13 @@ https://github.com/adafruit/Adafruit_FreeTouch
 //#define DEBUG2 
 //#define DEBUG3 
 
+
+#define BUFFER_LENGTH    3     // 3 bytes gives us 24 samples
+#define NUM_INPUTS       10    // 6 on the front + 4 on the back
+
 #include "Keyboard.h"
 #include "Adafruit_FreeTouch.h"
+#include "settings.h"
 
 Adafruit_FreeTouch qt_1 = Adafruit_FreeTouch(A0, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE);  //A0
 Adafruit_FreeTouch qt_2 = Adafruit_FreeTouch(A1, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); //AREF
@@ -75,13 +80,15 @@ Adafruit_FreeTouch qt_10 = Adafruit_FreeTouch(A9, OVERSAMPLE_4, RESISTOR_50K, FR
 Adafruit_FreeTouch *p[10] = { &qt_1, &qt_2, &qt_3, &qt_4, &qt_5, &qt_6, &qt_7, &qt_8, &qt_9, &qt_10 };
 //Adafruit_FreeTouch *p[10] = { &qt_2 };
 
-#define BUFFER_LENGTH    3     // 3 bytes gives us 24 samples
-#define NUM_INPUTS       10    // 6 on the front + 4 on the back
-
 int touch = 600;    // Change this variable to something between your capacitive touch serial readouts for on and off
 
 byte byteCounter = 0;
 byte bitCounter = 0;
+int pressThreshold;
+int releaseThreshold;
+boolean inputChanged;
+
+int mouseHoldCount[NUM_INPUTS]; // used to store mouse movement hold data
 
 /////////////////////////
 // STRUCT ///////////////
@@ -104,6 +111,7 @@ MeowMeowInput inputs[NUM_INPUTS];
 
 // Pin Numbers
 // input pin numbers for kickstarter production board
+
 int pinNumbers[NUM_INPUTS] = {
   A0, A1, A2, A3, A4, A5,     // top of makey makey board
   A6, A7, A8, A9        // left side of female header, KEYBOARD 
@@ -126,15 +134,15 @@ void setup() {
   // initialize digital pin LED_BUILTIN as an output.
   pinMode(LED_BUILTIN, OUTPUT);
 
- //   if (! qt_1.begin())  
- //   Serial.println(F("Failed to begin qt on pin A0"));
+    if (! qt_1.begin())  
+    Serial.println(F("Failed to begin qt on pin A0"));
   if (! qt_2.begin())  
     Serial.println(F("Failed to begin qt on pin A1"));
   if (! qt_3.begin())  
     Serial.println(F("Failed to begin qt on pin A2"));
   if (! qt_4.begin())  
     Serial.println(F("Failed to begin qt on pin A3"));
-        if (! qt_5.begin())  
+  if (! qt_5.begin())  
     Serial.println(F("Failed to begin qt on pin A4"));
   if (! qt_6.begin())  
     Serial.println(F("Failed to begin qt on pin A5"));
@@ -147,6 +155,7 @@ void setup() {
   if (! qt_10.begin())  
    Serial.println(F("Failed to begin qt on pin A9"));
 
+  initializeInputs();
  
   Keyboard.begin();
 }
@@ -154,8 +163,9 @@ void setup() {
 void loop() {
 
   updateMeasurementBuffers();
-  //updateBufferSums();
+  updateBufferSums();
   updateBufferIndex();
+  updateInputStates();
   #ifdef DEBUG
     delay(100);
   #endif
@@ -210,6 +220,35 @@ void updateMeasurementBuffers() {
 }
 
 ///////////////////////////
+// UPDATE BUFFER SUMS
+///////////////////////////
+void updateBufferSums() {
+
+  // the bufferSum is a running tally of the entire measurementBuffer
+  // add the new measurement and subtract the old one
+
+  for (int i=0; i<NUM_INPUTS; i++) {
+    byte currentByte = inputs[i].measurementBuffer[byteCounter];
+    boolean currentMeasurement = (currentByte >> bitCounter) & 0x01; 
+    #ifdef DEBUG2
+      Serial.print("currentMeasurement:");Serial.println(currentMeasurement);
+    #endif
+    if (currentMeasurement) {
+      inputs[i].bufferSum++;
+      #ifdef DEBUG2
+        Serial.print("bufferSum++");Serial.println(inputs[i].bufferSum);
+      #endif
+    }
+    if (inputs[i].oldestMeasurement) {
+      inputs[i].bufferSum--;
+      #ifdef DEBUG2
+        Serial.print("bufferSum--:");Serial.println(inputs[i].bufferSum);
+      #endif
+    }
+  }  
+}
+
+///////////////////////////
 // UPDATE BUFFER INDEX
 ///////////////////////////
 void updateBufferIndex() {
@@ -220,6 +259,103 @@ void updateBufferIndex() {
     if (byteCounter == BUFFER_LENGTH) {
       byteCounter = 0;
     }
+  }
+}
+
+//////////////////////////
+// UPDATE INPUT STATES
+///////////////////////////
+void updateInputStates() {
+  inputChanged = false;
+  for (int i=0; i<NUM_INPUTS; i++) {
+    inputs[i].prevPressed = inputs[i].pressed; // store previous pressed state (only used for mouse buttons)
+    #ifdef DEBUG2
+      Serial.print("inputs pressed:");Serial.println(inputs[i].pressed);
+    #endif
+    if (inputs[i].pressed) {
+      if (inputs[i].bufferSum < releaseThreshold) {  
+        inputChanged = true;
+        inputs[i].pressed = false;
+        if (inputs[i].isKey) {
+          Keyboard.release(inputs[i].keyCode);
+        }
+        if (inputs[i].isMouseMotion) {  
+          mouseHoldCount[i] = 0;  // input becomes released, reset mouse hold
+        }
+      }
+      else if (inputs[i].isMouseMotion) {  
+        mouseHoldCount[i]++; // input remains pressed, increment mouse hold
+      }
+    } 
+    else if (!inputs[i].pressed) {
+      if (inputs[i].bufferSum > pressThreshold) {  // input becomes pressed
+        inputChanged = true;
+        inputs[i].pressed = true; 
+        if (inputs[i].isKey) {
+          Keyboard.press(inputs[i].keyCode);
+        }
+      }
+    }
+  }
+#ifdef DEBUG3
+  if (inputChanged) {
+    Serial.println("change");
+  }
+#endif
+}
+
+///////////////////////////
+// INITIALIZE INPUTS
+///////////////////////////
+void initializeInputs() {
+
+//TODO
+  float thresholdPerc = SWITCH_THRESHOLD_OFFSET_PERC;
+  float thresholdCenterBias = SWITCH_THRESHOLD_CENTER_BIAS/50.0;
+  float pressThresholdAmount = (BUFFER_LENGTH * 8) * (thresholdPerc / 100.0);
+  float thresholdCenter = ( (BUFFER_LENGTH * 8) / 2.0 ) * (thresholdCenterBias);
+  pressThreshold = int(thresholdCenter + pressThresholdAmount);
+  releaseThreshold = int(thresholdCenter - pressThresholdAmount);
+
+#ifdef DEBUG
+  Serial.println(pressThreshold);
+  Serial.println(releaseThreshold);
+#endif
+
+  for (int i=0; i<NUM_INPUTS; i++) {
+    inputs[i].pinNumber = pinNumbers[i];
+    inputs[i].keyCode = keyCodes[i];
+
+    for (int j=0; j<BUFFER_LENGTH; j++) {
+      inputs[i].measurementBuffer[j] = 0;
+    }
+    inputs[i].oldestMeasurement = 0;
+    inputs[i].bufferSum = 0;
+
+    inputs[i].pressed = false;
+    inputs[i].prevPressed = false;
+
+    inputs[i].isMouseMotion = false;
+    inputs[i].isMouseButton = false;
+    inputs[i].isKey = false;
+
+    if (inputs[i].keyCode < 0) {
+#ifdef DEBUG_MOUSE
+      Serial.println("GOT IT");  
+#endif
+
+      inputs[i].isMouseMotion = true;
+    } 
+    /*else if ((inputs[i].keyCode == MOUSE_LEFT) || (inputs[i].keyCode == MOUSE_RIGHT)) {
+      inputs[i].isMouseButton = true;
+    } */
+    else {
+      inputs[i].isKey = true;
+    }
+#ifdef DEBUG
+    Serial.println(i);
+#endif
+
   }
 }
 
