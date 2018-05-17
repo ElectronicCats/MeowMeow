@@ -86,7 +86,6 @@ Adafruit_FreeTouch qt_9 = Adafruit_FreeTouch(A8, OVERSAMPLE_4, RESISTOR_50K, FRE
 Adafruit_FreeTouch qt_10 = Adafruit_FreeTouch(A9, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE);
 
 Adafruit_FreeTouch *p[10] = { &qt_1, &qt_2, &qt_3, &qt_4, &qt_5, &qt_6, &qt_7, &qt_8, &qt_9, &qt_10 };
-//Adafruit_FreeTouch *p[10] = { &qt_2 };
 
 int touch = 600;    // Change this variable to something between your capacitive touch serial readouts for on and off
 
@@ -119,17 +118,10 @@ MeowMeowInput inputs[NUM_INPUTS];
 
 // Pin Numbers
 // input pin numbers for kickstarter production board
-
 int pinNumbers[NUM_INPUTS] = {
   A0, A1, A2, A3, A4, A5,     // top of makey makey board
   A6, A7, A8, A9        // left side of female header, KEYBOARD 
 };
-
-/*
-int pinNumbers[NUM_INPUTS] = {
-  A1 
-};
-*/
 
 void setup() {
   #ifdef DEBUG
