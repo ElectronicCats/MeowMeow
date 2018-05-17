@@ -50,6 +50,14 @@ Library Adafruit FreeTouch
 https://github.com/adafruit/Adafruit_FreeTouch
 
 */
+
+////////////////////////
+// DEBUG DEFINITIONS ////               
+/////////////////////////
+//#define DEBUG
+//#define DEBUG2 
+//#define DEBUG3 
+
 #include "Keyboard.h"
 #include "Adafruit_FreeTouch.h"
 
@@ -148,6 +156,10 @@ void loop() {
   updateMeasurementBuffers();
   //updateBufferSums();
   updateBufferIndex();
+  #ifdef DEBUG
+    delay(100);
+  #endif
+  
 }
 
 //////////////////////////////
@@ -167,23 +179,34 @@ void updateMeasurementBuffers() {
     long newState = (p[i]->measure());
     boolean newMeasurement = ((newState > touch)? 1 : 0);
   
-    Serial.print("Index:");Serial.println(i);
-    Serial.println(p[i]->measure());
-    Serial.println(newMeasurement);
+
+    #ifdef DEBUG
+      Serial.print("Index:");Serial.println(i);
+      Serial.println(p[i]->measure());
+      Serial.println(newMeasurement);
+    #endif
     // invert so that true means the switch is closed
     newMeasurement = !newMeasurement; 
-    Serial.println(newMeasurement);
+    #ifdef DEBUG
+      Serial.println(newMeasurement);
+    #endif
     // store it    
     if (newMeasurement) {
       currentByte |= (1<<bitCounter);
-      //Serial.print("Current OR:");Serial.println(currentByte);
+      #ifdef DEBUG2
+        Serial.print("Current OR:");Serial.println(currentByte);
+      #endif
     } 
     else {
       currentByte &= ~(1<<bitCounter);
-      //Serial.print("Current AND");Serial.println(currentByte);
+      #ifdef DEBUG2
+        Serial.print("Current AND");Serial.println(currentByte);
+      #endif
     }
     inputs[i].measurementBuffer[byteCounter] = currentByte;
-    //Serial.println(inputs[i].measurementBuffer[byteCounter]);
+    #ifdef DEBUG2
+      Serial.println(inputs[i].measurementBuffer[byteCounter]);
+    #endif
   }
 }
 
