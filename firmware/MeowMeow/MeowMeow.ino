@@ -30,8 +30,8 @@ Basado en el trabajo de:
 
 /************************************************************
 ENGLISH
-CatSat.ino
-Meow Meow - 
+MeowMeow.ino
+Meow Meow -
 Andres Sabas @ Electronic Cats
 Original Creation Date: April 17, 2018
 https://github.com/ElectronicCats/MeowMeow
@@ -75,18 +75,18 @@ https://github.com/adafruit/Adafruit_FreeTouch
 #include "Adafruit_FreeTouch.h"
 #include "settings.h"
 
-Adafruit_FreeTouch qt_1 = Adafruit_FreeTouch(A0, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE);  //A0
-Adafruit_FreeTouch qt_2 = Adafruit_FreeTouch(A1, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); //AREF
-Adafruit_FreeTouch qt_3 = Adafruit_FreeTouch(A2, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE);
-Adafruit_FreeTouch qt_4 = Adafruit_FreeTouch(A3, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE);
-Adafruit_FreeTouch qt_5 = Adafruit_FreeTouch(A4, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE);
-Adafruit_FreeTouch qt_6 = Adafruit_FreeTouch(A5, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE);
-Adafruit_FreeTouch qt_7 = Adafruit_FreeTouch(A6, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE);
-Adafruit_FreeTouch qt_8 = Adafruit_FreeTouch(A7, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); //A1
-Adafruit_FreeTouch qt_9 = Adafruit_FreeTouch(A8, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE);
-Adafruit_FreeTouch qt_10 = Adafruit_FreeTouch(A9, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE);
+Adafruit_FreeTouch qt_0 = Adafruit_FreeTouch(A0, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE);  
+Adafruit_FreeTouch qt_1 = Adafruit_FreeTouch(A1, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE);
+Adafruit_FreeTouch qt_2 = Adafruit_FreeTouch(A2, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE);
+Adafruit_FreeTouch qt_3 = Adafruit_FreeTouch(A3, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE);
+Adafruit_FreeTouch qt_4 = Adafruit_FreeTouch(A4, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE);
+Adafruit_FreeTouch qt_5 = Adafruit_FreeTouch(A5, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE);
+Adafruit_FreeTouch qt_6 = Adafruit_FreeTouch(A6, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE);
+Adafruit_FreeTouch qt_7 = Adafruit_FreeTouch(A7, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE);
+Adafruit_FreeTouch qt_8 = Adafruit_FreeTouch(A8, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE);
+Adafruit_FreeTouch qt_9 = Adafruit_FreeTouch(A9, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE);
 
-Adafruit_FreeTouch *p[10] = { &qt_1, &qt_2, &qt_3, &qt_4, &qt_5, &qt_6, &qt_7, &qt_8, &qt_9, &qt_10 };
+Adafruit_FreeTouch *p[10] = { &qt_0, &qt_1, &qt_2, &qt_3, &qt_4, &qt_5, &qt_6, &qt_7, &qt_8, &qt_9 };
 
 int touch = 600;    // Change this variable to something between your capacitive touch serial readouts for on and off
 
@@ -135,25 +135,25 @@ void setup() {
   // initialize digital pin LED_BUILTIN as an output.
   pinMode(LED_BUILTIN, OUTPUT);
 
-    if (! qt_1.begin())  
+  if (! qt_0.begin())  
     Serial.println(F("Failed to begin qt on pin A0"));
-  if (! qt_2.begin())  
+  if (! qt_1.begin())  
     Serial.println(F("Failed to begin qt on pin A1"));
-  if (! qt_3.begin())  
+  if (! qt_2.begin())  
     Serial.println(F("Failed to begin qt on pin A2"));
-  if (! qt_4.begin())  
+  if (! qt_3.begin())  
     Serial.println(F("Failed to begin qt on pin A3"));
-  if (! qt_5.begin())  
+  if (! qt_4.begin())  
     Serial.println(F("Failed to begin qt on pin A4"));
-  if (! qt_6.begin())  
+  if (! qt_5.begin())  
     Serial.println(F("Failed to begin qt on pin A5"));
-  if (! qt_7.begin())  
+  if (! qt_6.begin())  
     Serial.println(F("Failed to begin qt on pin A6"));
-  if (! qt_8.begin())  
+  if (! qt_7.begin())  
     Serial.println(F("Failed to begin qt on pin A7"));
-  if (! qt_9.begin())  
+  if (! qt_8.begin())  
    Serial.println(F("Failed to begin qt on pin A8"));
-  if (! qt_10.begin())  
+  if (! qt_9.begin())  
    Serial.println(F("Failed to begin qt on pin A9"));
 
   initializeInputs();
