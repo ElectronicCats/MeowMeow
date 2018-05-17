@@ -319,8 +319,11 @@ void initializeInputs() {
   releaseThreshold = int(thresholdCenter - pressThresholdAmount);
 
 #ifdef DEBUG
+  Serial.println("pressThreshold: ");
   Serial.println(pressThreshold);
+  Serial.println("releaseThreshold: ");
   Serial.println(releaseThreshold);
+  delay(4000);
 #endif
 
   for (int i=0; i<NUM_INPUTS; i++) {
