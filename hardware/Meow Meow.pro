@@ -1,4 +1,4 @@
-update=jueves, 19 '19e' abril '19e' 2018, 23:26:10
+update=miércoles, 16 '16e' mayo '16e' 2018, 12:49:07
 version=1
 last_client=kicad
 [pcbnew]
@@ -118,3 +118,4 @@ LibName86=Worldsemi
 LibName87=Xicor
 LibName88=zetex
 LibName89=Zilog
+LibName90=/Users/sabas/Downloads/ATSAMD21G18A-AU/ATSAMD21G18A-AU
