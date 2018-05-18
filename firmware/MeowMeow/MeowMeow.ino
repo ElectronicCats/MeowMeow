@@ -95,6 +95,7 @@ byte bitCounter = 0;
 int pressThreshold;
 int releaseThreshold;
 boolean inputChanged;
+int mouseMovementCounter = 0; // for sending mouse movement events at a slower interval
 
 int mouseHoldCount[NUM_INPUTS]; // used to store mouse movement hold data
 
@@ -167,6 +168,8 @@ void loop() {
   updateBufferSums();
   updateBufferIndex();
   updateInputStates();
+  sendMouseButtonEvents();
+  sendMouseMovementEvents();
   #ifdef DEBUG
     delay(100);
   #endif
@@ -360,6 +363,126 @@ void initializeInputs() {
     Serial.println(i);
 #endif
 
+  }
+}
+
+/////////////////////////////
+// SEND MOUSE BUTTON EVENTS 
+/////////////////////////////
+void sendMouseButtonEvents() {
+  if (inputChanged) {
+    for (int i=0; i<NUM_INPUTS; i++) {
+      if (inputs[i].isMouseButton) {
+        if (inputs[i].pressed) {
+          if (inputs[i].keyCode == MOUSE_LEFT) {
+            Mouse.press(MOUSE_LEFT);
+          } 
+          if (inputs[i].keyCode == MOUSE_RIGHT) {
+            Mouse.press(MOUSE_RIGHT);
+          } 
+        } 
+        else if (inputs[i].prevPressed) {
+          if (inputs[i].keyCode == MOUSE_LEFT) {
+            Mouse.release(MOUSE_LEFT);
+          } 
+          if (inputs[i].keyCode == MOUSE_RIGHT) {
+            Mouse.release(MOUSE_RIGHT);
+          }           
+        }
+      }
+    }
+  }
+}
+
+//////////////////////////////
+// SEND MOUSE MOVEMENT EVENTS
+//////////////////////////////
+void sendMouseMovementEvents() {
+  byte right = 0;
+  byte left = 0;
+  byte down = 0;
+  byte up = 0;
+  byte horizmotion = 0;
+  byte vertmotion = 0;
+
+  mouseMovementCounter++;
+  mouseMovementCounter %= MOUSE_MOTION_UPDATE_INTERVAL;
+  if (mouseMovementCounter == 0) {
+    for (int i=0; i<NUM_INPUTS; i++) {
+#ifdef DEBUG_MOUSE
+      //  Serial.println(inputs[i].isMouseMotion);  
+#endif
+
+      if (inputs[i].isMouseMotion) {
+        if (inputs[i].pressed) {
+          #ifdef MOUSE_MOVE_UP
+          if (inputs[i].keyCode == MOUSE_MOVE_UP) {
+            // JL Changes (x4): now update to 1 + a hold factor, constrained between 1 and mouse max movement speed
+            up=constrain(1+mouseHoldCount[i]/MOUSE_RAMP_SCALE, 1, MOUSE_MAX_PIXELS);
+          }  
+          #endif
+          #ifdef MOUSE_MOVE_DOWN
+          if (inputs[i].keyCode == MOUSE_MOVE_DOWN) {
+            down=constrain(1+mouseHoldCount[i]/MOUSE_RAMP_SCALE, 1, MOUSE_MAX_PIXELS);
+          }  
+          #endif
+          #ifdef MOUSE_MOVE_LEFT
+          if (inputs[i].keyCode == MOUSE_MOVE_LEFT) {
+            left=constrain(1+mouseHoldCount[i]/MOUSE_RAMP_SCALE, 1, MOUSE_MAX_PIXELS);
+          }
+          #endif
+          #ifdef MOUSE_MOVE_RIGHT  
+          if (inputs[i].keyCode == MOUSE_MOVE_RIGHT) {
+            right=constrain(1+mouseHoldCount[i]/MOUSE_RAMP_SCALE, 1, MOUSE_MAX_PIXELS);
+          }  
+          #endif
+        }
+      }
+    }
+
+    // diagonal scrolling and left/right cancellation
+    if(left > 0)
+    {
+      if(right > 0)
+      {
+        horizmotion = 0; // cancel horizontal motion because left and right are both pushed
+      }
+      else
+      {
+        horizmotion = -left; // left yes, right no
+      }
+    }
+    else
+    {
+      if(right > 0)
+      {
+        horizmotion = right; // right yes, left no
+      }
+    }
+
+    if(down > 0)
+    {
+      if(up > 0)
+      {
+        vertmotion = 0; // cancel vertical motion because up and down are both pushed
+      }
+      else
+      {
+        vertmotion = down; // down yes, up no
+      }
+    }
+    else
+    {
+      if (up > 0)
+      {
+        vertmotion = -up; // up yes, down no
+      }
+    }
+    // now move the mouse
+    if( !((horizmotion == 0) && (vertmotion==0)) )
+    {
+      Mouse.move(horizmotion * PIXELS_PER_MOUSE_STEP, vertmotion * PIXELS_PER_MOUSE_STEP);
+    }
   }
 }
 
