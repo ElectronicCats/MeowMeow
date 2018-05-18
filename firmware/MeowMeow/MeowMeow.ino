@@ -132,30 +132,6 @@ void setup() {
   Serial.println("Meow");
   Serial.println("Meow");
   #endif
-  
-  // initialize digital pin LED_BUILTIN as an output.
-  pinMode(LED_BUILTIN, OUTPUT);
-
-  if (! qt_0.begin())  
-    Serial.println(F("Failed to begin qt on pin A0"));
-  if (! qt_1.begin())  
-    Serial.println(F("Failed to begin qt on pin A1"));
-  if (! qt_2.begin())  
-    Serial.println(F("Failed to begin qt on pin A2"));
-  if (! qt_3.begin())  
-    Serial.println(F("Failed to begin qt on pin A3"));
-  if (! qt_4.begin())  
-    Serial.println(F("Failed to begin qt on pin A4"));
-  if (! qt_5.begin())  
-    Serial.println(F("Failed to begin qt on pin A5"));
-  if (! qt_6.begin())  
-    Serial.println(F("Failed to begin qt on pin A6"));
-  if (! qt_7.begin())  
-    Serial.println(F("Failed to begin qt on pin A7"));
-  if (! qt_8.begin())  
-   Serial.println(F("Failed to begin qt on pin A8"));
-  if (! qt_9.begin())  
-   Serial.println(F("Failed to begin qt on pin A9"));
 
   initializeInputs();
  
@@ -313,7 +289,30 @@ void updateInputStates() {
 ///////////////////////////
 void initializeInputs() {
 
-//TODO
+// initialize digital pin LED_BUILTIN as an output.
+  pinMode(LED_BUILTIN, OUTPUT);
+
+  if (! qt_0.begin())  
+    Serial.println(F("Failed to begin qt on pin A0"));
+  if (! qt_1.begin())  
+    Serial.println(F("Failed to begin qt on pin A1"));
+  if (! qt_2.begin())  
+    Serial.println(F("Failed to begin qt on pin A2"));
+  if (! qt_3.begin())  
+    Serial.println(F("Failed to begin qt on pin A3"));
+  if (! qt_4.begin())  
+    Serial.println(F("Failed to begin qt on pin A4"));
+  if (! qt_5.begin())  
+    Serial.println(F("Failed to begin qt on pin A5"));
+  if (! qt_6.begin())  
+    Serial.println(F("Failed to begin qt on pin A6"));
+  if (! qt_7.begin())  
+    Serial.println(F("Failed to begin qt on pin A7"));
+  if (! qt_8.begin())  
+   Serial.println(F("Failed to begin qt on pin A8"));
+  if (! qt_9.begin())  
+   Serial.println(F("Failed to begin qt on pin A9"));
+   
   float thresholdPerc = SWITCH_THRESHOLD_OFFSET_PERC;
   float thresholdCenterBias = SWITCH_THRESHOLD_CENTER_BIAS/50.0;
   float pressThresholdAmount = (BUFFER_LENGTH * 8) * (thresholdPerc / 100.0);
