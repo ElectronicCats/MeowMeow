@@ -100,7 +100,7 @@ Date "2018-05-16"
 Rev "0.4"
 Comp "Electronic Cats"
 Comment1 "Andres Sabas"
-Comment2 "Eduardo Contreras"
+Comment2 "[OSHW] MX000003 | Certified open source hardware | oshwa.org/cert."
 Comment3 ""
 Comment4 ""
 $EndDescr
