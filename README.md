@@ -3,7 +3,7 @@
 
 ![MX0003](https://github.com/ElectronicCats/MeowMeow/blob/master/OSHW-MX0003.png?raw=true)
 
-**[OSHW] MX0003 | Certified open source hardware | [oshwa.org/cert.](oshwa.org/cert)**
+**[OSHW] MX0003 | Certified open source hardware |** [oshwa.org/cert.](https://www.oshwa.org/cert)
 
 Electronic Cats invests time and resources providing this open source design, please support Electronic Cats and open-source hardware by purchasing products from Electronic Cats!
 
