@@ -88,8 +88,6 @@ Adafruit_FreeTouch qt_9 = Adafruit_FreeTouch(A9, OVERSAMPLE_4, RESISTOR_50K, FRE
 
 Adafruit_FreeTouch *p[10] = { &qt_0, &qt_1, &qt_2, &qt_3, &qt_4, &qt_5, &qt_6, &qt_7, &qt_8, &qt_9 };
 
-int touch = 600;    // Change this variable to something between your capacitive touch serial readouts for on and off
-
 byte byteCounter = 0;
 byte bitCounter = 0;
 int pressThreshold;
@@ -113,6 +111,7 @@ typedef struct {
   boolean isMouseMotion;
   boolean isMouseButton;
   boolean isKey;
+  int touch;
 } 
 MeowMeowInput;
 
@@ -134,6 +133,7 @@ void setup() {
   #endif
 
   initializeInputs();
+  calibrate();
  
   Keyboard.begin();
 }
@@ -167,7 +167,7 @@ void updateMeasurementBuffers() {
 
     // make the new measurement
     long newState = (p[i]->measure());
-    boolean newMeasurement = ((newState > touch)? 0 : 1);
+    boolean newMeasurement = ((newState > inputs[i].touch)? 0 : 1);
 
     #ifdef DEBUG
       Serial.print("Index:");Serial.println(i);
@@ -482,6 +482,27 @@ void sendMouseMovementEvents() {
     {
       Mouse.move(horizmotion * PIXELS_PER_MOUSE_STEP, vertmotion * PIXELS_PER_MOUSE_STEP);
     }
+  }
+}
+
+
+/* 
+ *  INITIAL CALIBRATION INPUT
+The wires, electrodes and other object themselves have a certain amount of 
+'inherent capacitcance'!
+
+This means that whenever you attach an alligator clip, or a large piece of copper, 
+or whatever your electrode is, the capacitive sense chip will detect it and may 
+think you're touching it. What you have to do is recalibrate the sensor. 
+The easiest way to do that is to restart the arduino sketch since calibration is done 
+when the chip is initialized. So, basically ... connect all your wires, electrodes, 
+fruit, etc...then start up the capacitive touch program!
+*/
+void calibrate(){
+  for (int i=0; i<NUM_INPUTS; i++) {
+    // make a new measurement for initial calibration
+    long newState = (p[i]->measure());
+    inputs[i].touch = newState * (1+(CALIBRATION/100));
   }
 }
 

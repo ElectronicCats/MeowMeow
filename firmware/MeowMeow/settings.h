@@ -66,6 +66,15 @@ int keyCodes[NUM_INPUTS] = {
                                             
 #define MOUSE_MAX_PIXELS              10   // Max pixels per step for mouse movement
 
+////////////////////////
+// MOUSE MOTION /////////
+/////////////////////////
+#define CALIBRATION                   10   // number between 1 and 99
+                                           // Initial calibration percentage
+                                           // recommended values are between 10 and 20
+                                           //Change this variable to something between 
+                                           //your capacitive touch serial readouts for 
+                                           //on and off
 /*
 
 ///////////////////////////
