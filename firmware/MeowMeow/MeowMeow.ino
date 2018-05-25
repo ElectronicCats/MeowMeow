@@ -502,7 +502,7 @@ void calibrate(){
   for (int i=0; i<NUM_INPUTS; i++) {
     // make a new measurement for initial calibration
     long newState = (p[i]->measure());
-    inputs[i].touch = newState * (1+(CALIBRATION/100));
+    inputs[i].touch = newState + CALIBRATION;
   }
 }
 

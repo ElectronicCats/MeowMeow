@@ -69,9 +69,10 @@ int keyCodes[NUM_INPUTS] = {
 ////////////////////////
 // MOUSE MOTION /////////
 /////////////////////////
-#define CALIBRATION                   10   // number between 1 and 99
+#define CALIBRATION                   200   // number between 0 and 1000
                                            // Initial calibration percentage
-                                           // recommended values are between 10 and 20
+                                           // recommended values are between 150 and 350
+                                           // default value is 200
                                            //Change this variable to something between 
                                            //your capacitive touch serial readouts for 
                                            //on and off
