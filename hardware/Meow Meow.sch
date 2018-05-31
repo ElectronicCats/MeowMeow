@@ -822,7 +822,7 @@ Wire Wire Line
 Wire Wire Line
 	8705 3435 8560 3435
 Wire Wire Line
-	8705 3235 8560 3235
+	9660 3335 9660 3300
 Wire Wire Line
 	9330 3435 9205 3435
 Wire Wire Line
