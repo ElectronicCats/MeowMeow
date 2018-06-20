@@ -1,7 +1,8 @@
 /************************************************************
 SPANISH
-MeowMeow.ino
-Meow Meow - 
+MeowMeow.ino - v0.5
+Meow Meow - Using the Meow Meow you can make anything into a key 
+just by connecting a few alligator clips
 Andres Sabas @ Electronic Cats
 Eduardo Contreras @ Electronic Cats
 Original Creation Date: April 17, 2018
@@ -30,8 +31,10 @@ Basado en el trabajo de:
 
 /************************************************************
 ENGLISH
-MeowMeow.ino
-Meow Meow -
+MeowMeow.ino - v0.5v
+Meow Meow - Using the Meow Meow you can make anything into a key 
+just by connecting a few alligator clips
+
 Andres Sabas @ Electronic Cats
 Original Creation Date: April 17, 2018
 https://github.com/ElectronicCats/MeowMeow
