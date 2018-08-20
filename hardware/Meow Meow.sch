@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2
+EESchema Schematic File Version 4
 LIBS:Meow Meow-rescue
 LIBS:power
 LIBS:device
@@ -56,7 +56,6 @@ LIBS:microchip_pic10mcu
 LIBS:microchip_pic12mcu
 LIBS:microchip_pic16mcu
 LIBS:microchip_pic18mcu
-LIBS:microchip_pic32mcu
 LIBS:motor_drivers
 LIBS:motors
 LIBS:msp430
@@ -86,14 +85,14 @@ LIBS:zetex
 LIBS:Zilog
 LIBS:MeowMeow
 LIBS:Meow Meow-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Meow Meow"
-Date "2018-05-16"
-Rev "0.8"
+Date "2018-08-19"
+Rev "1.0"
 Comp "Electronic Cats"
 Comment1 "Andres Sabas"
 Comment2 "[OSHW] MX000003 | Certified open source hardware | oshwa.org/cert."
@@ -770,9 +769,9 @@ Wire Wire Line
 	3895 1755 3990 1755
 Connection ~ 3990 1655
 Wire Wire Line
-	3895 1655 4210 1655
+	3895 1655 3990 1655
 Wire Wire Line
-	3990 1565 3990 1955
+	3990 1565 3990 1655
 Wire Wire Line
 	3990 1955 3895 1955
 Wire Wire Line
@@ -815,7 +814,7 @@ Connection ~ 4025 4555
 Wire Wire Line
 	4025 4555 3895 4555
 Wire Wire Line
-	4025 4355 4025 4740
+	4025 4355 4025 4455
 Wire Wire Line
 	3895 4355 4025 4355
 Wire Wire Line
@@ -846,11 +845,11 @@ Wire Wire Line
 Wire Wire Line
 	9945 1290 9945 1225
 Wire Wire Line
-	9265 1290 9945 1290
+	9265 1290 9370 1290
 Wire Wire Line
 	7590 1290 7590 1175
 Wire Wire Line
-	7590 1290 8315 1290
+	7590 1290 8030 1290
 Wire Wire Line
 	9795 5095 9795 5360
 Wire Wire Line
@@ -999,4 +998,24 @@ Wire Wire Line
 	9385 3395 9470 3395
 Wire Wire Line
 	9385 3495 9470 3495
+Wire Wire Line
+	3990 1855 3990 1955
+Wire Wire Line
+	3990 1755 3990 1855
+Wire Wire Line
+	3990 1655 4210 1655
+Wire Wire Line
+	3990 1655 3990 1755
+Wire Wire Line
+	4025 4455 4025 4555
+Wire Wire Line
+	4025 4655 4025 4740
+Wire Wire Line
+	4025 4555 4025 4655
+Wire Wire Line
+	8030 1290 8315 1290
+Wire Wire Line
+	9605 1290 9945 1290
+Wire Wire Line
+	9370 1290 9605 1290
 $EndSCHEMATC
