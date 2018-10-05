@@ -71,7 +71,7 @@ https://github.com/adafruit/Adafruit_FreeTouch
 
 
 #define BUFFER_LENGTH    3     // 3 bytes gives us 24 samples
-#define NUM_INPUTS       10    // 6 on the front + 4 on the back
+#define NUM_INPUTS       10    // 10 on the front
 
 #include "Keyboard.h"
 #include <Mouse.h>
@@ -121,12 +121,12 @@ MeowMeowInput;
 MeowMeowInput inputs[NUM_INPUTS];
 
 // Pin Numbers
-// input pin numbers for kickstarter production board
+// input pin numbers for pre-order production board
 int pinNumbers[NUM_INPUTS] = {
-  A0, A1, A2, A3, A4, A5,     // top of makey makey board
+  A0, A1, A2, A3, A4, A5,     // top of meow meow board
   A6, A7, A8, A9        // left side of female header, KEYBOARD 
 };
-
+    
 void setup() {
   #ifdef DEBUG
   Serial.begin(115200);

@@ -14,22 +14,18 @@
 
 */
 
-int keyCodes[NUM_INPUTS] = {
-  // top side of the makey makey board
- 
-  KEY_UP_ARROW,      // up arrow pad
-  KEY_DOWN_ARROW,    // down arrow pad
-  KEY_LEFT_ARROW,    // left arrow pad
-  KEY_RIGHT_ARROW,   // right arrow pad
-  ' ',               // space button pad
-  MOUSE_LEFT,        // click button pad
-  
-  // female header on the back left side
-  
+int keyCodes[NUM_INPUTS] = {            
+  //     top side of the meow meow board
+  's',                // pin A0 
+  'd',                // pin A1
+  KEY_LEFT_ARROW,    // left arrow pad A2
+  KEY_RIGHT_ARROW,   // right arrow pad A3
+  KEY_DOWN_ARROW,    // down arrow pad A4
+  KEY_UP_ARROW,      // up arrow pad A5
   'w',                // pin A6
   'a',                // pin A7
-  's',                // pin A8
-  'd',                // pin A9
+  MOUSE_LEFT,        // click button pad A8
+  ' ',               // space button pad A9
 };
 
 ///////////////////////////
