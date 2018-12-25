@@ -7,7 +7,7 @@ encoding utf-8
 Sheet 1 1
 Title "Meow Meow"
 Date "2018-08-19"
-Rev "1.0"
+Rev "1.1"
 Comp "Electronic Cats"
 Comment1 "Andres Sabas"
 Comment2 "[OSHW] MX000003 | Certified open source hardware | oshwa.org/cert."
