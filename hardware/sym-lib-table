@@ -1,2 +1,3 @@
 (sym_lib_table
+  (lib (name Meow-Meow-rescue)(type Legacy)(uri "${KIPRJMOD}/Meow Meow-rescue.lib")(options "")(descr ""))
 )

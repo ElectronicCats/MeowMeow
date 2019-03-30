@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L MeowMeow:AP2112 U2
+L Meow-Meow-rescue:AP2112-MeowMeow U2
 U 1 1 5AD95D02
 P 8765 1490
 F 0 "U2" H 8565 1790 60  0000 C CNN
@@ -40,7 +40,7 @@ Text Label 4070 2755 0    60   ~ 0
 Y14
 NoConn ~ 7635 3460
 $Comp
-L MeowMeow:GND #PWR01
+L Meow-Meow-rescue:GND-MeowMeow #PWR01
 U 1 1 5AD96563
 P 7530 3600
 F 0 "#PWR01" H 7530 3350 50  0001 C CNN
@@ -51,7 +51,7 @@ F 3 "" H 7530 3600 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MeowMeow:VCC #PWR02
+L Meow-Meow-rescue:VCC-MeowMeow #PWR02
 U 1 1 5AD96587
 P 7180 3135
 F 0 "#PWR02" H 7180 2985 50  0001 C CNN
@@ -74,7 +74,7 @@ USB, SWD PROGRAMMING AND LEDS
 Text Notes 7925 4725 0    60   ~ 0
 SENSOR CAPACITIVE
 $Comp
-L MeowMeow:CONN_01X01_FEMALE P7
+L Meow-Meow-rescue:CONN_01X01_FEMALE-MeowMeow P7
 U 1 1 5AD981B5
 P 10435 4985
 F 0 "P7" H 10435 5085 60  0000 C CNN
@@ -85,7 +85,7 @@ F 3 "" H 10435 4985 60  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L MeowMeow:CONN_01X01_FEMALE P6
+L Meow-Meow-rescue:CONN_01X01_FEMALE-MeowMeow P6
 U 1 1 5AD9829A
 P 10130 4985
 F 0 "P6" H 10130 5085 60  0000 C CNN
@@ -96,7 +96,7 @@ F 3 "" H 10130 4985 60  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L MeowMeow:CONN_01X01_FEMALE P3
+L Meow-Meow-rescue:CONN_01X01_FEMALE-MeowMeow P3
 U 1 1 5AD98302
 P 9485 4995
 F 0 "P3" H 9485 5095 60  0000 C CNN
@@ -107,7 +107,7 @@ F 3 "" H 9485 4995 60  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L MeowMeow:CONN_01X01_FEMALE P2
+L Meow-Meow-rescue:CONN_01X01_FEMALE-MeowMeow P2
 U 1 1 5AD9836F
 P 9155 5005
 F 0 "P2" H 9155 5105 60  0000 C CNN
@@ -126,7 +126,7 @@ Y3
 Text Label 9155 5370 3    60   ~ 0
 Y4
 $Comp
-L MeowMeow:C_Small C4
+L Meow-Meow-rescue:C_Small-MeowMeow C4
 U 1 1 5AD98E8E
 P 8030 1440
 F 0 "C4" H 8040 1510 50  0000 L CNN
@@ -138,7 +138,7 @@ F 4 "TMCUA0J106MTR2F" H 8030 1440 60  0001 C CNN "Part#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L MeowMeow:C_Small C5
+L Meow-Meow-rescue:C_Small-MeowMeow C5
 U 1 1 5AD98EFB
 P 9370 1455
 F 0 "C5" H 9380 1525 50  0000 L CNN
@@ -150,7 +150,7 @@ F 4 "885012207072" H 9370 1455 60  0001 C CNN "Part#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L MeowMeow:C_Small C6
+L Meow-Meow-rescue:C_Small-MeowMeow C6
 U 1 1 5AD98F7F
 P 9605 1455
 F 0 "C6" H 9615 1525 50  0000 L CNN
@@ -162,7 +162,7 @@ F 4 "TMCUA0J106MTR2F" H 9605 1455 60  0001 C CNN "Part#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L MeowMeow:LED D1
+L Meow-Meow-rescue:LED-MeowMeow D1
 U 1 1 5AD9907D
 P 10560 3100
 F 0 "D1" H 10560 3200 50  0000 C CNN
@@ -174,7 +174,7 @@ F 4 "APT2012SGC" H 10560 3100 60  0001 C CNN "Part#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L MeowMeow:R_Small R2
+L Meow-Meow-rescue:R_Small-MeowMeow R2
 U 1 1 5AD9913C
 P 10230 3100
 F 0 "R2" H 10260 3120 50  0000 L CNN
@@ -186,7 +186,7 @@ F 4 "AC0805FR-071KL" H 10230 3100 60  0001 C CNN "Part#"
 	0    1    1    0   
 $EndComp
 $Comp
-L MeowMeow:GND #PWR03
+L Meow-Meow-rescue:GND-MeowMeow #PWR03
 U 1 1 5AD99661
 P 10055 3100
 F 0 "#PWR03" H 10055 2850 50  0001 C CNN
@@ -197,7 +197,7 @@ F 3 "" H 10055 3100 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MeowMeow:+3.3V #PWR04
+L Meow-Meow-rescue:+3.3V-MeowMeow #PWR04
 U 1 1 5AD9971F
 P 10790 3100
 F 0 "#PWR04" H 10790 2950 50  0001 C CNN
@@ -208,7 +208,7 @@ F 3 "" H 10790 3100 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MeowMeow:LED D2
+L Meow-Meow-rescue:LED-MeowMeow D2
 U 1 1 5AD99995
 P 10560 3515
 F 0 "D2" H 10560 3615 50  0000 C CNN
@@ -220,7 +220,7 @@ F 4 "APT2012SGC" H 10560 3515 60  0001 C CNN "Part#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L MeowMeow:R_Small R3
+L Meow-Meow-rescue:R_Small-MeowMeow R3
 U 1 1 5AD9999C
 P 10230 3515
 F 0 "R3" H 10260 3535 50  0000 L CNN
@@ -232,7 +232,7 @@ F 4 "AC0805FR-071KL" H 10230 3515 60  0001 C CNN "Part#"
 	0    1    1    0   
 $EndComp
 $Comp
-L MeowMeow:GND #PWR05
+L Meow-Meow-rescue:GND-MeowMeow #PWR05
 U 1 1 5AD999A6
 P 10055 3515
 F 0 "#PWR05" H 10055 3265 50  0001 C CNN
@@ -249,7 +249,7 @@ SWDIO
 Text Label 9470 3495 0    60   ~ 0
 SWCLK
 $Comp
-L MeowMeow:+3.3V #PWR06
+L Meow-Meow-rescue:+3.3V-MeowMeow #PWR06
 U 1 1 5AD9BCA9
 P 8354 3477
 F 0 "#PWR06" H 8354 3327 50  0001 C CNN
@@ -260,7 +260,7 @@ F 3 "" H 8354 3477 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MeowMeow:GND #PWR07
+L Meow-Meow-rescue:GND-MeowMeow #PWR07
 U 1 1 5AD9BD50
 P 9831 3431
 F 0 "#PWR07" H 9831 3181 50  0001 C CNN
@@ -271,7 +271,7 @@ F 3 "" H 9831 3431 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MeowMeow:R_Small R1
+L Meow-Meow-rescue:R_Small-MeowMeow R1
 U 1 1 5AD9C752
 P 2215 1655
 F 0 "R1" V 2280 1580 50  0000 L CNN
@@ -283,7 +283,7 @@ F 4 "B3U-1000P" V 2215 1655 60  0001 C CNN "Part#"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L MeowMeow:CONN_01X01_FEMALE P5
+L Meow-Meow-rescue:CONN_01X01_FEMALE-MeowMeow P5
 U 1 1 5AD9D9AC
 P 9795 4995
 F 0 "P5" H 9795 5095 60  0000 C CNN
@@ -296,7 +296,7 @@ $EndComp
 Text Label 9795 5360 3    60   ~ 0
 Y2
 $Comp
-L MeowMeow:GND #PWR08
+L Meow-Meow-rescue:GND-MeowMeow #PWR08
 U 1 1 5ADA067C
 P 8030 1600
 F 0 "#PWR08" H 8030 1350 50  0001 C CNN
@@ -307,7 +307,7 @@ F 3 "" H 8030 1600 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MeowMeow:GND #PWR09
+L Meow-Meow-rescue:GND-MeowMeow #PWR09
 U 1 1 5ADA0DDC
 P 8250 1720
 F 0 "#PWR09" H 8250 1470 50  0001 C CNN
@@ -318,7 +318,7 @@ F 3 "" H 8250 1720 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MeowMeow:VCC #PWR010
+L Meow-Meow-rescue:VCC-MeowMeow #PWR010
 U 1 1 5ADA0F24
 P 7590 1175
 F 0 "#PWR010" H 7590 1025 50  0001 C CNN
@@ -329,7 +329,7 @@ F 3 "" H 7590 1175 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MeowMeow:+3.3V #PWR011
+L Meow-Meow-rescue:+3.3V-MeowMeow #PWR011
 U 1 1 5ADA11F4
 P 9945 1225
 F 0 "#PWR011" H 9945 1075 50  0001 C CNN
@@ -340,7 +340,7 @@ F 3 "" H 9945 1225 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MeowMeow:GND #PWR012
+L Meow-Meow-rescue:GND-MeowMeow #PWR012
 U 1 1 5ADA139A
 P 9605 1630
 F 0 "#PWR012" H 9605 1380 50  0001 C CNN
@@ -351,7 +351,7 @@ F 3 "" H 9605 1630 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MeowMeow:GND #PWR013
+L Meow-Meow-rescue:GND-MeowMeow #PWR013
 U 1 1 5ADA141E
 P 9370 1630
 F 0 "#PWR013" H 9370 1380 50  0001 C CNN
@@ -362,7 +362,7 @@ F 3 "" H 9370 1630 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MeowMeow:GND #PWR014
+L Meow-Meow-rescue:GND-MeowMeow #PWR014
 U 1 1 5AE3E770
 P 8035 3760
 F 0 "#PWR014" H 8035 3510 50  0001 C CNN
@@ -383,7 +383,7 @@ SDA
 Text Label 2340 2055 2    60   ~ 0
 SCL
 $Comp
-L MeowMeow:ATSAMD21G18A-AU U1
+L Meow-Meow-rescue:ATSAMD21G18A-AU-MeowMeow U1
 U 1 1 5AFC6E86
 P 3195 3255
 F 0 "U1" H 2595 4976 50  0000 L BNN
@@ -398,7 +398,7 @@ F 7 "ATSAMD21G15A-AU" H 3195 3255 50  0001 L BNN "Part#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L MeowMeow:USB_OTG P9
+L Meow-Meow-rescue:USB_OTG-MeowMeow P9
 U 1 1 5AFC70FD
 P 7935 3360
 F 0 "P9" H 8260 3235 50  0000 C CNN
@@ -420,7 +420,7 @@ Y8
 Text Label 4070 2655 0    60   ~ 0
 Y9
 $Comp
-L MeowMeow:C_Small C1
+L Meow-Meow-rescue:C_Small-MeowMeow C1
 U 1 1 5AFCC5C3
 P 3945 2185
 F 0 "C1" H 3955 2255 50  0000 L CNN
@@ -432,7 +432,7 @@ F 4 "C2012X7R1C105K125AA" H 3945 2185 60  0001 C CNN "Part#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L MeowMeow:GND #PWR015
+L Meow-Meow-rescue:GND-MeowMeow #PWR015
 U 1 1 5AFCC90C
 P 3945 2340
 F 0 "#PWR015" H 3945 2090 50  0001 C CNN
@@ -443,7 +443,7 @@ F 3 "" H 3945 2340 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MeowMeow:+3.3V #PWR016
+L Meow-Meow-rescue:+3.3V-MeowMeow #PWR016
 U 1 1 5AFCCDC2
 P 3990 1565
 F 0 "#PWR016" H 3990 1415 50  0001 C CNN
@@ -454,7 +454,7 @@ F 3 "" H 3990 1565 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MeowMeow:C_Small C2
+L Meow-Meow-rescue:C_Small-MeowMeow C2
 U 1 1 5AFCCE9C
 P 4210 1755
 F 0 "C2" H 4220 1825 50  0000 L CNN
@@ -466,7 +466,7 @@ F 4 "885012207072" H 4210 1755 60  0001 C CNN "Part#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L MeowMeow:GND #PWR017
+L Meow-Meow-rescue:GND-MeowMeow #PWR017
 U 1 1 5AFCCF73
 P 4210 1885
 F 0 "#PWR017" H 4210 1635 50  0001 C CNN
@@ -477,7 +477,7 @@ F 3 "" H 4210 1885 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MeowMeow:GND #PWR018
+L Meow-Meow-rescue:GND-MeowMeow #PWR018
 U 1 1 5AFCF78D
 P 4025 4740
 F 0 "#PWR018" H 4025 4490 50  0001 C CNN
@@ -488,7 +488,7 @@ F 3 "" H 4025 4740 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MeowMeow:CONN_01X01_FEMALE P12
+L Meow-Meow-rescue:CONN_01X01_FEMALE-MeowMeow P12
 U 1 1 5AFCFBC0
 P 8840 5005
 F 0 "P12" H 8840 5105 60  0000 C CNN
@@ -499,7 +499,7 @@ F 3 "" H 8840 5005 60  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L MeowMeow:CONN_01X01_FEMALE P11
+L Meow-Meow-rescue:CONN_01X01_FEMALE-MeowMeow P11
 U 1 1 5AFCFBC7
 P 8570 5005
 F 0 "P11" H 8570 5105 60  0000 C CNN
@@ -510,7 +510,7 @@ F 3 "" H 8570 5005 60  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L MeowMeow:CONN_01X01_FEMALE P8
+L Meow-Meow-rescue:CONN_01X01_FEMALE-MeowMeow P8
 U 1 1 5AFCFBCE
 P 7990 5015
 F 0 "P8" H 7990 5115 60  0000 C CNN
@@ -521,7 +521,7 @@ F 3 "" H 7990 5015 60  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L MeowMeow:CONN_01X01_FEMALE P1
+L Meow-Meow-rescue:CONN_01X01_FEMALE-MeowMeow P1
 U 1 1 5AFCFBD5
 P 7685 5005
 F 0 "P1" H 7685 5105 60  0000 C CNN
@@ -540,7 +540,7 @@ Y14
 Text Label 7685 5330 3    60   ~ 0
 Y15
 $Comp
-L MeowMeow:CONN_01X01_FEMALE P10
+L Meow-Meow-rescue:CONN_01X01_FEMALE-MeowMeow P10
 U 1 1 5AFCFBE0
 P 8290 5010
 F 0 "P10" H 8290 5110 60  0000 C CNN
@@ -620,7 +620,7 @@ SDA
 Text Label 7631 6138 2    60   ~ 0
 SCL
 $Comp
-L MeowMeow:GND #PWR019
+L Meow-Meow-rescue:GND-MeowMeow #PWR019
 U 1 1 5AFF5159
 P 9335 5930
 F 0 "#PWR019" H 9335 5680 50  0001 C CNN
@@ -631,7 +631,7 @@ F 3 "" H 9335 5930 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L MeowMeow:SW_Push SW1
+L Meow-Meow-rescue:SW_Push-MeowMeow SW1
 U 1 1 5B071A82
 P 1835 1655
 F 0 "SW1" H 1885 1755 50  0000 L CNN
@@ -642,7 +642,7 @@ F 3 "" H 1835 1855 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MeowMeow:GND #PWR020
+L Meow-Meow-rescue:GND-MeowMeow #PWR020
 U 1 1 5B0727F0
 P 1590 1675
 F 0 "#PWR020" H 1590 1425 50  0001 C CNN
@@ -836,11 +836,11 @@ Wire Wire Line
 Wire Wire Line
 	8885 3395 8755 3395
 $Comp
-L MeowMeow:CONN_02X03 J2
+L Meow-Meow-rescue:CONN_02X03-MeowMeow J2
 U 1 1 5B57974D
 P 9690 6030
 F 0 "J2" H 9740 6230 50  0000 C CNN
-F 1 "SWD" H 9740 5830 50  0000 C CNN
+F 1 "Backpack2" H 9740 5830 50  0000 C CNN
 F 2 "Pin_Headers:Pin_Header_Straight_2x03_Pitch2.54mm_SMD" H 9690 6030 50  0001 C CNN
 F 3 "" H 9690 6030 50  0001 C CNN
 	1    9690 6030
@@ -849,11 +849,11 @@ $EndComp
 Text Label 7631 5938 2    60   ~ 0
 MOSI
 $Comp
-L MeowMeow:CONN_02X03 J1
+L Meow-Meow-rescue:CONN_02X03-MeowMeow J1
 U 1 1 5B57970D
 P 7966 6038
 F 0 "J1" H 8016 6238 50  0000 C CNN
-F 1 "SWD" H 8016 5838 50  0000 C CNN
+F 1 "Backpack1" H 8016 5838 50  0000 C CNN
 F 2 "Pin_Headers:Pin_Header_Straight_2x03_Pitch2.54mm_SMD" H 7966 6038 50  0001 C CNN
 F 3 "" H 7966 6038 50  0001 C CNN
 	1    7966 6038
@@ -866,7 +866,7 @@ Wire Wire Line
 Wire Wire Line
 	7631 6138 7716 6138
 $Comp
-L MeowMeow:VCC #PWR021
+L Meow-Meow-rescue:VCC-MeowMeow #PWR021
 U 1 1 5B26C1A1
 P 8623 6138
 F 0 "#PWR021" H 8623 5988 50  0001 C CNN
