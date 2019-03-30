@@ -30,6 +30,10 @@ Artistas, niños, educadores, ingenieros, diseñadores, inventores, creadores ..
   Cualquier material que pueda conducir al menos un poquito de electricidad funcionará. Aquí hay algunos materiales que las personas han usado en nuestros talleres: Ketchup o salsa de tomate, Grafito a lápiz, Finger Paint, Limones, etc.
 
   Otros materiales que funcionan muy bien: plantas, monedas, cubiertos, todo lo que está mojado, la mayoría de los alimentos, papel de aluminio, agua y cientos de cosas que no hemos probado
+  
+## Manual
+
+Manual [Wiki](https://github.com/ElectronicCats/MeowMeow/wiki)
 
 ## Licence
 
