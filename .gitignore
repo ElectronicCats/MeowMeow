@@ -13,3 +13,11 @@
 .dsn
 
 \.DS_Store
+
+hardware/footprint_EC\.pretty/
+
+hardware/gerbers-beta/
+
+hardware/gerbersv1/
+
+hardware/gerbersv1_1/
