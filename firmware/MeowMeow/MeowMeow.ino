@@ -67,7 +67,8 @@ https://github.com/adafruit/Adafruit_FreeTouch
 /////////////////////////
 //#define DEBUG
 //#define DEBUG2 
-//#define DEBUG3 
+//#define DEBUG3
+//#define DEBUG_MOUSE
 
 
 #define BUFFER_LENGTH    3     // 3 bytes gives us 24 samples
@@ -412,7 +413,7 @@ void sendMouseMovementEvents() {
   if (mouseMovementCounter == 0) {
     for (int i=0; i<NUM_INPUTS; i++) {
 #ifdef DEBUG_MOUSE
-      //  Serial.println(inputs[i].isMouseMotion);  
+        Serial.println(inputs[i].isMouseMotion);  
 #endif
 
       if (inputs[i].isMouseMotion) {
