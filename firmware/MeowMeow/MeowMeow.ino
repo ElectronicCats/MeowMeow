@@ -1,6 +1,6 @@
 /************************************************************
 SPANISH
-MeowMeow.ino - v0.5
+MeowMeow.ino - v0.6
 Meow Meow - Using the Meow Meow you can make anything into a key 
 just by connecting a few alligator clips
 Andres Sabas @ Electronic Cats
@@ -31,7 +31,7 @@ Basado en el trabajo de:
 
 /************************************************************
 ENGLISH
-MeowMeow.ino - v0.5v
+MeowMeow.ino - v0.6v
 Meow Meow - Using the Meow Meow you can make anything into a key 
 just by connecting a few alligator clips
 
@@ -79,16 +79,16 @@ https://github.com/adafruit/Adafruit_FreeTouch
 #include "Adafruit_FreeTouch.h"
 #include "settings.h"
 
-Adafruit_FreeTouch qt_0 = Adafruit_FreeTouch(A0, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE);  
-Adafruit_FreeTouch qt_1 = Adafruit_FreeTouch(A1, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE);
-Adafruit_FreeTouch qt_2 = Adafruit_FreeTouch(A2, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE);
-Adafruit_FreeTouch qt_3 = Adafruit_FreeTouch(A3, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE);
-Adafruit_FreeTouch qt_4 = Adafruit_FreeTouch(A4, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE);
-Adafruit_FreeTouch qt_5 = Adafruit_FreeTouch(A5, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE);
-Adafruit_FreeTouch qt_6 = Adafruit_FreeTouch(A6, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE);
-Adafruit_FreeTouch qt_7 = Adafruit_FreeTouch(A7, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE);
-Adafruit_FreeTouch qt_8 = Adafruit_FreeTouch(A8, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE);
-Adafruit_FreeTouch qt_9 = Adafruit_FreeTouch(A9, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE);
+Adafruit_FreeTouch qt_0 = Adafruit_FreeTouch(A0, OVERSAMPLE_4, RESISTOR_20K, FREQ_MODE_NONE); // S
+Adafruit_FreeTouch qt_1 = Adafruit_FreeTouch(A1, OVERSAMPLE_4, RESISTOR_20K, FREQ_MODE_NONE); // D
+Adafruit_FreeTouch qt_2 = Adafruit_FreeTouch(A2, OVERSAMPLE_4, RESISTOR_20K, FREQ_MODE_NONE); // Arrow LEFT
+Adafruit_FreeTouch qt_3 = Adafruit_FreeTouch(A3, OVERSAMPLE_4, RESISTOR_20K, FREQ_MODE_NONE); // Arrow RIGHT
+Adafruit_FreeTouch qt_4 = Adafruit_FreeTouch(A4, OVERSAMPLE_4, RESISTOR_20K, FREQ_MODE_NONE); // Arrow DOWN
+Adafruit_FreeTouch qt_5 = Adafruit_FreeTouch(A5, OVERSAMPLE_4, RESISTOR_20K, FREQ_MODE_NONE); // Arrow UP
+Adafruit_FreeTouch qt_6 = Adafruit_FreeTouch(A6, OVERSAMPLE_4, RESISTOR_20K, FREQ_MODE_NONE); // W
+Adafruit_FreeTouch qt_7 = Adafruit_FreeTouch(A7, OVERSAMPLE_4, RESISTOR_20K, FREQ_MODE_NONE); // A
+Adafruit_FreeTouch qt_8 = Adafruit_FreeTouch(A8, OVERSAMPLE_4, RESISTOR_20K, FREQ_MODE_NONE); // Click Mouse
+Adafruit_FreeTouch qt_9 = Adafruit_FreeTouch(A9, OVERSAMPLE_4, RESISTOR_20K, FREQ_MODE_NONE); // SPACE
 
 Adafruit_FreeTouch *p[10] = { &qt_0, &qt_1, &qt_2, &qt_3, &qt_4, &qt_5, &qt_6, &qt_7, &qt_8, &qt_9 };
 
@@ -171,16 +171,17 @@ void updateMeasurementBuffers() {
 
     // make the new measurement
     long newState = (p[i]->measure());
-    boolean newMeasurement = ((newState > inputs[i].touch)? 0 : 1);
+    boolean newMeasurement = ((abs(newState - inputs[i].touch) > CALIBRATION) ? 0 : 1);
 
     #ifdef DEBUG
-      Serial.print("Index:");Serial.println(i);
-      Serial.println(p[i]->measure());
-      Serial.println(newMeasurement);
+      Serial.print(p[i]->measure());
+      Serial.print(",");
     #endif
     // invert so that true means the switch is closed
     newMeasurement = !newMeasurement; 
-    #ifdef DEBUG
+    #ifdef DEBUG2
+      Serial.print("Index:");
+      Serial.print(i);
       Serial.println(newMeasurement);
     #endif
     // store it    
@@ -506,7 +507,7 @@ void calibrate(){
   for (int i=0; i<NUM_INPUTS; i++) {
     // make a new measurement for initial calibration
     long newState = (p[i]->measure());
-    inputs[i].touch = newState + CALIBRATION;
+    inputs[i].touch = newState;
   }
 }
 
