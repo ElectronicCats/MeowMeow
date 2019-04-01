@@ -79,16 +79,16 @@ https://github.com/adafruit/Adafruit_FreeTouch
 #include "Adafruit_FreeTouch.h"
 #include "settings.h"
 
-Adafruit_FreeTouch qt_0 = Adafruit_FreeTouch(A0, OVERSAMPLE_4, RESISTOR_20K, FREQ_MODE_NONE); // S
-Adafruit_FreeTouch qt_1 = Adafruit_FreeTouch(A1, OVERSAMPLE_4, RESISTOR_20K, FREQ_MODE_NONE); // D
-Adafruit_FreeTouch qt_2 = Adafruit_FreeTouch(A2, OVERSAMPLE_4, RESISTOR_20K, FREQ_MODE_NONE); // Arrow LEFT
-Adafruit_FreeTouch qt_3 = Adafruit_FreeTouch(A3, OVERSAMPLE_4, RESISTOR_20K, FREQ_MODE_NONE); // Arrow RIGHT
-Adafruit_FreeTouch qt_4 = Adafruit_FreeTouch(A4, OVERSAMPLE_4, RESISTOR_20K, FREQ_MODE_NONE); // Arrow DOWN
-Adafruit_FreeTouch qt_5 = Adafruit_FreeTouch(A5, OVERSAMPLE_4, RESISTOR_20K, FREQ_MODE_NONE); // Arrow UP
-Adafruit_FreeTouch qt_6 = Adafruit_FreeTouch(A6, OVERSAMPLE_4, RESISTOR_20K, FREQ_MODE_NONE); // W
-Adafruit_FreeTouch qt_7 = Adafruit_FreeTouch(A7, OVERSAMPLE_4, RESISTOR_20K, FREQ_MODE_NONE); // A
-Adafruit_FreeTouch qt_8 = Adafruit_FreeTouch(A8, OVERSAMPLE_4, RESISTOR_20K, FREQ_MODE_NONE); // Click Mouse
-Adafruit_FreeTouch qt_9 = Adafruit_FreeTouch(A9, OVERSAMPLE_4, RESISTOR_20K, FREQ_MODE_NONE); // SPACE
+Adafruit_FreeTouch qt_0 = Adafruit_FreeTouch(A0, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // S
+Adafruit_FreeTouch qt_1 = Adafruit_FreeTouch(A1, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // D
+Adafruit_FreeTouch qt_2 = Adafruit_FreeTouch(A2, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Arrow LEFT
+Adafruit_FreeTouch qt_3 = Adafruit_FreeTouch(A3, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Arrow RIGHT
+Adafruit_FreeTouch qt_4 = Adafruit_FreeTouch(A4, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Arrow DOWN
+Adafruit_FreeTouch qt_5 = Adafruit_FreeTouch(A5, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Arrow UP
+Adafruit_FreeTouch qt_6 = Adafruit_FreeTouch(A6, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // W
+Adafruit_FreeTouch qt_7 = Adafruit_FreeTouch(A7, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // A
+Adafruit_FreeTouch qt_8 = Adafruit_FreeTouch(A8, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Click Mouse
+Adafruit_FreeTouch qt_9 = Adafruit_FreeTouch(A9, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // SPACE
 
 Adafruit_FreeTouch *p[10] = { &qt_0, &qt_1, &qt_2, &qt_3, &qt_4, &qt_5, &qt_6, &qt_7, &qt_8, &qt_9 };
 
