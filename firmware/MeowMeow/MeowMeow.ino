@@ -140,6 +140,7 @@ void setup() {
   calibrate();
  
   Keyboard.begin();
+  digitalWrite(LED_BUILTIN,LOW);
 }
 
 void loop() {
@@ -299,27 +300,28 @@ void initializeInputs() {
 
 // initialize digital pin LED_BUILTIN as an output.
   pinMode(LED_BUILTIN, OUTPUT);
+  digitalWrite(LED_BUILTIN,HIGH);
 
   if (! qt_0.begin())  
-    Serial.println(F("Failed to begin qt on pin A0"));
+    Serial.println(F("Failed to begin pin A0 or"));
   if (! qt_1.begin())  
-    Serial.println(F("Failed to begin qt on pin A1"));
+    Serial.println(F("Failed to begin pin A1 or D"));
   if (! qt_2.begin())  
-    Serial.println(F("Failed to begin qt on pin A2"));
+    Serial.println(F("Failed to begin pin A2 or Arrow LEFT"));
   if (! qt_3.begin())  
-    Serial.println(F("Failed to begin qt on pin A3"));
+    Serial.println(F("Failed to begin pin A3 or Arrow RIGHT"));
   if (! qt_4.begin())  
-    Serial.println(F("Failed to begin qt on pin A4"));
+    Serial.println(F("Failed to begin pin A4 or Arrow DOWN"));
   if (! qt_5.begin())  
-    Serial.println(F("Failed to begin qt on pin A5"));
+    Serial.println(F("Failed to begin pin A5 or Arrow UP"));
   if (! qt_6.begin())  
-    Serial.println(F("Failed to begin qt on pin A6"));
+    Serial.println(F("Failed to begin pin A6 or W"));
   if (! qt_7.begin())  
-    Serial.println(F("Failed to begin qt on pin A7"));
+    Serial.println(F("Failed to begin pin A7 or A"));
   if (! qt_8.begin())  
-   Serial.println(F("Failed to begin qt on pin A8"));
+   Serial.println(F("Failed to begin pin A8 or Click Mouse"));
   if (! qt_9.begin())  
-   Serial.println(F("Failed to begin qt on pin A9"));
+   Serial.println(F("Failed to begin pin A9 or SPACE"));
    
   float thresholdPerc = SWITCH_THRESHOLD_OFFSET_PERC;
   float thresholdCenterBias = SWITCH_THRESHOLD_CENTER_BIAS/50.0;
