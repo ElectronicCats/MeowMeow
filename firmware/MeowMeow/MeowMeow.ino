@@ -202,6 +202,9 @@ void updateMeasurementBuffers() {
       Serial.println(inputs[i].measurementBuffer[byteCounter]);
     #endif
   }
+  #ifdef DEBUG
+    Serial.println();
+  #endif
 }
 
 ///////////////////////////
@@ -330,7 +333,7 @@ void initializeInputs() {
   Serial.println(pressThreshold);
   Serial.println("releaseThreshold: ");
   Serial.println(releaseThreshold);
-  delay(4000);
+  delay(500);
 #endif
 
   for (int i=0; i<NUM_INPUTS; i++) {
@@ -510,5 +513,3 @@ void calibrate(){
     inputs[i].touch = newState;
   }
 }
-
-
