@@ -25,3 +25,7 @@ hardware/gerbersv1_1/
 hardware/Meow Meow\.xml
 
 Recursos/footprint/
+
+*.dcm
+
+*.csv
