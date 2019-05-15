@@ -18,8 +18,8 @@ int keyCodes[NUM_INPUTS] = {
   //     top side of the meow meow board
   's',                // pin A0 
   'd',                // pin A1
-  KEY_LEFT_ARROW,    // left arrow pad A2
-  KEY_RIGHT_ARROW,   // right arrow pad A3
+  KEY_RIGHT_ARROW,    // left arrow pad A2
+  KEY_LEFT_ARROW,   // right arrow pad A3
   KEY_DOWN_ARROW,    // down arrow pad A4
   KEY_UP_ARROW,      // up arrow pad A5
   'w',                // pin A6
