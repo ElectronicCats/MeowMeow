@@ -6,8 +6,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Meow Meow"
-Date "2018-08-19"
-Rev "1.1"
+Date "2019-04-01"
+Rev "1.2"
 Comp "Electronic Cats"
 Comment1 "Andres Sabas"
 Comment2 "[OSHW] MX000003 | Certified open source hardware | oshwa.org/cert."
@@ -636,7 +636,7 @@ U 1 1 5B071A82
 P 1835 1655
 F 0 "SW1" H 1885 1755 50  0000 L CNN
 F 1 "SW_Push" H 1835 1595 50  0000 C CNN
-F 2 "Buttons_Switches_SMD:SW_SPST_B3U-1000P-B" H 1835 1855 50  0001 C CNN
+F 2 "Buttons_Switches_SMD:SW_SPST_TL3342" H 1835 1855 50  0001 C CNN
 F 3 "" H 1835 1855 50  0000 C CNN
 	1    1835 1655
 	1    0    0    -1  

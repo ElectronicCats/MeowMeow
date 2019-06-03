@@ -1,4 +1,4 @@
-![Meow MeowLogo](https://github.com/ElectronicCats/MeowMeow/raw/master/meowmeow_logo.png)
+![Meow MeowLogo](https://github.com/ElectronicCats/MeowMeow/raw/master/Recursos/meowmeow_logo.png)
 
 ![MX0003](https://github.com/ElectronicCats/MeowMeow/blob/master/OSHW-MX0003.png?raw=true)
 
