@@ -1,6 +1,6 @@
 /************************************************************
 SPANISH
-MeowMeow.ino - v0.5
+MeowMeow.ino - v0.6
 Meow Meow - Using the Meow Meow you can make anything into a key 
 just by connecting a few alligator clips
 Andres Sabas @ Electronic Cats
@@ -31,7 +31,7 @@ Basado en el trabajo de:
 
 /************************************************************
 ENGLISH
-MeowMeow.ino - v0.5v
+MeowMeow.ino - v0.6v
 Meow Meow - Using the Meow Meow you can make anything into a key 
 just by connecting a few alligator clips
 
@@ -67,7 +67,8 @@ https://github.com/adafruit/Adafruit_FreeTouch
 /////////////////////////
 //#define DEBUG
 //#define DEBUG2 
-//#define DEBUG3 
+//#define DEBUG3
+//#define DEBUG_MOUSE
 
 
 #define BUFFER_LENGTH    3     // 3 bytes gives us 24 samples
@@ -78,16 +79,16 @@ https://github.com/adafruit/Adafruit_FreeTouch
 #include "Adafruit_FreeTouch.h"
 #include "settings.h"
 
-Adafruit_FreeTouch qt_0 = Adafruit_FreeTouch(A0, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE);  
-Adafruit_FreeTouch qt_1 = Adafruit_FreeTouch(A1, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE);
-Adafruit_FreeTouch qt_2 = Adafruit_FreeTouch(A2, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE);
-Adafruit_FreeTouch qt_3 = Adafruit_FreeTouch(A3, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE);
-Adafruit_FreeTouch qt_4 = Adafruit_FreeTouch(A4, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE);
-Adafruit_FreeTouch qt_5 = Adafruit_FreeTouch(A5, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE);
-Adafruit_FreeTouch qt_6 = Adafruit_FreeTouch(A6, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE);
-Adafruit_FreeTouch qt_7 = Adafruit_FreeTouch(A7, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE);
-Adafruit_FreeTouch qt_8 = Adafruit_FreeTouch(A8, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE);
-Adafruit_FreeTouch qt_9 = Adafruit_FreeTouch(A9, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE);
+Adafruit_FreeTouch qt_0 = Adafruit_FreeTouch(A0, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // S
+Adafruit_FreeTouch qt_1 = Adafruit_FreeTouch(A1, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // D
+Adafruit_FreeTouch qt_2 = Adafruit_FreeTouch(A2, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Arrow LEFT
+Adafruit_FreeTouch qt_3 = Adafruit_FreeTouch(A3, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Arrow RIGHT
+Adafruit_FreeTouch qt_4 = Adafruit_FreeTouch(A4, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Arrow DOWN
+Adafruit_FreeTouch qt_5 = Adafruit_FreeTouch(A5, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Arrow UP
+Adafruit_FreeTouch qt_6 = Adafruit_FreeTouch(A6, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // W
+Adafruit_FreeTouch qt_7 = Adafruit_FreeTouch(A7, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // A
+Adafruit_FreeTouch qt_8 = Adafruit_FreeTouch(A8, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Click Mouse
+Adafruit_FreeTouch qt_9 = Adafruit_FreeTouch(A9, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // SPACE
 
 Adafruit_FreeTouch *p[10] = { &qt_0, &qt_1, &qt_2, &qt_3, &qt_4, &qt_5, &qt_6, &qt_7, &qt_8, &qt_9 };
 
@@ -139,6 +140,7 @@ void setup() {
   calibrate();
  
   Keyboard.begin();
+  digitalWrite(LED_BUILTIN,LOW);
 }
 
 void loop() {
@@ -170,16 +172,17 @@ void updateMeasurementBuffers() {
 
     // make the new measurement
     long newState = (p[i]->measure());
-    boolean newMeasurement = ((newState > inputs[i].touch)? 0 : 1);
+    boolean newMeasurement = ((abs(newState - inputs[i].touch) > CALIBRATION) ? 0 : 1);
 
     #ifdef DEBUG
-      Serial.print("Index:");Serial.println(i);
-      Serial.println(p[i]->measure());
-      Serial.println(newMeasurement);
+      Serial.print(p[i]->measure());
+      Serial.print(",");
     #endif
     // invert so that true means the switch is closed
     newMeasurement = !newMeasurement; 
-    #ifdef DEBUG
+    #ifdef DEBUG2
+      Serial.print("Index:");
+      Serial.print(i);
       Serial.println(newMeasurement);
     #endif
     // store it    
@@ -200,6 +203,9 @@ void updateMeasurementBuffers() {
       Serial.println(inputs[i].measurementBuffer[byteCounter]);
     #endif
   }
+  #ifdef DEBUG
+    Serial.println();
+  #endif
 }
 
 ///////////////////////////
@@ -294,27 +300,28 @@ void initializeInputs() {
 
 // initialize digital pin LED_BUILTIN as an output.
   pinMode(LED_BUILTIN, OUTPUT);
+  digitalWrite(LED_BUILTIN,HIGH);
 
   if (! qt_0.begin())  
-    Serial.println(F("Failed to begin qt on pin A0"));
+    Serial.println(F("Failed to begin pin A0 or"));
   if (! qt_1.begin())  
-    Serial.println(F("Failed to begin qt on pin A1"));
+    Serial.println(F("Failed to begin pin A1 or D"));
   if (! qt_2.begin())  
-    Serial.println(F("Failed to begin qt on pin A2"));
+    Serial.println(F("Failed to begin pin A2 or Arrow LEFT"));
   if (! qt_3.begin())  
-    Serial.println(F("Failed to begin qt on pin A3"));
+    Serial.println(F("Failed to begin pin A3 or Arrow RIGHT"));
   if (! qt_4.begin())  
-    Serial.println(F("Failed to begin qt on pin A4"));
+    Serial.println(F("Failed to begin pin A4 or Arrow DOWN"));
   if (! qt_5.begin())  
-    Serial.println(F("Failed to begin qt on pin A5"));
+    Serial.println(F("Failed to begin pin A5 or Arrow UP"));
   if (! qt_6.begin())  
-    Serial.println(F("Failed to begin qt on pin A6"));
+    Serial.println(F("Failed to begin pin A6 or W"));
   if (! qt_7.begin())  
-    Serial.println(F("Failed to begin qt on pin A7"));
+    Serial.println(F("Failed to begin pin A7 or A"));
   if (! qt_8.begin())  
-   Serial.println(F("Failed to begin qt on pin A8"));
+   Serial.println(F("Failed to begin pin A8 or Click Mouse"));
   if (! qt_9.begin())  
-   Serial.println(F("Failed to begin qt on pin A9"));
+   Serial.println(F("Failed to begin pin A9 or SPACE"));
    
   float thresholdPerc = SWITCH_THRESHOLD_OFFSET_PERC;
   float thresholdCenterBias = SWITCH_THRESHOLD_CENTER_BIAS/50.0;
@@ -328,7 +335,7 @@ void initializeInputs() {
   Serial.println(pressThreshold);
   Serial.println("releaseThreshold: ");
   Serial.println(releaseThreshold);
-  delay(4000);
+  delay(500);
 #endif
 
   for (int i=0; i<NUM_INPUTS; i++) {
@@ -412,7 +419,7 @@ void sendMouseMovementEvents() {
   if (mouseMovementCounter == 0) {
     for (int i=0; i<NUM_INPUTS; i++) {
 #ifdef DEBUG_MOUSE
-      //  Serial.println(inputs[i].isMouseMotion);  
+        Serial.println(inputs[i].isMouseMotion);  
 #endif
 
       if (inputs[i].isMouseMotion) {
@@ -505,8 +512,6 @@ void calibrate(){
   for (int i=0; i<NUM_INPUTS; i++) {
     // make a new measurement for initial calibration
     long newState = (p[i]->measure());
-    inputs[i].touch = newState + CALIBRATION;
+    inputs[i].touch = newState;
   }
 }
-
-

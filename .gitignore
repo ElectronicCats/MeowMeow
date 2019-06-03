@@ -26,6 +26,7 @@ hardware/Meow Meow\.xml
 
 Recursos/footprint/
 
-*.dcm
 
+SVG PCB/
+*.dcm
 *.csv
