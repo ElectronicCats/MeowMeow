@@ -4,6 +4,10 @@
 
 **[OSHW] MX0003 | Certified open source hardware |** [oshwa.org/cert.](https://www.oshwa.org/cert)
 
+<a href="https://electroniccats.com/producto/meowmeow/">
+  <img src="https://electroniccats.com/wp-content/uploads/badge_store.png" width="200" height="104" />
+</a>
+
 
   Meow Meow es un kit que convierte los objetos cotidianos en paneles táctiles haciéndolos interactivos, y así, de ésta manera incluso permite la conexión de éstos objetos a internet.
 
