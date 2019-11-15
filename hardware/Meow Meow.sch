@@ -1,13 +1,13 @@
 EESchema Schematic File Version 4
 LIBS:Meow Meow-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Meow Meow"
-Date "2019-04-01"
-Rev "1.2"
+Date "2019-11-14"
+Rev "1.3"
 Comp "Electronic Cats"
 Comment1 "Andres Sabas"
 Comment2 "[OSHW] MX000003 | Certified open source hardware | oshwa.org/cert."
@@ -271,18 +271,6 @@ F 3 "" H 9831 3431 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Meow-Meow-rescue:R_Small-MeowMeow R1
-U 1 1 5AD9C752
-P 2215 1655
-F 0 "R1" V 2280 1580 50  0000 L CNN
-F 1 "330" V 2150 1585 50  0000 L CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" H 2215 1655 50  0001 C CNN
-F 3 "" H 2215 1655 50  0000 C CNN
-F 4 "B3U-1000P" V 2215 1655 60  0001 C CNN "Part#"
-	1    2215 1655
-	0    -1   -1   0   
-$EndComp
-$Comp
 L Meow-Meow-rescue:CONN_01X01_FEMALE-MeowMeow P5
 U 1 1 5AD9D9AC
 P 9795 4995
@@ -393,7 +381,7 @@ F 3 "3.01 USD" H 3195 3255 50  0001 L BNN
 F 4 "Microchip" H 3195 3255 50  0001 L BNN "Campo4"
 F 5 "TQFP-48 Microchip" H 3195 3255 50  0001 L BNN "Campo5"
 F 6 "SAMD21G Series 256 kB Flash 32 kB SRAM 48 MHz 32-Bit Microcontroller - TQFP-48" H 3195 3255 50  0001 L BNN "Campo6"
-F 7 "ATSAMD21G15A-AU" H 3195 3255 50  0001 L BNN "Part#"
+F 7 "ATSAMD21G18A-AU" H 3195 3255 50  0001 L BNN "Part#"
 	1    3195 3255
 	1    0    0    -1  
 $EndComp
@@ -403,9 +391,9 @@ U 1 1 5AFC70FD
 P 7935 3360
 F 0 "P9" H 8260 3235 50  0000 C CNN
 F 1 "USB_Micro" H 7935 3560 50  0000 C CNN
-F 2 "Connector_USB:USB_Micro-B_Wuerth_629105150521" V 7885 3260 50  0001 C CNN
+F 2 "Connectors:U254051N4BH806" V 7885 3260 50  0001 C CNN
 F 3 "" V 7885 3260 50  0000 C CNN
-F 4 "629105150521" H 7935 3360 60  0001 C CNN "Part#"
+F 4 "U254-051N-4BH806" H 7935 3360 60  0001 C CNN "Part#"
 	1    7935 3360
 	0    1    1    0   
 $EndComp
@@ -631,17 +619,6 @@ F 3 "" H 9335 5930 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Meow-Meow-rescue:SW_Push-MeowMeow SW1
-U 1 1 5B071A82
-P 1835 1655
-F 0 "SW1" H 1885 1755 50  0000 L CNN
-F 1 "SW_Push" H 1835 1595 50  0000 C CNN
-F 2 "Buttons_Switches_SMD:SW_SPST_TL3342" H 1835 1855 50  0001 C CNN
-F 3 "" H 1835 1855 50  0000 C CNN
-	1    1835 1655
-	1    0    0    -1  
-$EndComp
-$Comp
 L Meow-Meow-rescue:GND-MeowMeow #PWR020
 U 1 1 5B0727F0
 P 1590 1675
@@ -732,8 +709,6 @@ Wire Wire Line
 	4025 4355 4025 4455
 Wire Wire Line
 	3895 4355 4025 4355
-Wire Wire Line
-	2495 1655 2315 1655
 Wire Wire Line
 	2495 4855 2295 4855
 Wire Wire Line
@@ -827,8 +802,6 @@ Wire Notes Line
 	6990 5490 11235 5490
 Wire Notes Line
 	11215 5515 11215 5520
-Wire Wire Line
-	2115 1655 2035 1655
 Wire Wire Line
 	1635 1655 1590 1655
 Wire Wire Line
@@ -937,4 +910,17 @@ Wire Wire Line
 	9831 3395 9831 3431
 Wire Wire Line
 	9385 3395 9831 3395
+$Comp
+L Meow-Meow-rescue:SW_Push-MeowMeow SW1
+U 1 1 5B071A82
+P 1835 1655
+F 0 "SW1" H 1885 1755 50  0000 L CNN
+F 1 "SW_Push" H 1835 1595 50  0000 C CNN
+F 2 "Buttons_Switches_SMD:SW_SPST_TL3342" H 1835 1855 50  0001 C CNN
+F 3 "" H 1835 1855 50  0000 C CNN
+	1    1835 1655
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2035 1655 2495 1655
 $EndSCHEMATC
