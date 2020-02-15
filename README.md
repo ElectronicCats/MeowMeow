@@ -9,15 +9,13 @@
 </a>
 
 
-  Meow Meow es un kit que convierte los objetos cotidianos en paneles táctiles haciéndolos interactivos, y así, de ésta manera incluso permite la conexión de éstos objetos a internet.
+  Meow Meow es una tarjeta electrónica diseñada por Electronic Cats  que simula algunas teclas configurables del teclado y mouse.  La Meow Meow tiene la característica de poder conectar cualquier material que conduzca  la electricidad convirtiendo estos objetos en paneles táctiles. 
 
-  Es un simple kit de experimentos para principiantes y expertos que quieren interactuar el mundo real con la tecnología, puede ser en artes plásticas, artes visuales, música, neumática, deporte, ingeniería, incluso rehabilitación física y todo lo que permite interacción hombre-tecnología. Meow Meow fue diseñado por Electronic Cats.
+  Es un kit de experimentos para principiantes y expertos que buscan interactuar entre mundo real y la tecnología. La meow meow puede cubrir las áreas de artes plásticas, artes visuales, música, deporte, ingeniería e  incluso rehabilitación física.
 
-## ¿Qué puedo hacer?
+## ¿Para quién es Meow Meow? 
 
-  ¡Eso depende de ti! Primero, carga un programa de computadora o cualquier página web. Digamos que cargas un piano. Luego, en lugar de usar los botones del teclado de la computadora para tocar el piano, puede conectar Meow Meow a algo divertido, como bananas, y las bananas se convierten en las teclas de tu piano.
-  O digamos que busca un juego Pacman en línea y dibuje un joystick con un lápiz. Entonces puedes jugar a Pacman tocando el dibujo.
-El kit incluye todo lo que necesita: Meow Meow, cable caimán, cable USB.
+  Personas de 6 años en adelante, educadores, artistas, ingenieros, diseñadores, inventores y creadores. 
 
 ## ¿Cómo funciona? 
 
@@ -25,15 +23,20 @@ El kit incluye todo lo que necesita: Meow Meow, cable caimán, cable USB.
 
   Cuando tocas la manzana, haces una conexión, y Meow Meow envía a la computadora un mensaje de teclado. La computadora ve a Meow Meow como un teclado (o mouse) comun y corriente. Por lo tanto, funciona con todos los programas, sistemas operativos y páginas web, ya que todos los programas y páginas web reciben información del teclado y el mouse.
 
-## ¿Para quién es Meow Meow? 
-
-Artistas, niños, educadores, ingenieros, diseñadores, inventores, creadores ... Realmente es para todos. 
-
 ## ¿Qué materiales funcionan con Meow Meow? 
 
-  Cualquier material que pueda conducir al menos un poquito de electricidad funcionará. Aquí hay algunos materiales que las personas han usado en nuestros talleres: Ketchup o salsa de tomate, Grafito a lápiz, Finger Paint, Limones, etc.
+  Cualquier material que pueda conducir un poco de electricidad funcionará. Aquí hay algunos materiales que las personas han usado en nuestros talleres: Ketchup o salsa de tomate, Grafito a lápiz, Finger Paint, Limones, etc.
 
   Otros materiales que funcionan muy bien: plantas, monedas, cubiertos, todo lo que está mojado, la mayoría de los alimentos, papel de aluminio, agua y cientos de cosas que no hemos probado
+
+## ¿Qué puedo hacer?
+
+  ¡Eso depende de ti! Primero, cargue un programa de computadora o cualquier página web. Digamos que cargas un piano. Luego, en lugar de usar los botones del teclado de la computadora para tocar el piano, puede conectar Meow Meow a algo divertido, como bananas, y las bananas se convierten en las teclas de su piano. 
+
+  O digamos que busca un juego Pacman en línea y dibuje un joystick con un lápiz. Entonces puedes jugar a Pacman tocando el dibujo. 
+
+  El kit incluye todo lo que necesita: Meow Meow, cable caiman, cable USB. 
+
   
 ## Manual
 
