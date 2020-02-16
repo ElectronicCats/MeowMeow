@@ -72,7 +72,7 @@ https://github.com/adafruit/Adafruit_FreeTouch
 
 
 #define BUFFER_LENGTH    3     // 3 bytes gives us 24 samples
-#define NUM_INPUTS       10    // 10 on the front
+#define NUM_INPUTS       11    // 11 on the front
 
 #include "Keyboard.h"
 #include <Mouse.h>
@@ -84,8 +84,14 @@ Adafruit_FreeTouch qt_1 = Adafruit_FreeTouch(A1, OVERSAMPLE_4, RESISTOR_50K, FRE
 Adafruit_FreeTouch qt_2 = Adafruit_FreeTouch(A2, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Arrow LEFT
 Adafruit_FreeTouch qt_3 = Adafruit_FreeTouch(A3, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Arrow RIGHT
 Adafruit_FreeTouch qt_4 = Adafruit_FreeTouch(A4, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Arrow DOWN
+Adafruit_FreeTouch qt_5 = Adafruit_FreeTouch(A5, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Arrow DOWN
+Adafruit_FreeTouch qt_6 = Adafruit_FreeTouch(A6, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Arrow DOWN
+Adafruit_FreeTouch qt_7 = Adafruit_FreeTouch(A7, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Arrow DOWN
+Adafruit_FreeTouch qt_8 = Adafruit_FreeTouch(16, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Arrow DOWN
+Adafruit_FreeTouch qt_9 = Adafruit_FreeTouch(22, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Arrow DOWN
+Adafruit_FreeTouch qt_10 = Adafruit_FreeTouch(23, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Arrow DOWN
 
-Adafruit_FreeTouch *p[10] = { &qt_0, &qt_1, &qt_2, &qt_3, &qt_4 };
+Adafruit_FreeTouch *p[11] = { &qt_0, &qt_1, &qt_2, &qt_3, &qt_4, &qt_5, &qt_6 , &qt_7, &qt_8, &qt_9, &qt_10};
 
 byte byteCounter = 0;
 byte bitCounter = 0;
@@ -119,8 +125,8 @@ MeowMeowInput inputs[NUM_INPUTS];
 // Pin Numbers
 // input pin numbers for pre-order production board
 int pinNumbers[NUM_INPUTS] = {
-  A0, A1, A2, A3, A4     // top of meow meow board
-       // left side of female header, KEYBOARD 
+  A0, A1, A2, A3, A4, A5,     // top of meow meow board
+  A6, A7, 16, 22, 23     // left side of female header, KEYBOARD 
 };
     
 void setup() {
@@ -307,6 +313,18 @@ void initializeInputs() {
     Serial.println(F("Failed to begin pin A3 or Arrow RIGHT"));
   if (! qt_4.begin())  
     Serial.println(F("Failed to begin pin A4 or Arrow DOWN"));
+  if (! qt_5.begin())  
+    Serial.println(F("Failed to begin pin A5 or Arrow DOWN"));
+  if (! qt_6.begin())  
+    Serial.println(F("Failed to begin pin A5 or Arrow DOWN"));
+  if (! qt_7.begin())  
+    Serial.println(F("Failed to begin pin A5 or Arrow DOWN"));
+  if (! qt_8.begin())  
+    Serial.println(F("Failed to begin pin A5 or Arrow DOWN"));
+  if (! qt_9.begin())  
+    Serial.println(F("Failed to begin pin A5 or Arrow DOWN"));
+  if (! qt_10.begin())  
+    Serial.println(F("Failed to begin pin A5 or Arrow DOWN"));
 
    
   float thresholdPerc = SWITCH_THRESHOLD_OFFSET_PERC;

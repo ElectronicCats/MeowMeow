@@ -26,6 +26,7 @@ int keyCodes[NUM_INPUTS] = {
   'a',                // pin A7
   MOUSE_LEFT,        // click button pad A8
   ' ',               // space button pad A9
+  'b',               // space button pad A9
 };
 
 ///////////////////////////
