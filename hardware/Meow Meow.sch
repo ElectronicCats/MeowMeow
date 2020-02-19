@@ -760,4 +760,5 @@ Wire Wire Line
 Wire Wire Line
 	8315 1536 8315 1390
 NoConn ~ 2815 2545
+NoConn ~ 10516 5103
 $EndSCHEMATC
