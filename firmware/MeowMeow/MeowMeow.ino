@@ -74,6 +74,12 @@ https://github.com/adafruit/Adafruit_FreeTouch
 #define BUFFER_LENGTH    3     // 3 bytes gives us 24 samples
 #define NUM_INPUTS       10    // 10 on the front
 
+// id numbers for mouse movement inputs (used in settings.h)
+#define MOUSE_MOVE_UP       -1 
+#define MOUSE_MOVE_DOWN     -2
+#define MOUSE_MOVE_LEFT     -3
+#define MOUSE_MOVE_RIGHT    -4
+
 #include "Keyboard.h"
 #include <Mouse.h>
 #include "Adafruit_FreeTouch.h"
