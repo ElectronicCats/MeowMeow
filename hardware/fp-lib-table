@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name MeowMeow)(type KiCad)(uri "$(KIPRJMOD)/Library/MeowMeow.pretty")(options "")(descr ""))
+  (lib (name hardware)(type KiCad)(uri ${KIPRJMOD}/Library/MeowMeow.pretty/hardware.pretty)(options "")(descr ""))
 )

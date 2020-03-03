@@ -5,12 +5,12 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Meow Meow Mini"
-Date "2019-11-14"
+Date "2020-03-02"
 Rev "1.1"
 Comp "Electronic Cats"
 Comment1 "Andres Sabas"
-Comment2 "[OSHW] MX000003 | Certified open source hardware | oshwa.org/cert."
-Comment3 ""
+Comment2 "Eduardo Contreras"
+Comment3 "[OSHW] MX000003 | Certified open source hardware | oshwa.org/cert."
 Comment4 ""
 $EndDescr
 Text Label 3879 2945 0    60   ~ 0
@@ -19,36 +19,25 @@ Text Label 3870 2845 0    60   ~ 0
 D-
 Text Label 3854 1745 0    60   ~ 0
 Y0
-Text Label 3852 1945 0    60   ~ 0
+Text Label 3860 2745 0    60   ~ 0
 Y2
-Text Label 3857 2545 0    60   ~ 0
+Text Label 3855 2145 0    60   ~ 0
 Y10
-NoConn ~ 7635 3460
-$Comp
-L Meow-Meow-rescue:GND-MeowMeow #PWR01
-U 1 1 5AD96563
-P 7530 3600
-F 0 "#PWR01" H 7530 3350 50  0001 C CNN
-F 1 "GND" H 7530 3450 50  0000 C CNN
-F 2 "" H 7530 3600 50  0000 C CNN
-F 3 "" H 7530 3600 50  0000 C CNN
-	1    7530 3600
-	1    0    0    -1  
-$EndComp
+NoConn ~ 8340 3315
 $Comp
 L Meow-Meow-rescue:VCC-MeowMeow #PWR02
 U 1 1 5AD96587
-P 7180 3135
-F 0 "#PWR02" H 7180 2985 50  0001 C CNN
-F 1 "VCC" H 7180 3285 50  0000 C CNN
-F 2 "" H 7180 3135 50  0000 C CNN
-F 3 "" H 7180 3135 50  0000 C CNN
-	1    7180 3135
+P 8730 2815
+F 0 "#PWR02" H 8730 2665 50  0001 C CNN
+F 1 "VCC" H 8730 2965 50  0000 C CNN
+F 2 "" H 8730 2815 50  0000 C CNN
+F 3 "" H 8730 2815 50  0000 C CNN
+	1    8730 2815
 	1    0    0    -1  
 $EndComp
-Text Label 7525 3260 0    60   ~ 0
+Text Label 8340 3215 0    60   ~ 0
 D-
-Text Label 7525 3360 0    60   ~ 0
+Text Label 8340 3115 0    60   ~ 0
 D+
 Text Notes 2645 765  0    60   ~ 0
 MICROCONTROLLER SAMD11
@@ -205,30 +194,19 @@ F 3 "" H 10055 3515 50  0000 C CNN
 $EndComp
 Text Label 10790 3515 0    60   ~ 0
 LED
-Text Label 8755 3395 2    60   ~ 0
+Text Label 9055 3425 0    60   ~ 0
 SWDIO
-Text Label 9470 3495 0    60   ~ 0
+Text Label 9055 3325 0    60   ~ 0
 SWCLK
 $Comp
 L Meow-Meow-rescue:+3.3V-MeowMeow #PWR06
 U 1 1 5AD9BCA9
-P 8354 3477
-F 0 "#PWR06" H 8354 3327 50  0001 C CNN
-F 1 "+3.3V" H 8354 3617 50  0000 C CNN
-F 2 "" H 8354 3477 50  0000 C CNN
-F 3 "" H 8354 3477 50  0000 C CNN
-	1    8354 3477
-	1    0    0    -1  
-$EndComp
-$Comp
-L Meow-Meow-rescue:GND-MeowMeow #PWR07
-U 1 1 5AD9BD50
-P 9831 3431
-F 0 "#PWR07" H 9831 3181 50  0001 C CNN
-F 1 "GND" H 9836 3281 50  0000 C CNN
-F 2 "" H 9831 3431 50  0000 C CNN
-F 3 "" H 9831 3431 50  0000 C CNN
-	1    9831 3431
+P 9200 3160
+F 0 "#PWR06" H 9200 3010 50  0001 C CNN
+F 1 "+3.3V" H 9200 3300 50  0000 C CNN
+F 2 "" H 9200 3160 50  0000 C CNN
+F 3 "" H 9200 3160 50  0000 C CNN
+	1    9200 3160
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -280,41 +258,29 @@ $EndComp
 $Comp
 L Meow-Meow-rescue:GND-MeowMeow #PWR014
 U 1 1 5AE3E770
-P 8035 3760
-F 0 "#PWR014" H 8035 3510 50  0001 C CNN
-F 1 "GND" H 8035 3610 50  0000 C CNN
-F 2 "" H 8035 3760 50  0000 C CNN
-F 3 "" H 8035 3760 50  0000 C CNN
-	1    8035 3760
+P 8040 3665
+F 0 "#PWR014" H 8040 3415 50  0001 C CNN
+F 1 "GND" H 8040 3515 50  0000 C CNN
+F 2 "" H 8040 3665 50  0000 C CNN
+F 3 "" H 8040 3665 50  0000 C CNN
+	1    8040 3665
 	1    0    0    -1  
 $EndComp
-Text Label 3849 2045 0    60   ~ 0
+Text Label 3860 2645 0    60   ~ 0
 Y3
 Text Label 2751 2145 2    60   ~ 0
 SWCLK
 Text Label 2749 2245 2    60   ~ 0
 SWDIO
-$Comp
-L Meow-Meow-rescue:USB_OTG-MeowMeow P9
-U 1 1 5AFC70FD
-P 7935 3360
-F 0 "P9" H 8260 3235 50  0000 C CNN
-F 1 "USB_Micro" H 7935 3560 50  0000 C CNN
-F 2 "Connectors:U254051N4BH806" V 7885 3260 50  0001 C CNN
-F 3 "" V 7885 3260 50  0000 C CNN
-F 4 "U254-051N-4BH806" H 7935 3360 60  0001 C CNN "Part#"
-	1    7935 3360
-	0    1    1    0   
-$EndComp
-Text Label 3850 1845 0    60   ~ 0
+Text Label 3850 2045 0    60   ~ 0
 Y1
-Text Label 3852 2145 0    60   ~ 0
+Text Label 3860 2445 0    60   ~ 0
 Y4
-Text Label 3853 2245 0    60   ~ 0
-Y5
 Text Label 3855 2345 0    60   ~ 0
+Y5
+Text Label 3850 1945 0    60   ~ 0
 Y6
-Text Label 3854 2445 0    60   ~ 0
+Text Label 3850 1845 0    60   ~ 0
 Y7
 $Comp
 L Meow-Meow-rescue:+3.3V-MeowMeow #PWR016
@@ -377,7 +343,7 @@ U 1 1 5AFCFBCE
 P 8236 5560
 F 0 "P8" H 8236 5660 60  0000 C CNN
 F 1 "MOUSE_LEFT" H 8236 5460 60  0000 C CNN
-F 2 "Connectors_EC:SEWALLI_renew" H 8236 5560 60  0001 C CNN
+F 2 "MeowMeow:SEWALLI_renew" H 8236 5560 60  0001 C CNN
 F 3 "" H 8236 5560 60  0001 C CNN
 	1    8236 5560
 	0    -1   -1   0   
@@ -415,13 +381,13 @@ $EndComp
 $Comp
 L Device:Fuse_Small F1
 U 1 1 5AFD1CE2
-P 7425 3160
-F 0 "F1" H 7425 3100 50  0000 C CNN
-F 1 "0.5A" H 7425 3220 50  0000 C CNN
-F 2 "Resistor_SMD:R_1812_4532Metric_Pad1.30x3.40mm_HandSolder" H 7425 3160 50  0001 C CNN
-F 3 "" H 7425 3160 50  0000 C CNN
-F 4 "0ZCG0030FF2C" H 7425 3160 60  0001 C CNN "Part#"
-	1    7425 3160
+P 8500 2915
+F 0 "F1" H 8500 2855 50  0000 C CNN
+F 1 "0.5A" H 8500 2975 50  0000 C CNN
+F 2 "Resistor_SMD:R_1812_4532Metric_Pad1.30x3.40mm_HandSolder" H 8500 2915 50  0001 C CNN
+F 3 "" H 8500 2915 50  0000 C CNN
+F 4 "0ZCG0030FF2C" H 8500 2915 60  0001 C CNN "Part#"
+	1    8500 2915
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -435,10 +401,6 @@ F 3 "" H 1121 1718 50  0000 C CNN
 	1    1121 1718
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7180 3160 7180 3135
-Wire Wire Line
-	7325 3160 7180 3160
 Wire Wire Line
 	8536 5655 8536 5915
 Wire Wire Line
@@ -496,47 +458,14 @@ Wire Wire Line
 	10376 5630 10376 5910
 Wire Wire Line
 	10681 5630 10681 5910
-Wire Wire Line
-	7635 3160 7525 3160
-Wire Wire Line
-	7635 3260 7525 3260
-Wire Wire Line
-	7635 3360 7525 3360
-Wire Wire Line
-	7530 3560 7530 3600
-Wire Wire Line
-	7635 3560 7530 3560
 Wire Notes Line
 	11215 5515 11215 5520
 Wire Wire Line
 	1166 1698 1121 1698
 Wire Wire Line
 	1121 1698 1121 1718
-Wire Wire Line
-	8885 3395 8755 3395
 Text Label 8536 5915 3    60   ~ 0
 Y7
-$Comp
-L Connector_Generic:Conn_02x02_Counter_Clockwise J3
-U 1 1 5B590A39
-P 9085 3395
-F 0 "J3" H 9135 3495 50  0000 C CNN
-F 1 "SWD" H 9135 3195 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 9085 3395 50  0001 C CNN
-F 3 "" H 9085 3395 50  0001 C CNN
-	1    9085 3395
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9385 3495 9470 3495
-Wire Wire Line
-	8354 3495 8354 3477
-Wire Wire Line
-	8354 3495 8885 3495
-Wire Wire Line
-	9831 3395 9831 3431
-Wire Wire Line
-	9385 3395 9831 3395
 $Comp
 L Meow-Meow-rescue:SW_Push-MeowMeow SW1
 U 1 1 5B071A82
@@ -583,28 +512,10 @@ Wire Wire Line
 	3815 1745 3854 1745
 Wire Wire Line
 	3815 1845 3850 1845
-Wire Wire Line
-	3815 1945 3852 1945
-Wire Wire Line
-	3815 2045 3849 2045
-Wire Wire Line
-	3815 2145 3852 2145
-Wire Wire Line
-	3815 2245 3853 2245
-Wire Wire Line
-	3815 2445 3854 2445
-Wire Wire Line
-	3815 2345 3855 2345
-Text Label 3861 2645 0    50   ~ 0
+Text Label 3855 2245 0    50   ~ 0
 Y12
-Text Label 3854 2745 0    50   ~ 0
+Text Label 3860 2545 0    50   ~ 0
 Y13
-Wire Wire Line
-	3815 2545 3857 2545
-Wire Wire Line
-	3815 2645 3861 2645
-Wire Wire Line
-	3815 2745 3854 2745
 Wire Wire Line
 	3815 2945 3879 2945
 Wire Wire Line
@@ -649,8 +560,6 @@ Text Label 7479 5820 3    60   ~ 0
 Y13
 Wire Wire Line
 	7479 5595 7479 5820
-Wire Wire Line
-	8030 1290 8231 1290
 $Comp
 L Regulator_Linear:AP2112K-3.3 U2
 U 1 1 5E6AF373
@@ -660,18 +569,6 @@ F 1 "AP2112K-3.3" H 8615 1641 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-5" H 8615 1715 50  0001 C CNN
 F 3 "https://www.diodes.com/assets/Datasheets/AP2112.pdf" H 8615 1490 50  0001 C CNN
 	1    8615 1390
-	1    0    0    -1  
-$EndComp
-$Comp
-L Meow-Meow-rescue:C_Small-MeowMeow C5
-U 1 1 5AD98EFB
-P 9020 1455
-F 0 "C5" H 9030 1525 50  0000 L CNN
-F 1 "0.1uF" H 8857 1378 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9020 1455 50  0001 C CNN
-F 3 "" H 9020 1455 50  0000 C CNN
-F 4 "885012207072" H 9020 1455 60  0001 C CNN "Part#"
-	1    9020 1455
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -708,57 +605,101 @@ F 3 "" H 9255 1630 50  0000 C CNN
 	1    9255 1630
 	1    0    0    -1  
 $EndComp
-$Comp
-L Meow-Meow-rescue:GND-MeowMeow #PWR013
-U 1 1 5ADA141E
-P 9020 1630
-F 0 "#PWR013" H 9020 1380 50  0001 C CNN
-F 1 "GND" H 9020 1480 50  0000 C CNN
-F 2 "" H 9020 1630 50  0000 C CNN
-F 3 "" H 9020 1630 50  0000 C CNN
-	1    9020 1630
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	9255 1555 9255 1630
-Wire Wire Line
-	9020 1555 9020 1630
 Connection ~ 9255 1290
 Wire Wire Line
 	9255 1290 9255 1355
-Connection ~ 9020 1290
-Wire Wire Line
-	9020 1355 9020 1290
 Wire Wire Line
 	9595 1290 9595 1225
 Wire Wire Line
-	8915 1290 9020 1290
-Wire Wire Line
 	9255 1290 9595 1290
-Wire Wire Line
-	9020 1290 9255 1290
+NoConn ~ 2815 2545
+NoConn ~ 10516 5103
 $Comp
-L Device:R_Small R1
-U 1 1 5E6DB2BC
-P 8231 1429
-F 0 "R1" H 8251 1518 50  0000 L CNN
-F 1 "10K" H 8140 1302 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8231 1429 50  0001 C CNN
-F 3 "~" H 8231 1429 50  0001 C CNN
-	1    8231 1429
+L Connector:Conn_01x04_Male J2
+U 1 1 5E5E0F1C
+P 8855 3325
+F 0 "J2" H 8963 3606 50  0000 C CNN
+F 1 "SWD" H 8963 3515 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 8855 3325 50  0001 C CNN
+F 3 "~" H 8855 3325 50  0001 C CNN
+	1    8855 3325
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8231 1329 8231 1290
-Connection ~ 8231 1290
+	9200 3605 9200 3525
 Wire Wire Line
-	8231 1290 8315 1290
+	9200 3525 9055 3525
+$Comp
+L Meow-Meow-rescue:GND-MeowMeow #PWR07
+U 1 1 5AD9BD50
+P 9200 3605
+F 0 "#PWR07" H 9200 3355 50  0001 C CNN
+F 1 "GND" H 9205 3455 50  0000 C CNN
+F 2 "" H 9200 3605 50  0000 C CNN
+F 3 "" H 9200 3605 50  0000 C CNN
+	1    9200 3605
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	8231 1529 8231 1536
+	9200 3160 9200 3225
 Wire Wire Line
-	8231 1536 8315 1536
+	9200 3225 9055 3225
+$Comp
+L Connector:USB_B_Micro J1
+U 1 1 5E5EF3EF
+P 8040 3115
+F 0 "J1" H 8097 3582 50  0000 C CNN
+F 1 "USB_B_Micro" H 8097 3491 50  0000 C CNN
+F 2 "Connectors:U254051N4BH806" H 8190 3065 50  0001 C CNN
+F 3 "~" H 8190 3065 50  0001 C CNN
+F 4 "U254051N4BH806" H 8040 3115 50  0001 C CNN "manf#"
+	1    8040 3115
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	8315 1536 8315 1390
-NoConn ~ 2815 2545
-NoConn ~ 10516 5103
+	8040 3665 8040 3580
+Wire Wire Line
+	8040 3580 7940 3580
+Wire Wire Line
+	7940 3580 7940 3515
+Connection ~ 8040 3580
+Wire Wire Line
+	8040 3580 8040 3515
+Wire Wire Line
+	8400 2915 8340 2915
+Wire Wire Line
+	8730 2815 8730 2915
+Wire Wire Line
+	8730 2915 8600 2915
+Wire Wire Line
+	8030 1290 8205 1290
+Wire Wire Line
+	8315 1390 8205 1390
+Wire Wire Line
+	8205 1390 8205 1290
+Connection ~ 8205 1290
+Wire Wire Line
+	8205 1290 8315 1290
+Wire Wire Line
+	8915 1290 9255 1290
+Wire Wire Line
+	3815 1945 3850 1945
+Wire Wire Line
+	3815 2045 3850 2045
+Wire Wire Line
+	3815 2145 3855 2145
+Wire Wire Line
+	3815 2545 3860 2545
+Wire Wire Line
+	3815 2245 3855 2245
+Wire Wire Line
+	3815 2345 3855 2345
+Wire Wire Line
+	3815 2745 3860 2745
+Wire Wire Line
+	3815 2645 3860 2645
+Wire Wire Line
+	3860 2445 3815 2445
 $EndSCHEMATC
