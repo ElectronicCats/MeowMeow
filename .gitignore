@@ -32,3 +32,5 @@ SVG PCB/
 *.csv
 
 *.sch-bak
+
+hardware/gerbersv1_mini/

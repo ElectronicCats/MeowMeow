@@ -16,7 +16,7 @@
 
 int keyCodes[NUM_INPUTS] = {            
   //     top side of the meow meow board
-  's',                // pin A0 
+  's',                // pin A0
   'd',                // pin A1
   KEY_RIGHT_ARROW,    // left arrow pad A2
   KEY_LEFT_ARROW,   // right arrow pad A3
@@ -26,7 +26,6 @@ int keyCodes[NUM_INPUTS] = {
   'a',                // pin A7
   MOUSE_LEFT,        // click button pad A8
   ' ',               // space button pad A9
-  'b',               // space button pad A9
 };
 
 ///////////////////////////
