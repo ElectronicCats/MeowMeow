@@ -1,20 +1,20 @@
 /************************************************************
 SPANISH
-MeowMeow.ino - v0.6
-Meow Meow - Using the Meow Meow you can make anything into a key 
+MeowMeow_Mini.ino - v1.0
+Meow Meow mini - Using the Meow Meow mini you can make anything into a key 
 just by connecting a few alligator clips
 Andres Sabas @ Electronic Cats
 Eduardo Contreras @ Electronic Cats
 Original Creation Date: April 17, 2018
 https://github.com/ElectronicCats/MeowMeow
 
-Este ejemplos demuestra el funcionamiento basico del kit Meow Meow
+Este ejemplos demuestra el funcionamiento basico del kit Meow Meow Mini
 http://electroniccats.com
 
 Especificaciones del entorno de Desarrollo:
   IDE: Arduino 1.8.4
   Plataforma de Hardware:
-  Meow Meow
+  Meow Meow Mini
   - SAMD11D14
 
 Este código es beerware si tu me ves ( o cualquier otro miembro de Electronic Cats) 
@@ -31,8 +31,8 @@ Basado en el trabajo de:
 
 /************************************************************
 ENGLISH
-MeowMeow.ino - v0.6v
-Meow Meow - Using the Meow Meow you can make anything into a key 
+MeowMeow_Mini.ino - v1.0
+Meow Meow Mini- Using the Meow Meow Mini you can make anything into a key 
 just by connecting a few alligator clips
 
 Andres Sabas @ Electronic Cats
@@ -44,8 +44,8 @@ This example demonstrates how to use Meow Meow
 Development environment specifics:
   IDE: Arduino 1.8.4
   Hardware Platform:
-  Meow Meow
-  - SAMD21G18
+  Meow Meow Mini
+  - SAMD11D14
 
 This code is beerware; if you see me (or any other Electronic Cats 
 member) at the local, and you've found our code helpful, 
@@ -74,6 +74,12 @@ https://github.com/adafruit/Adafruit_FreeTouch
 #define BUFFER_LENGTH    3     // 3 bytes gives us 24 samples
 #define NUM_INPUTS       10    // 11 on the front
 
+// id numbers for mouse movement inputs (used in settings.h)
+#define MOUSE_MOVE_UP       -1 
+#define MOUSE_MOVE_DOWN     -2
+#define MOUSE_MOVE_LEFT     -3
+#define MOUSE_MOVE_RIGHT    -4
+
 #include "Keyboard.h"
 #include <Mouse.h>
 #include "Adafruit_FreeTouch.h"
@@ -81,15 +87,15 @@ https://github.com/adafruit/Adafruit_FreeTouch
 
 
 Adafruit_FreeTouch qt_0 = Adafruit_FreeTouch(A0, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // S
-Adafruit_FreeTouch qt_1 = Adafruit_FreeTouch(A1, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // D
-Adafruit_FreeTouch qt_2 = Adafruit_FreeTouch(A2, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Arrow LEFT
-Adafruit_FreeTouch qt_3 = Adafruit_FreeTouch(A3, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Arrow RIGHT
-Adafruit_FreeTouch qt_4 = Adafruit_FreeTouch(A4, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Arrow DOWN
-Adafruit_FreeTouch qt_5 = Adafruit_FreeTouch(A5, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Arrow UP
-Adafruit_FreeTouch qt_6 = Adafruit_FreeTouch(A6, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // W
-Adafruit_FreeTouch qt_7 = Adafruit_FreeTouch(A7, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // A
-Adafruit_FreeTouch qt_8 = Adafruit_FreeTouch(22, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Click Mouse
-Adafruit_FreeTouch qt_9 = Adafruit_FreeTouch(23, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // SPACE
+Adafruit_FreeTouch qt_1 = Adafruit_FreeTouch(A3, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // D
+Adafruit_FreeTouch qt_2 = Adafruit_FreeTouch(23, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Arrow LEFT
+Adafruit_FreeTouch qt_3 = Adafruit_FreeTouch(22, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Arrow RIGHT
+Adafruit_FreeTouch qt_4 = Adafruit_FreeTouch(A7, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Arrow DOWN
+Adafruit_FreeTouch qt_5 = Adafruit_FreeTouch(A6, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Arrow UP
+Adafruit_FreeTouch qt_6 = Adafruit_FreeTouch(A2, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // W
+Adafruit_FreeTouch qt_7 = Adafruit_FreeTouch(A1, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // A
+Adafruit_FreeTouch qt_8 = Adafruit_FreeTouch(A4, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Click Mouse
+Adafruit_FreeTouch qt_9 = Adafruit_FreeTouch(A5, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // SPACE
 
 Adafruit_FreeTouch *p[NUM_INPUTS] = { &qt_0, &qt_1, &qt_2, &qt_3, &qt_4, &qt_5, &qt_6 , &qt_7, &qt_8, &qt_9};
 

@@ -2,11 +2,11 @@
 
 /*
 /////////////////////////////////////////////////////////////////////////
-// KEY MAPPINGS: WHICH KEY MAPS TO WHICH PIN ON THE MEOW MEOW BOARD? //
+// KEY MAPPINGS: WHICH KEY MAPS TO WHICH PIN ON THE MEOW MEOW MINI BOARD? //
 /////////////////////////////////////////////////////////////////////////
   
-  - edit the keyCodes array below to change the keys sent by the Meow Meow for each input
-  - the comments tell you which input sends that key (for example, by default 'w' is sent by pin A6)
+  - edit the keyCodes array below to change the keys sent by the Meow Meow Mini for each input
+  - the comments tell you which input sends that key (for example, by default 'w' is sent by pin A2)
   - change the keys by replacing them. for example, you can replace 'w' with any other individual letter,
     number, or symbol on your keyboard
   - you can also use codes for other keys such as modifier and function keys (see the
@@ -17,15 +17,15 @@
 int keyCodes[NUM_INPUTS] = {            
   //     top side of the meow meow board
   's',                // pin A0
-  'd',                // pin A1
-  KEY_RIGHT_ARROW,    // left arrow pad A2
-  KEY_LEFT_ARROW,   // right arrow pad A3
-  KEY_DOWN_ARROW,    // down arrow pad A4
-  KEY_UP_ARROW,      // up arrow pad A5
-  'w',                // pin A6
-  'a',                // pin A7
-  MOUSE_LEFT,        // click button pad A8
-  ' ',               // space button pad A9
+  'd',                // pin A3
+  KEY_RIGHT_ARROW,    // left arrow pad 22
+  KEY_LEFT_ARROW,   // right arrow pad 23
+  KEY_DOWN_ARROW,    // down arrow pad A7
+  KEY_UP_ARROW,      // up arrow pad A6
+  'w',                // pin A2
+  'a',                // pin A1
+  MOUSE_LEFT,        // click button pad A4
+  ' ',               // space button pad A5
 };
 
 ///////////////////////////
@@ -36,12 +36,12 @@ int keyCodes[NUM_INPUTS] = {
                                            // recommended values are between 2 and 20
                                            // default value is 5
 
-#define SWITCH_THRESHOLD_CENTER_BIAS 55   // number between 1 and 99
+#define SWITCH_THRESHOLD_CENTER_BIAS 50   // number between 1 and 99
                                           // larger value makes it easier to "release" keys, but harder to "press"
                                           // smaller value makes it easier to "press" keys, but harder to "release"
                                           // recommended values are between 30 and 70
                                           // 50 is "middle" 2.5 volt center
-                                          // default value is 55
+                                          // default value is 50
                                           // 100 = 5V (never use this high)
                                           // 0 = 0 V (never use this low
                                           
