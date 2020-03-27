@@ -274,6 +274,7 @@ void updateInputStates() {
         inputs[i].pressed = false;
         if (inputs[i].isKey) {
           Keyboard.release(inputs[i].keyCode);
+          digitalWrite(LED_BUILTIN,LOW);
         }
         if (inputs[i].isMouseMotion) {  
           mouseHoldCount[i] = 0;  // input becomes released, reset mouse hold
@@ -289,6 +290,7 @@ void updateInputStates() {
         inputs[i].pressed = true; 
         if (inputs[i].isKey) {
           Keyboard.press(inputs[i].keyCode);
+          digitalWrite(LED_BUILTIN,HIGH);
         }
       }
     }
@@ -309,25 +311,25 @@ void initializeInputs() {
   pinMode(LED_BUILTIN, OUTPUT);
   digitalWrite(LED_BUILTIN,HIGH);
   if (! qt_0.begin())  
-    Serial.println(F("Failed to begin pin A0 or"));
+    Serial.println(F("Failed to begin pin A0 or S"));
   if (! qt_1.begin())  
-    Serial.println(F("Failed to begin pin A1 or D"));
+    Serial.println(F("Failed to begin pin A3 or D"));
   if (! qt_2.begin())  
-    Serial.println(F("Failed to begin pin A2 or Arrow LEFT"));
+    Serial.println(F("Failed to begin pin 23 or Arrow LEFT"));
   if (! qt_3.begin())  
-    Serial.println(F("Failed to begin pin A3 or Arrow RIGHT"));
+    Serial.println(F("Failed to begin pin 22 or Arrow RIGHT"));
   if (! qt_4.begin())  
-    Serial.println(F("Failed to begin pin A4 or Arrow DOWN"));
+    Serial.println(F("Failed to begin pin A7 or Arrow DOWN"));
   if (! qt_5.begin())  
-    Serial.println(F("Failed to begin pin A5 or Arrow UP"));
+    Serial.println(F("Failed to begin pin A6 or Arrow UP"));
   if (! qt_6.begin())  
-    Serial.println(F("Failed to begin pin A6 or W"));
+    Serial.println(F("Failed to begin pin A2 or W"));
   if (! qt_7.begin())  
-    Serial.println(F("Failed to begin pin A7 or A"));
+    Serial.println(F("Failed to begin pin A1 or A"));
   if (! qt_8.begin())  
-   Serial.println(F("Failed to begin pin 16 or Click Mouse"));
+   Serial.println(F("Failed to begin pin A4 or Click Mouse"));
   if (! qt_9.begin())  
-   Serial.println(F("Failed to begin pin 23 or SPACE"));
+   Serial.println(F("Failed to begin pin A5 or SPACE"));
 
    
   float thresholdPerc = SWITCH_THRESHOLD_OFFSET_PERC;
@@ -392,6 +394,7 @@ void sendMouseButtonEvents() {
         if (inputs[i].pressed) {
           if (inputs[i].keyCode == MOUSE_LEFT) {
             Mouse.press(MOUSE_LEFT);
+            digitalWrite(LED_BUILTIN,HIGH);
           } 
           if (inputs[i].keyCode == MOUSE_RIGHT) {
             Mouse.press(MOUSE_RIGHT);
@@ -400,6 +403,7 @@ void sendMouseButtonEvents() {
         else if (inputs[i].prevPressed) {
           if (inputs[i].keyCode == MOUSE_LEFT) {
             Mouse.release(MOUSE_LEFT);
+            digitalWrite(LED_BUILTIN,LOW);
           } 
           if (inputs[i].keyCode == MOUSE_RIGHT) {
             Mouse.release(MOUSE_RIGHT);
