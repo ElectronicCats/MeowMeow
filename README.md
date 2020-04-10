@@ -4,7 +4,7 @@
 
 **[OSHW] MX0003 | Certified open source hardware |** [oshwa.org/cert.](https://www.oshwa.org/cert)
 
-<a href="https://electroniccats.com/store/meowmeow/">
+<a href="https://electroniccats.com/store/bast-pro-mini-m0/">
   <img src="https://electroniccats.com/wp-content/uploads/badge_store.png" width="200" height="104" />
 </a>
 
