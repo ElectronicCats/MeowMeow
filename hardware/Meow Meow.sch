@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:Meow Meow-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -194,9 +195,9 @@ F 3 "" H 10055 3515 50  0000 C CNN
 $EndComp
 Text Label 10790 3515 0    60   ~ 0
 LED
-Text Label 9055 3425 0    60   ~ 0
-SWDIO
 Text Label 9055 3325 0    60   ~ 0
+SWDIO
+Text Label 9055 3425 0    60   ~ 0
 SWCLK
 $Comp
 L Meow-Meow-rescue:+3.3V-MeowMeow #PWR06
