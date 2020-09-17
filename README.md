@@ -43,6 +43,7 @@
 Manual [Wiki](https://github.com/ElectronicCats/MeowMeow/wiki)
 
 ## Licence
+![OpenSourceLicense](https://github.com/ElectronicCats/AjoloteBoard/raw/master/OpenSourceLicense.png)
 
 Firmware released under an GNU AGPL v3.0 license. See the LICENSE file for more information.
 
