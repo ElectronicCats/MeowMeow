@@ -1,23 +1,148 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# AP2112K-3.3-Regulator_Linear-Meow-Meow-rescue
+# +3.3V-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue
 #
-DEF AP2112K-3.3-Regulator_Linear-Meow-Meow-rescue U 0 10 Y Y 1 F N
-F0 "U" -200 225 50 H V L CNN
-F1 "AP2112K-3.3-Regulator_Linear-Meow-Meow-rescue" 0 225 50 H V L CNN
-F2 "Package_TO_SOT_SMD:SOT-23-5" 0 325 50 H I C CNN
-F3 "" 0 100 50 H I C CNN
+DEF +3.3V-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "+3.3V-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue" 0 140 50 H V C CNN
+F2 "" 0 0 50 H V C CNN
+F3 "" 0 0 50 H V C CNN
+DRAW
+P 2 0 1 0 -30 50 0 100 N
+P 2 0 1 0 0 0 0 100 N
+P 2 0 1 0 0 100 30 50 N
+X +3V3 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# CONN_01X01_FEMALE-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue
+#
+DEF CONN_01X01_FEMALE-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue P 0 40 Y N 1 F N
+F0 "P" 0 100 60 H V C CNN
+F1 "CONN_01X01_FEMALE-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue" 0 -100 60 H V C CNN
+F2 "" 0 0 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+DRAW
+A 150 0 50 901 -901 0 1 0 N 150 50 150 -50
+X 1 1 -100 0 200 R 50 50 1 1 B
+ENDDRAW
+ENDDEF
+#
+# C_Small-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue
+#
+DEF C_Small-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue C 0 10 N N 1 F N
+F0 "C" 10 70 50 H V L CNN
+F1 "C_Small-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue" 10 -80 50 H V L CNN
+F2 "" 0 0 50 H V C CNN
+F3 "" 0 0 50 H V C CNN
 $FPLIST
- SOT?23?5*
+ C?
+ C_????_*
+ C_????
+ SMD*_c
+ Capacitor*
 $ENDFPLIST
 DRAW
-S -200 175 200 -200 0 1 10 f
-X VIN 1 -300 100 100 R 50 50 1 1 W
-X GND 2 0 -300 100 U 50 50 1 1 W
-X EN 3 -300 0 100 R 50 50 1 1 I
-X NC 4 300 0 100 L 50 50 1 1 N N
-X VOUT 5 300 100 100 L 50 50 1 1 w
+P 2 0 1 13 -60 -20 60 -20 N
+P 2 0 1 12 -60 20 60 20 N
+X ~ 1 0 100 80 D 50 50 1 1 P
+X ~ 2 0 -100 80 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# GND-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue
+#
+DEF GND-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -250 50 H I C CNN
+F1 "GND-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue" 0 -150 50 H V C CNN
+F2 "" 0 0 50 H V C CNN
+F3 "" 0 0 50 H V C CNN
+DRAW
+P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
+X GND 1 0 0 0 D 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# LED-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue
+#
+DEF LED-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue D 0 40 Y N 1 F N
+F0 "D" 0 100 50 H V C CNN
+F1 "LED-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue" 0 -100 50 H V C CNN
+F2 "" 0 0 50 H V C CNN
+F3 "" 0 0 50 H V C CNN
+$FPLIST
+ LED*
+$ENDFPLIST
+DRAW
+P 2 0 1 8 -50 -50 -50 50 N
+P 2 0 1 0 -50 0 50 0 N
+P 4 0 1 8 50 -50 50 50 -50 0 50 -50 N
+P 5 0 1 0 -120 -30 -180 -90 -150 -90 -180 -90 -180 -60 N
+P 5 0 1 0 -70 -30 -130 -90 -100 -90 -130 -90 -130 -60 N
+X K 1 -150 0 100 R 50 50 1 1 P
+X A 2 150 0 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# R_Small-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue
+#
+DEF R_Small-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue R 0 10 N N 1 F N
+F0 "R" 30 20 50 H V L CNN
+F1 "R_Small-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue" 30 -40 50 H V L CNN
+F2 "" 0 0 50 H V C CNN
+F3 "" 0 0 50 H V C CNN
+$FPLIST
+ Resistor_*
+ R_*
+$ENDFPLIST
+DRAW
+S -30 70 30 -70 0 1 8 N
+X ~ 1 0 100 30 D 50 50 1 1 P
+X ~ 2 0 -100 30 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# SW_Push-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue
+#
+DEF SW_Push-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue SW 0 40 N N 1 F N
+F0 "SW" 50 100 50 H V L CNN
+F1 "SW_Push-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue" 0 -60 50 H V C CNN
+F2 "" 0 200 50 H V C CNN
+F3 "" 0 200 50 H V C CNN
+DRAW
+C -80 0 20 0 1 0 N
+C 80 0 20 0 1 0 N
+P 2 0 1 0 0 50 0 120 N
+P 2 0 1 0 100 50 -100 50 N
+X 1 1 -200 0 100 R 50 50 0 1 P
+X 2 2 200 0 100 L 50 50 0 1 P
+ENDDRAW
+ENDDEF
+#
+# USB_OTG-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue
+#
+DEF USB_OTG-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue P 0 40 Y Y 1 F N
+F0 "P" 325 -125 50 H V C CNN
+F1 "USB_OTG-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue" 0 200 50 H V C CNN
+F2 "" -50 -100 50 V V C CNN
+F3 "" -50 -100 50 V V C CNN
+$FPLIST
+ USB*
+$ENDFPLIST
+DRAW
+S -250 -150 250 150 0 1 0 N
+S -205 -150 -195 -120 0 1 0 N
+S -105 -150 -95 -120 0 1 0 N
+S -5 -150 5 -120 0 1 0 N
+S 95 -150 105 -120 0 1 0 N
+S 195 -150 205 -120 0 1 0 N
+X VBUS 1 -200 -300 150 U 50 50 1 1 w
+X D- 2 -100 -300 150 U 50 50 1 1 P
+X D+ 3 0 -300 150 U 50 50 1 1 P
+X ID 4 100 -300 150 U 50 50 1 1 W
+X GND 5 200 -300 150 U 50 50 1 1 W
+X shield 6 400 100 150 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
