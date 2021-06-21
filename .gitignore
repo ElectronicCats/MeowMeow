@@ -30,3 +30,5 @@ Recursos/footprint/
 SVG PCB/
 *.dcm
 *.csv
+
+*.sch-bak
