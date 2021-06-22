@@ -1,26 +1,30 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# Connector_Generic_Conn_01x04
+# Connector_Generic_Conn_01x06
 #
-DEF Connector_Generic_Conn_01x04 J 0 40 Y N 1 F N
-F0 "J" 0 200 50 H V C CNN
-F1 "Connector_Generic_Conn_01x04" 0 -300 50 H V C CNN
+DEF Connector_Generic_Conn_01x06 J 0 40 Y N 1 F N
+F0 "J" 0 300 50 H V C CNN
+F1 "Connector_Generic_Conn_01x06" 0 -400 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
  Connector*:*_1x??_*
 $ENDFPLIST
 DRAW
+S -50 -295 0 -305 1 1 6 N
 S -50 -195 0 -205 1 1 6 N
 S -50 -95 0 -105 1 1 6 N
 S -50 5 0 -5 1 1 6 N
 S -50 105 0 95 1 1 6 N
-S -50 150 50 -250 1 1 10 f
-X Pin_1 1 -200 100 150 R 50 50 1 1 P
-X Pin_2 2 -200 0 150 R 50 50 1 1 P
-X Pin_3 3 -200 -100 150 R 50 50 1 1 P
-X Pin_4 4 -200 -200 150 R 50 50 1 1 P
+S -50 205 0 195 1 1 6 N
+S -50 250 50 -350 1 1 10 f
+X Pin_1 1 -200 200 150 R 50 50 1 1 P
+X Pin_2 2 -200 100 150 R 50 50 1 1 P
+X Pin_3 3 -200 0 150 R 50 50 1 1 P
+X Pin_4 4 -200 -100 150 R 50 50 1 1 P
+X Pin_5 5 -200 -200 150 R 50 50 1 1 P
+X Pin_6 6 -200 -300 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
@@ -210,11 +214,11 @@ X PA04 9 -700 1200 100 R 50 50 1 1 B
 ENDDRAW
 ENDDEF
 #
-# Meow-Meow-rescue_+3.3V-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue
+# Meow-Meow-rescue_+3.3V-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue
 #
-DEF Meow-Meow-rescue_+3.3V-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue #PWR 0 0 Y Y 1 F P
+DEF Meow-Meow-rescue_+3.3V-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "Meow-Meow-rescue_+3.3V-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue" 0 140 50 H V C CNN
+F1 "Meow-Meow-rescue_+3.3V-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue" 0 140 50 H V C CNN
 F2 "" 0 0 50 H V C CNN
 F3 "" 0 0 50 H V C CNN
 DRAW
@@ -225,11 +229,11 @@ X +3V3 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# Meow-Meow-rescue_AP2112K-3.3-Regulator_Linear-Meow-Meow-rescue-Meow-Meow-rescue
+# Meow-Meow-rescue_AP2112K-3.3-Regulator_Linear-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue
 #
-DEF Meow-Meow-rescue_AP2112K-3.3-Regulator_Linear-Meow-Meow-rescue-Meow-Meow-rescue U 0 10 Y Y 1 F N
+DEF Meow-Meow-rescue_AP2112K-3.3-Regulator_Linear-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue U 0 10 Y Y 1 F N
 F0 "U" -200 225 50 H V L CNN
-F1 "Meow-Meow-rescue_AP2112K-3.3-Regulator_Linear-Meow-Meow-rescue-Meow-Meow-rescue" 0 225 50 H V L CNN
+F1 "Meow-Meow-rescue_AP2112K-3.3-Regulator_Linear-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue" 0 225 50 H V L CNN
 F2 "Package_TO_SOT_SMD:SOT-23-5" 0 325 50 H I C CNN
 F3 "" 0 100 50 H I C CNN
 $FPLIST
@@ -245,11 +249,11 @@ X VOUT 5 300 100 100 L 50 50 1 1 w
 ENDDRAW
 ENDDEF
 #
-# Meow-Meow-rescue_CONN_01X01_FEMALE-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue
+# Meow-Meow-rescue_CONN_01X01_FEMALE-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue
 #
-DEF Meow-Meow-rescue_CONN_01X01_FEMALE-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue P 0 40 Y N 1 F N
+DEF Meow-Meow-rescue_CONN_01X01_FEMALE-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue P 0 40 Y N 1 F N
 F0 "P" 0 100 60 H V C CNN
-F1 "Meow-Meow-rescue_CONN_01X01_FEMALE-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue" 0 -100 60 H V C CNN
+F1 "Meow-Meow-rescue_CONN_01X01_FEMALE-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue" 0 -100 60 H V C CNN
 F2 "" 0 0 60 H I C CNN
 F3 "" 0 0 60 H I C CNN
 DRAW
@@ -258,11 +262,11 @@ X 1 1 -100 0 200 R 50 50 1 1 B
 ENDDRAW
 ENDDEF
 #
-# Meow-Meow-rescue_C_Small-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue
+# Meow-Meow-rescue_C_Small-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue
 #
-DEF Meow-Meow-rescue_C_Small-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue C 0 10 N N 1 F N
+DEF Meow-Meow-rescue_C_Small-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue C 0 10 N N 1 F N
 F0 "C" 10 70 50 H V L CNN
-F1 "Meow-Meow-rescue_C_Small-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue" 10 -80 50 H V L CNN
+F1 "Meow-Meow-rescue_C_Small-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue" 10 -80 50 H V L CNN
 F2 "" 0 0 50 H V C CNN
 F3 "" 0 0 50 H V C CNN
 $FPLIST
@@ -280,11 +284,11 @@ X ~ 2 0 -100 80 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Meow-Meow-rescue_GND-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue
+# Meow-Meow-rescue_GND-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue
 #
-DEF Meow-Meow-rescue_GND-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue #PWR 0 0 Y Y 1 F P
+DEF Meow-Meow-rescue_GND-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -250 50 H I C CNN
-F1 "Meow-Meow-rescue_GND-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue" 0 -150 50 H V C CNN
+F1 "Meow-Meow-rescue_GND-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue" 0 -150 50 H V C CNN
 F2 "" 0 0 50 H V C CNN
 F3 "" 0 0 50 H V C CNN
 DRAW
@@ -293,11 +297,11 @@ X GND 1 0 0 0 D 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# Meow-Meow-rescue_LED-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue
+# Meow-Meow-rescue_LED-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue
 #
-DEF Meow-Meow-rescue_LED-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue D 0 40 Y N 1 F N
+DEF Meow-Meow-rescue_LED-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue D 0 40 Y N 1 F N
 F0 "D" 0 100 50 H V C CNN
-F1 "Meow-Meow-rescue_LED-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue" 0 -100 50 H V C CNN
+F1 "Meow-Meow-rescue_LED-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue" 0 -100 50 H V C CNN
 F2 "" 0 0 50 H V C CNN
 F3 "" 0 0 50 H V C CNN
 $FPLIST
@@ -314,11 +318,11 @@ X A 2 150 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Meow-Meow-rescue_R_Small-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue
+# Meow-Meow-rescue_R_Small-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue
 #
-DEF Meow-Meow-rescue_R_Small-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue R 0 10 N N 1 F N
+DEF Meow-Meow-rescue_R_Small-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue R 0 10 N N 1 F N
 F0 "R" 30 20 50 H V L CNN
-F1 "Meow-Meow-rescue_R_Small-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue" 30 -40 50 H V L CNN
+F1 "Meow-Meow-rescue_R_Small-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue" 30 -40 50 H V L CNN
 F2 "" 0 0 50 H V C CNN
 F3 "" 0 0 50 H V C CNN
 $FPLIST
@@ -332,11 +336,11 @@ X ~ 2 0 -100 30 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Meow-Meow-rescue_SW_Push-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue
+# Meow-Meow-rescue_SW_Push-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue
 #
-DEF Meow-Meow-rescue_SW_Push-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue SW 0 40 N N 1 F N
+DEF Meow-Meow-rescue_SW_Push-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue SW 0 40 N N 1 F N
 F0 "SW" 50 100 50 H V L CNN
-F1 "Meow-Meow-rescue_SW_Push-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue" 0 -60 50 H V C CNN
+F1 "Meow-Meow-rescue_SW_Push-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue" 0 -60 50 H V C CNN
 F2 "" 0 200 50 H V C CNN
 F3 "" 0 200 50 H V C CNN
 DRAW
@@ -349,11 +353,11 @@ X 2 2 200 0 100 L 50 50 0 1 P
 ENDDRAW
 ENDDEF
 #
-# Meow-Meow-rescue_USB_OTG-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue
+# Meow-Meow-rescue_USB_OTG-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue
 #
-DEF Meow-Meow-rescue_USB_OTG-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue P 0 40 Y Y 1 F N
+DEF Meow-Meow-rescue_USB_OTG-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue P 0 40 Y Y 1 F N
 F0 "P" 325 -125 50 H V C CNN
-F1 "Meow-Meow-rescue_USB_OTG-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue" 0 200 50 H V C CNN
+F1 "Meow-Meow-rescue_USB_OTG-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue" 0 200 50 H V C CNN
 F2 "" -50 -100 50 V V C CNN
 F3 "" -50 -100 50 V V C CNN
 $FPLIST
