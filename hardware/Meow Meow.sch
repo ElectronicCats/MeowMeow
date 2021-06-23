@@ -846,9 +846,9 @@ F 3 "" H 7590 1175 50  0001 C CNN
 	1    7590 1175
 	1    0    0    -1  
 $EndComp
-Text Label 1930 2215 2    50   ~ 0
+Text Label 1930 2515 2    50   ~ 0
 A0
-Text Label 1930 2315 2    50   ~ 0
+Text Label 1930 2415 2    50   ~ 0
 A1
 Text Label 3025 6395 2    50   ~ 0
 A0
@@ -948,9 +948,9 @@ Wire Wire Line
 	3440 2415 3530 2415
 Wire Wire Line
 	3440 2515 3530 2515
-Text Label 1930 2415 2    50   ~ 0
+Text Label 1930 2315 2    50   ~ 0
 A2
-Text Label 1930 2515 2    50   ~ 0
+Text Label 1930 2215 2    50   ~ 0
 A3
 Text Label 3025 6595 2    50   ~ 0
 A2
@@ -1052,13 +1052,13 @@ Text Label 4550 2050 2    50   ~ 0
 Y4
 Text Label 4550 2150 2    50   ~ 0
 Y5
-Text Label 4550 2250 2    50   ~ 0
-A0
-Text Label 4550 2350 2    50   ~ 0
-A1
-Text Label 4550 2450 2    50   ~ 0
-A2
 Text Label 4550 2550 2    50   ~ 0
+A0
+Text Label 4550 2450 2    50   ~ 0
+A1
+Text Label 4550 2350 2    50   ~ 0
+A2
+Text Label 4550 2250 2    50   ~ 0
 A3
 Text Label 4550 2650 2    50   ~ 0
 TX
@@ -1120,7 +1120,6 @@ Wire Wire Line
 	5300 5000 5350 5000
 NoConn ~ 5950 3750
 NoConn ~ 5950 3650
-NoConn ~ 4550 3750
 Text Label 5950 2450 0    50   ~ 0
 GPIO08
 Text Label 5950 2350 0    50   ~ 0
@@ -1187,4 +1186,14 @@ Text Label 8870 3480 2    50   ~ 0
 RESET
 Wire Wire Line
 	8980 3480 8870 3480
+Wire Wire Line
+	4550 3750 4470 3750
+Text Label 1980 3715 2    50   ~ 0
+PA32
+Text Label 4470 3750 2    50   ~ 0
+PA32
+Text Notes 3290 1145 0    138  ~ 0
+QFN
+Text Notes 4270 1145 0    138  ~ 0
+TQFP
 $EndSCHEMATC
