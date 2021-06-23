@@ -102,13 +102,13 @@ Y4
 $Comp
 L Meow-Meow-rescue:C_Small-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue C4
 U 1 1 5AD98E8E
-P 8030 1440
-F 0 "C4" H 8040 1510 50  0000 L CNN
-F 1 "10uF" H 7819 1359 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 8030 1440 50  0001 C CNN
-F 3 "" H 8030 1440 50  0000 C CNN
-F 4 "TMCUA0J106MTR2F" H 8030 1440 60  0001 C CNN "Part#"
-	1    8030 1440
+P 7980 1440
+F 0 "C4" H 7990 1510 50  0000 L CNN
+F 1 "10uF" H 7769 1359 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 7980 1440 50  0001 C CNN
+F 3 "" H 7980 1440 50  0000 C CNN
+F 4 "TMCUA0J106MTR2F" H 7980 1440 60  0001 C CNN "Part#"
+	1    7980 1440
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -236,23 +236,23 @@ Y2
 $Comp
 L Meow-Meow-rescue:GND-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue #PWR08
 U 1 1 5ADA067C
-P 8030 1600
-F 0 "#PWR08" H 8030 1350 50  0001 C CNN
-F 1 "GND" H 8030 1450 50  0000 C CNN
-F 2 "" H 8030 1600 50  0000 C CNN
-F 3 "" H 8030 1600 50  0000 C CNN
-	1    8030 1600
+P 7980 1600
+F 0 "#PWR08" H 7980 1350 50  0001 C CNN
+F 1 "GND" H 7980 1450 50  0000 C CNN
+F 2 "" H 7980 1600 50  0000 C CNN
+F 3 "" H 7980 1600 50  0000 C CNN
+	1    7980 1600
 	1    0    0    -1  
 $EndComp
 $Comp
 L Meow-Meow-rescue:GND-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue #PWR09
 U 1 1 5ADA0DDC
-P 8615 1725
-F 0 "#PWR09" H 8615 1475 50  0001 C CNN
-F 1 "GND" H 8615 1575 50  0000 C CNN
-F 2 "" H 8615 1725 50  0000 C CNN
-F 3 "" H 8615 1725 50  0000 C CNN
-	1    8615 1725
+P 8595 1830
+F 0 "#PWR09" H 8595 1580 50  0001 C CNN
+F 1 "GND" H 8595 1680 50  0000 C CNN
+F 2 "" H 8595 1830 50  0000 C CNN
+F 3 "" H 8595 1830 50  0000 C CNN
+	1    8595 1830
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -470,14 +470,14 @@ Wire Wire Line
 Wire Wire Line
 	2135 940  2080 940 
 Wire Wire Line
-	8030 1540 8030 1600
-Connection ~ 8030 1290
+	7980 1540 7980 1600
+Connection ~ 7980 1290
 Wire Wire Line
-	8030 1340 8030 1290
+	7980 1340 7980 1290
 Wire Wire Line
-	7590 1290 7590 1175
+	7540 1290 7540 1175
 Wire Wire Line
-	7590 1290 8030 1290
+	7540 1290 7980 1290
 Wire Wire Line
 	9815 5726 9815 5991
 Wire Wire Line
@@ -721,17 +721,6 @@ F 3 "" H 7180 3135 50  0001 C CNN
 $EndComp
 Text Notes 2348 6680 0    50   ~ 0
 Analog A0-A3
-$Comp
-L Meow-Meow-rescue:AP2112K-3.3-Regulator_Linear-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue U2
-U 1 1 5E539C42
-P 8615 1390
-F 0 "U2" H 8615 1732 50  0000 C CNN
-F 1 "AP2112K-3.3" H 8615 1641 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-5" H 8615 1715 50  0001 C CNN
-F 3 "https://www.diodes.com/assets/Datasheets/AP2112.pdf" H 8615 1490 50  0001 C CNN
-	1    8615 1390
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	9020 1290 9255 1290
 Wire Wire Line
@@ -807,43 +796,15 @@ F 4 "885012207072" H 9020 1455 60  0001 C CNN "Part#"
 	1    9020 1455
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	8615 1725 8615 1690
-$Comp
-L Device:R_Small R1
-U 1 1 5E58816C
-P 8179 1455
-F 0 "R1" H 8238 1501 50  0000 L CNN
-F 1 "10K" H 8238 1410 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8179 1455 50  0001 C CNN
-F 3 "~" H 8179 1455 50  0001 C CNN
-	1    8179 1455
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8030 1290 8179 1290
-Wire Wire Line
-	8179 1355 8179 1290
-Connection ~ 8179 1290
-Wire Wire Line
-	8179 1290 8315 1290
-Wire Wire Line
-	8179 1555 8179 1578
-Wire Wire Line
-	8179 1578 8315 1578
-Wire Wire Line
-	8315 1578 8315 1390
-Text Label 8241 1578 3    50   ~ 0
-EN
 $Comp
 L power:VBUS #PWR0102
 U 1 1 5E5A1BDB
-P 7590 1175
-F 0 "#PWR0102" H 7590 1025 50  0001 C CNN
-F 1 "VBUS" H 7605 1348 50  0000 C CNN
-F 2 "" H 7590 1175 50  0001 C CNN
-F 3 "" H 7590 1175 50  0001 C CNN
-	1    7590 1175
+P 7540 1175
+F 0 "#PWR0102" H 7540 1025 50  0001 C CNN
+F 1 "VBUS" H 7555 1348 50  0000 C CNN
+F 2 "" H 7540 1175 50  0001 C CNN
+F 3 "" H 7540 1175 50  0001 C CNN
+	1    7540 1175
 	1    0    0    -1  
 $EndComp
 Text Label 1930 2515 2    50   ~ 0
@@ -1196,4 +1157,28 @@ Text Notes 3290 1145 0    138  ~ 0
 QFN
 Text Notes 4270 1145 0    138  ~ 0
 TQFP
+Wire Wire Line
+	7980 1290 8265 1290
+$Comp
+L Meow-Meow-rescue:AP2114-HA U2
+U 1 1 60D6F9DE
+P 8565 1390
+F 0 "U2" H 8590 1755 50  0000 C CNN
+F 1 "AP2114-HA" H 8590 1664 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223" H 8565 1690 50  0001 C CNN
+F 3 "" H 8565 1690 50  0001 C CNN
+	1    8565 1390
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8515 1740 8515 1795
+Wire Wire Line
+	8515 1795 8595 1795
+Wire Wire Line
+	8595 1795 8595 1830
+Wire Wire Line
+	8665 1740 8665 1795
+Wire Wire Line
+	8665 1795 8595 1795
+Connection ~ 8595 1795
 $EndSCHEMATC
