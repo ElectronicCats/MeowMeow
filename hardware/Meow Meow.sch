@@ -315,7 +315,7 @@ U 1 1 5AFCCE9C
 P 3140 845
 F 0 "C2" H 3150 915 50  0000 L CNN
 F 1 "0.1uF" H 3150 765 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 3140 845 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3140 845 50  0001 C CNN
 F 3 "" H 3140 845 50  0000 C CNN
 F 4 "885012207072" H 3140 845 60  0001 C CNN "Part#"
 	1    3140 845 
@@ -934,7 +934,7 @@ U 1 1 5AFCC5C3
 P 2235 940
 F 0 "C1" H 2245 1010 50  0000 L CNN
 F 1 "1uF" H 2245 860 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 2235 940 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2235 940 50  0001 C CNN
 F 3 "" H 2235 940 50  0000 C CNN
 F 4 "C2012X7R1C105K125AA" H 2235 940 60  0001 C CNN "Part#"
 	1    2235 940 
@@ -1120,8 +1120,6 @@ Wire Wire Line
 Wire Wire Line
 	5550 1090 5550 1150
 Connection ~ 5350 1090
-Wire Wire Line
-	5550 970  5550 1090
 Connection ~ 5550 1090
 Text Label 2440 940  1    50   ~ 0
 vddcore
@@ -1181,4 +1179,38 @@ Wire Wire Line
 Wire Wire Line
 	8665 1795 8595 1795
 Connection ~ 8595 1795
+$Comp
+L Meow-Meow-rescue:C_Small-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue C3
+U 1 1 60D4D2CA
+P 5745 1010
+F 0 "C3" H 5755 1080 50  0000 L CNN
+F 1 "0.1uF" H 5755 930 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5745 1010 50  0001 C CNN
+F 3 "" H 5745 1010 50  0000 C CNN
+F 4 "885012207072" H 5745 1010 60  0001 C CNN "Part#"
+	1    5745 1010
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5645 1010 5550 1010
+Wire Wire Line
+	5550 970  5550 1010
+Connection ~ 5550 1010
+Wire Wire Line
+	5550 1010 5550 1090
+$Comp
+L Meow-Meow-rescue:GND-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue #PWR0105
+U 1 1 60D56BBF
+P 6040 1070
+F 0 "#PWR0105" H 6040 820 50  0001 C CNN
+F 1 "GND" H 6040 920 50  0000 C CNN
+F 2 "" H 6040 1070 50  0000 C CNN
+F 3 "" H 6040 1070 50  0000 C CNN
+	1    6040 1070
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6040 1070 6040 1010
+Wire Wire Line
+	6040 1010 5845 1010
 $EndSCHEMATC
