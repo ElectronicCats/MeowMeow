@@ -192,8 +192,6 @@ F 3 "" H 10055 3515 50  0000 C CNN
 	1    10055 3515
 	1    0    0    -1  
 $EndComp
-Text Label 10790 3515 0    60   ~ 0
-GPIO08
 Text Label 8870 3380 2    60   ~ 0
 SWDIO
 Text Label 8875 3580 2    60   ~ 0
@@ -420,9 +418,7 @@ F 4 "0ZCG0030FF2C" H 7425 3160 60  0001 C CNN "Part#"
 	1    7425 3160
 	1    0    0    -1  
 $EndComp
-Text Label 1930 3015 2    50   ~ 0
-GPIO10
-Text Label 1925 2815 2    50   ~ 0
+Text Label 3735 3715 2    50   ~ 0
 GPIO13
 Text Label 1930 3215 2    50   ~ 0
 MOSI
@@ -599,8 +595,6 @@ Wire Wire Line
 	3125 7495 3025 7495
 Wire Wire Line
 	4175 5995 4225 5995
-Text Label 3025 5995 2    50   ~ 0
-RESET
 Text Label 3025 6995 2    50   ~ 0
 SCK
 Text Label 3025 7095 2    50   ~ 0
@@ -700,12 +694,8 @@ Text Label 1920 3515 2    50   ~ 0
 GPIO05
 Text Label 1920 3415 2    50   ~ 0
 GPIO06
-Text Label 1930 3115 2    50   ~ 0
+Text Label 1750 4115 0    50   ~ 0
 GPIO09
-Text Label 1930 2915 2    50   ~ 0
-GPIO11
-Text Label 3530 2515 0    50   ~ 0
-GPIO12
 Text Label 1920 4715 2    50   ~ 0
 RESET
 $Comp
@@ -879,8 +869,6 @@ Wire Wire Line
 Wire Wire Line
 	2040 3915 1915 3915
 Wire Wire Line
-	2040 4115 1910 4115
-Wire Wire Line
 	2040 4215 1905 4215
 Wire Wire Line
 	2040 4415 1915 4415
@@ -972,9 +960,6 @@ Wire Wire Line
 	1110 4520 1190 4520
 Text Label 1190 4520 0    50   ~ 0
 RESET
-NoConn ~ 3440 3615
-NoConn ~ 3440 3715
-NoConn ~ 1910 4115
 NoConn ~ 1905 4215
 Wire Wire Line
 	8980 3280 8865 3280
@@ -985,7 +970,6 @@ Wire Wire Line
 Wire Wire Line
 	8980 3680 8870 3680
 NoConn ~ 4225 5995
-NoConn ~ 1915 3715
 $Comp
 L MCU_Microchip_SAMD:ATSAMD21G18A-M U3
 U 1 1 60D38881
@@ -1029,27 +1013,24 @@ Text Label 4550 3550 2    50   ~ 0
 GPIO05
 Text Label 4550 3450 2    50   ~ 0
 GPIO06
-Text Label 4550 3150 2    50   ~ 0
-GPIO09
-Text Label 4550 3050 2    50   ~ 0
+Text Label 5950 2550 0    50   ~ 0
 GPIO10
 Text Label 4550 3250 2    50   ~ 0
 MOSI
 Text Label 4550 3350 2    50   ~ 0
 SCK
-Text Label 4550 2950 2    50   ~ 0
+Text Label 4550 2850 2    50   ~ 0
 GPIO11
-Text Label 5950 2550 0    50   ~ 0
+Text Label 6245 3650 2    50   ~ 0
 GPIO12
 Text Label 4550 3650 2    50   ~ 0
 MISO
-Text Label 4550 2850 2    50   ~ 0
+Text Label 6245 3750 2    50   ~ 0
 GPIO13
 Text Label 4550 3850 2    50   ~ 0
 D-
 Text Label 4550 3950 2    50   ~ 0
 D+
-NoConn ~ 4550 4150
 NoConn ~ 4550 4250
 Text Label 4550 4450 2    60   ~ 0
 SWCLK
@@ -1079,8 +1060,6 @@ Wire Wire Line
 Connection ~ 5300 5000
 Wire Wire Line
 	5300 5000 5350 5000
-NoConn ~ 5950 3750
-NoConn ~ 5950 3650
 Text Label 5950 2450 0    50   ~ 0
 GPIO08
 Text Label 5950 2350 0    50   ~ 0
@@ -1141,13 +1120,11 @@ F 3 "~" H 9180 3480 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 NoConn ~ 8980 3780
-Text Label 8870 3480 2    50   ~ 0
-RESET
 Wire Wire Line
 	8980 3480 8870 3480
 Wire Wire Line
 	4550 3750 4470 3750
-Text Label 1980 3715 2    50   ~ 0
+Text Label 1915 3715 2    50   ~ 0
 PA32
 Text Label 4470 3750 2    50   ~ 0
 PA32
@@ -1213,4 +1190,72 @@ Wire Wire Line
 	6040 1070 6040 1010
 Wire Wire Line
 	6040 1010 5845 1010
+Wire Wire Line
+	3440 3615 3735 3615
+Text Label 4270 4150 0    50   ~ 0
+GPIO09
+Wire Wire Line
+	6245 3650 5950 3650
+Wire Wire Line
+	1750 4115 2040 4115
+Wire Wire Line
+	3735 3715 3440 3715
+NoConn ~ 1930 2915
+NoConn ~ 1930 3015
+NoConn ~ 1930 3110
+Wire Wire Line
+	6245 3750 5950 3750
+Wire Wire Line
+	4270 4150 4550 4150
+NoConn ~ 4550 2950
+NoConn ~ 4550 3050
+NoConn ~ 4550 3150
+Text Label 1925 2815 2    50   ~ 0
+GPIO11
+Text Label 3530 2515 0    50   ~ 0
+GPIO10
+Text Label 3735 3615 2    50   ~ 0
+GPIO12
+NoConn ~ 8870 3480
+NoConn ~ 3025 5995
+Text Label 10790 3515 0    50   ~ 0
+PA32
+$Comp
+L Meow-Meow-rescue:C_Small-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue C7
+U 1 1 60EF8F53
+P 3920 1280
+F 0 "C7" H 3930 1350 50  0000 L CNN
+F 1 "0.1uF" H 3930 1200 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3920 1280 50  0001 C CNN
+F 3 "" H 3920 1280 50  0000 C CNN
+F 4 "885012207072" H 3920 1280 60  0001 C CNN "Part#"
+	1    3920 1280
+	1    0    0    -1  
+$EndComp
+$Comp
+L Meow-Meow-rescue:+3.3V-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue #PWR02
+U 1 1 60EF9E45
+P 3920 1110
+F 0 "#PWR02" H 3920 960 50  0001 C CNN
+F 1 "+3.3V" H 3920 1250 50  0000 C CNN
+F 2 "" H 3920 1110 50  0000 C CNN
+F 3 "" H 3920 1110 50  0000 C CNN
+	1    3920 1110
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3920 1110 3920 1180
+$Comp
+L Meow-Meow-rescue:GND-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue #PWR010
+U 1 1 60F03F32
+P 3920 1430
+F 0 "#PWR010" H 3920 1180 50  0001 C CNN
+F 1 "GND" H 3920 1280 50  0000 C CNN
+F 2 "" H 3920 1430 50  0000 C CNN
+F 3 "" H 3920 1430 50  0000 C CNN
+	1    3920 1430
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3920 1380 3920 1430
 $EndSCHEMATC
