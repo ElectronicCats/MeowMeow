@@ -1,0 +1,595 @@
+Archive member included to satisfy reference by file (symbol)
+
+/usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(lib_a-memcpy-stub.o)
+                              build/meowmeow2/startup_samd21.o (memcpy)
+/usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(lib_a-memset.o)
+                              build/meowmeow2/startup_samd21.o (memset)
+
+Discarded input sections
+
+ .text          0x0000000000000000        0x0 build/meowmeow2/flash_samd21.o
+ .data          0x0000000000000000        0x0 build/meowmeow2/flash_samd21.o
+ .bss           0x0000000000000000        0x0 build/meowmeow2/flash_samd21.o
+ .text.flash_erase_to_end
+                0x0000000000000000       0x1a build/meowmeow2/flash_samd21.o
+ .text.copy_words
+                0x0000000000000000       0x14 build/meowmeow2/flash_samd21.o
+ .text.flash_write
+                0x0000000000000000       0x9c build/meowmeow2/flash_samd21.o
+ .text          0x0000000000000000        0x0 build/meowmeow2/init_samd21.o
+ .data          0x0000000000000000        0x0 build/meowmeow2/init_samd21.o
+ .bss           0x0000000000000000        0x0 build/meowmeow2/init_samd21.o
+ .data.g_interrupt_enabled
+                0x0000000000000000        0x1 build/meowmeow2/init_samd21.o
+ .text          0x0000000000000000        0x0 build/meowmeow2/startup_samd21.o
+ .data          0x0000000000000000        0x0 build/meowmeow2/startup_samd21.o
+ .bss           0x0000000000000000        0x0 build/meowmeow2/startup_samd21.o
+ .text          0x0000000000000000        0x0 build/meowmeow2/usart_sam_ba.o
+ .data          0x0000000000000000        0x0 build/meowmeow2/usart_sam_ba.o
+ .bss           0x0000000000000000        0x0 build/meowmeow2/usart_sam_ba.o
+ .text.usart_open
+                0x0000000000000000       0xbc build/meowmeow2/usart_sam_ba.o
+ .text.usart_close
+                0x0000000000000000       0x10 build/meowmeow2/usart_sam_ba.o
+ .text.usart_putc
+                0x0000000000000000       0x14 build/meowmeow2/usart_sam_ba.o
+ .text.usart_is_rx_ready
+                0x0000000000000000       0x10 build/meowmeow2/usart_sam_ba.o
+ .text.usart_getc
+                0x0000000000000000       0x18 build/meowmeow2/usart_sam_ba.o
+ .text.usart_sharp_received
+                0x0000000000000000       0x1a build/meowmeow2/usart_sam_ba.o
+ .text.usart_readc
+                0x0000000000000000       0x20 build/meowmeow2/usart_sam_ba.o
+ .text.usart_putdata
+                0x0000000000000000       0x1a build/meowmeow2/usart_sam_ba.o
+ .text.usart_getdata
+                0x0000000000000000        0xe build/meowmeow2/usart_sam_ba.o
+ .text.getbytes
+                0x0000000000000000       0x60 build/meowmeow2/usart_sam_ba.o
+ .text.getPacket
+                0x0000000000000000       0x70 build/meowmeow2/usart_sam_ba.o
+ .text.usart_putdata_xmd
+                0x0000000000000000      0x10c build/meowmeow2/usart_sam_ba.o
+ .text.usart_getdata_xmd
+                0x0000000000000000       0xa4 build/meowmeow2/usart_sam_ba.o
+ .bss.b_sharp_received
+                0x0000000000000000        0x1 build/meowmeow2/usart_sam_ba.o
+ .bss.buffer_rx_usart
+                0x0000000000000000       0x80 build/meowmeow2/usart_sam_ba.o
+ .bss.buffer_tx_usart
+                0x0000000000000000       0x80 build/meowmeow2/usart_sam_ba.o
+ .bss.error_timeout
+                0x0000000000000000        0x1 build/meowmeow2/usart_sam_ba.o
+ .bss.idx_rx_read
+                0x0000000000000000        0x1 build/meowmeow2/usart_sam_ba.o
+ .bss.idx_rx_write
+                0x0000000000000000        0x1 build/meowmeow2/usart_sam_ba.o
+ .bss.idx_tx_read
+                0x0000000000000000        0x1 build/meowmeow2/usart_sam_ba.o
+ .bss.idx_tx_write
+                0x0000000000000000        0x1 build/meowmeow2/usart_sam_ba.o
+ .bss.mode_of_transfer
+                0x0000000000000000        0x1 build/meowmeow2/usart_sam_ba.o
+ .bss.size_of_data
+                0x0000000000000000        0x2 build/meowmeow2/usart_sam_ba.o
+ .text          0x0000000000000000        0x0 build/meowmeow2/screen.o
+ .data          0x0000000000000000        0x0 build/meowmeow2/screen.o
+ .bss           0x0000000000000000        0x0 build/meowmeow2/screen.o
+ .debug_info    0x0000000000000000       0x72 build/meowmeow2/screen.o
+ .debug_abbrev  0x0000000000000000       0x26 build/meowmeow2/screen.o
+ .debug_aranges
+                0x0000000000000000       0x18 build/meowmeow2/screen.o
+ .debug_line    0x0000000000000000       0x1d build/meowmeow2/screen.o
+ .debug_str     0x0000000000000000      0x19b build/meowmeow2/screen.o
+ .comment       0x0000000000000000       0x4e build/meowmeow2/screen.o
+ .ARM.attributes
+                0x0000000000000000       0x32 build/meowmeow2/screen.o
+ .text          0x0000000000000000        0x0 build/meowmeow2/images.o
+ .data          0x0000000000000000        0x0 build/meowmeow2/images.o
+ .bss           0x0000000000000000        0x0 build/meowmeow2/images.o
+ .rodata.arrowLogo
+                0x0000000000000000       0x39 build/meowmeow2/images.o
+ .rodata.fileLogo
+                0x0000000000000000       0x4a build/meowmeow2/images.o
+ .rodata.font8  0x0000000000000000      0x240 build/meowmeow2/images.o
+ .rodata.pendriveLogo
+                0x0000000000000000       0x3e build/meowmeow2/images.o
+ .debug_info    0x0000000000000000      0x11e build/meowmeow2/images.o
+ .debug_abbrev  0x0000000000000000       0x6a build/meowmeow2/images.o
+ .debug_aranges
+                0x0000000000000000       0x18 build/meowmeow2/images.o
+ .debug_line    0x0000000000000000      0x138 build/meowmeow2/images.o
+ .debug_str     0x0000000000000000      0x1c8 build/meowmeow2/images.o
+ .comment       0x0000000000000000       0x4e build/meowmeow2/images.o
+ .ARM.attributes
+                0x0000000000000000       0x32 build/meowmeow2/images.o
+ .text          0x0000000000000000        0x0 build/meowmeow2/utils.o
+ .data          0x0000000000000000        0x0 build/meowmeow2/utils.o
+ .bss           0x0000000000000000        0x0 build/meowmeow2/utils.o
+ .text.writeNum
+                0x0000000000000000       0x38 build/meowmeow2/utils.o
+ .text.timerTick
+                0x0000000000000000       0x40 build/meowmeow2/utils.o
+ .text.led_signal
+                0x0000000000000000       0x2c build/meowmeow2/utils.o
+ .text.RGBLED_set_color
+                0x0000000000000000        0x2 build/meowmeow2/utils.o
+ .bss.resetHorizon
+                0x0000000000000000        0x4 build/meowmeow2/utils.o
+ .bss.timerHigh
+                0x0000000000000000        0x4 build/meowmeow2/utils.o
+ .bss.timerLow  0x0000000000000000        0x4 build/meowmeow2/utils.o
+ .text          0x0000000000000000        0x0 build/meowmeow2/selfmain.o
+ .data          0x0000000000000000        0x0 build/meowmeow2/selfmain.o
+ .bss           0x0000000000000000        0x0 build/meowmeow2/selfmain.o
+ .text          0x0000000000000000        0x0 build/meowmeow2/selfdata.o
+ .data          0x0000000000000000        0x0 build/meowmeow2/selfdata.o
+ .bss           0x0000000000000000        0x0 build/meowmeow2/selfdata.o
+ .text          0x0000000000000000        0x0 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(lib_a-memcpy-stub.o)
+ .data          0x0000000000000000        0x0 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(lib_a-memcpy-stub.o)
+ .bss           0x0000000000000000        0x0 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(lib_a-memcpy-stub.o)
+ .text          0x0000000000000000        0x0 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(lib_a-memset.o)
+ .data          0x0000000000000000        0x0 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(lib_a-memset.o)
+ .bss           0x0000000000000000        0x0 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(lib_a-memset.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+rom              0x0000000000002000 0x0000000000020000 xr
+ram              0x0000000020000000 0x0000000000008000 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD build/meowmeow2/flash_samd21.o
+LOAD build/meowmeow2/init_samd21.o
+LOAD build/meowmeow2/startup_samd21.o
+LOAD build/meowmeow2/usart_sam_ba.o
+LOAD build/meowmeow2/screen.o
+LOAD build/meowmeow2/images.o
+LOAD build/meowmeow2/utils.o
+LOAD build/meowmeow2/selfmain.o
+LOAD build/meowmeow2/selfdata.o
+START GROUP
+LOAD /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/libgcc.a
+LOAD /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a
+LOAD /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a
+END GROUP
+START GROUP
+LOAD /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/libgcc.a
+LOAD /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a
+LOAD /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libnosys.a
+END GROUP
+START GROUP
+LOAD /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/libgcc.a
+LOAD /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a
+LOAD /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libnosys.a
+END GROUP
+                0x0000000000002000                STACK_SIZE = DEFINED (STACK_SIZE)?STACK_SIZE:DEFINED (__stack_size__)?__stack_size__:0x2000
+
+.text           0x0000000000002000     0x2614
+                0x0000000000002000                . = ALIGN (0x4)
+                0x0000000000002000                _sfixed = .
+ *(.vectors .vectors.*)
+ .vectors       0x0000000000002000       0xb4 build/meowmeow2/startup_samd21.o
+                0x0000000000002000                exception_table
+ *(.text .text.* .gnu.linkonce.t.*)
+ .text.flash_erase_row
+                0x00000000000020b4       0x28 build/meowmeow2/flash_samd21.o
+                0x00000000000020b4                flash_erase_row
+ .text.flash_write_words
+                0x00000000000020dc       0x54 build/meowmeow2/flash_samd21.o
+                0x00000000000020dc                flash_write_words
+ .text.flash_write_row
+                0x0000000000002130       0x2e build/meowmeow2/flash_samd21.o
+                0x0000000000002130                flash_write_row
+ *fill*         0x000000000000215e        0x2 
+ .text.gclk_sync
+                0x0000000000002160       0x10 build/meowmeow2/init_samd21.o
+ .text.dfll_sync
+                0x0000000000002170       0x10 build/meowmeow2/init_samd21.o
+ .text.system_init
+                0x0000000000002180       0xcc build/meowmeow2/init_samd21.o
+                0x0000000000002180                system_init
+ .text.SysTick_Handler
+                0x000000000000224c        0x8 build/meowmeow2/init_samd21.o
+                0x000000000000224c                SysTick_Handler
+ .text.Dummy_Handler
+                0x0000000000002254        0x2 build/meowmeow2/startup_samd21.o
+                0x0000000000002254                SYSCTRL_Handler
+                0x0000000000002254                AC_Handler
+                0x0000000000002254                PendSV_Handler
+                0x0000000000002254                NMI_Handler
+                0x0000000000002254                SERCOM1_Handler
+                0x0000000000002254                ADC_Handler
+                0x0000000000002254                TCC1_Handler
+                0x0000000000002254                SERCOM2_Handler
+                0x0000000000002254                TCC0_Handler
+                0x0000000000002254                RTC_Handler
+                0x0000000000002254                EIC_Handler
+                0x0000000000002254                WDT_Handler
+                0x0000000000002254                TC4_Handler
+                0x0000000000002254                USB_Handler
+                0x0000000000002254                TC3_Handler
+                0x0000000000002254                Dummy_Handler
+                0x0000000000002254                PM_Handler
+                0x0000000000002254                SERCOM5_Handler
+                0x0000000000002254                SVC_Handler
+                0x0000000000002254                TCC2_Handler
+                0x0000000000002254                EVSYS_Handler
+                0x0000000000002254                SERCOM3_Handler
+                0x0000000000002254                SERCOM4_Handler
+                0x0000000000002254                I2S_Handler
+                0x0000000000002254                NVMCTRL_Handler
+                0x0000000000002254                SERCOM0_Handler
+                0x0000000000002254                DAC_Handler
+                0x0000000000002254                PTC_Handler
+                0x0000000000002254                TC5_Handler
+                0x0000000000002254                DMAC_Handler
+ .text.HardFault_Handler
+                0x0000000000002256        0x2 build/meowmeow2/startup_samd21.o
+                0x0000000000002256                HardFault_Handler
+ .text.Reset_Handler
+                0x0000000000002258       0xc0 build/meowmeow2/startup_samd21.o
+                0x0000000000002258                Reset_Handler
+ .text.add_crc  0x0000000000002318       0x58 build/meowmeow2/usart_sam_ba.o
+                0x0000000000002318                add_crc
+ .text.delay    0x0000000000002370       0x10 build/meowmeow2/utils.o
+                0x0000000000002370                delay
+ .text.panic    0x0000000000002380        0x2 build/meowmeow2/utils.o
+                0x0000000000002380                panic
+ *fill*         0x0000000000002382        0x2 
+ .text.resetIntoApp
+                0x0000000000002384       0x28 build/meowmeow2/utils.o
+                0x0000000000002384                resetIntoApp
+ .text.resetIntoBootloader
+                0x00000000000023ac       0x28 build/meowmeow2/utils.o
+                0x00000000000023ac                resetIntoBootloader
+ .text.led_tick
+                0x00000000000023d4       0x80 build/meowmeow2/utils.o
+                0x00000000000023d4                led_tick
+ .text.led_init
+                0x0000000000002454       0x10 build/meowmeow2/utils.o
+                0x0000000000002454                led_init
+ .text.setBootProt
+                0x0000000000002464       0xb8 build/meowmeow2/selfmain.o
+                0x0000000000002464                setBootProt
+ .text.startup.main
+                0x000000000000251c       0xc4 build/meowmeow2/selfmain.o
+                0x000000000000251c                main
+ .text.memcpy   0x00000000000025e0       0x12 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(lib_a-memcpy-stub.o)
+                0x00000000000025e0                memcpy
+ .text.memset   0x00000000000025f2       0x10 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(lib_a-memset.o)
+                0x00000000000025f2                memset
+ *(.glue_7t)
+ .glue_7t       0x0000000000002602        0x0 linker stubs
+ *(.glue_7)
+ .glue_7        0x0000000000002602        0x0 linker stubs
+ *(.rodata .rodata* .gnu.linkonce.r.*)
+ *fill*         0x0000000000002602        0x2 
+ .rodata.bootloader
+                0x0000000000002604     0x2000 build/meowmeow2/selfdata.o
+                0x0000000000002604                bootloader
+ .rodata.bootloader_crcs
+                0x0000000000004604       0x10 build/meowmeow2/selfdata.o
+                0x0000000000004604                bootloader_crcs
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x0000000000004614                . = ALIGN (0x4)
+ *(.init)
+                0x0000000000004614                . = ALIGN (0x4)
+                0x0000000000004614                __preinit_array_start = .
+ *(.preinit_array)
+                0x0000000000004614                __preinit_array_end = .
+                0x0000000000004614                . = ALIGN (0x4)
+                0x0000000000004614                __init_array_start = .
+ *(SORT_BY_NAME(.init_array.*))
+ *(.init_array)
+                0x0000000000004614                __init_array_end = .
+                0x0000000000004614                . = ALIGN (0x4)
+ *crtbegin.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o) .ctors)
+ *(SORT_BY_NAME(.ctors.*))
+ *crtend.o(.ctors)
+                0x0000000000004614                . = ALIGN (0x4)
+                0x0000000000004614                _efixed = .
+                [!provide]                        PROVIDE (__exidx_start = .)
+
+.vfp11_veneer   0x0000000000004614        0x0
+ .vfp11_veneer  0x0000000000004614        0x0 linker stubs
+
+.v4_bx          0x0000000000004614        0x0
+ .v4_bx         0x0000000000004614        0x0 linker stubs
+
+.iplt           0x0000000000004614        0x0
+ .iplt          0x0000000000004614        0x0 build/meowmeow2/flash_samd21.o
+
+.igot.plt       0x0000000000004614        0x0
+ .igot.plt      0x0000000000004614        0x0 build/meowmeow2/flash_samd21.o
+
+.rel.dyn        0x0000000000004614        0x0
+ .rel.iplt      0x0000000000004614        0x0 build/meowmeow2/flash_samd21.o
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                [!provide]                        PROVIDE (__exidx_end = .)
+                0x0000000000004614                . = ALIGN (0x4)
+                0x0000000000004614                _etext = .
+
+.relocate       0x0000000020000000        0x4 load address 0x0000000000004614
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                _srelocate = .
+ *(.ramfunc .ramfunc.*)
+ *(.data .data.*)
+ .data.led_tick_step
+                0x0000000020000000        0x1 build/meowmeow2/utils.o
+                0x0000000020000000                led_tick_step
+ .data.limit    0x0000000020000001        0x1 build/meowmeow2/utils.o
+                0x0000000020000004                . = ALIGN (0x4)
+ *fill*         0x0000000020000002        0x2 
+                0x0000000020000004                _erelocate = .
+
+.bss            0x0000000020000004      0x308 load address 0x0000000000004618
+                0x0000000020000004                . = ALIGN (0x4)
+                0x0000000020000004                _sbss = .
+                0x0000000020000004                _szero = .
+ *(.bss .bss.*)
+ .bss.crcCache  0x0000000020000004      0x200 build/meowmeow2/usart_sam_ba.o
+ .bss.now       0x0000000020000204        0x4 build/meowmeow2/utils.o
+ .bss.signal_end
+                0x0000000020000208        0x4 build/meowmeow2/utils.o
+ .bss.pageBuf   0x000000002000020c      0x100 build/meowmeow2/selfmain.o
+                0x000000002000020c                pageBuf
+ *(COMMON)
+                0x000000002000030c                . = ALIGN (0x4)
+                0x000000002000030c                _ebss = .
+                0x000000002000030c                _ezero = .
+
+.stack          0x000000002000030c     0x2004 load address 0x0000000000004920
+                0x0000000020000310                . = ALIGN (0x8)
+ *fill*         0x000000002000030c        0x4 
+                0x0000000020000310                _sstack = .
+                0x0000000020002310                . = (. + STACK_SIZE)
+ *fill*         0x0000000020000310     0x2000 
+                0x0000000020002310                . = ALIGN (0x8)
+                0x0000000020002310                _estack = .
+                0x0000000020002310                . = ALIGN (0x4)
+                0x0000000020002310                _end = .
+OUTPUT(build/meowmeow2/update-bootloader-meowmeow2-v3.6.0.elf elf32-littlearm)
+LOAD linker stubs
+
+.debug_info     0x0000000000000000     0xb267
+ .debug_info    0x0000000000000000      0x7ec build/meowmeow2/flash_samd21.o
+ .debug_info    0x00000000000007ec     0x1cc6 build/meowmeow2/init_samd21.o
+ .debug_info    0x00000000000024b2     0x399b build/meowmeow2/startup_samd21.o
+ .debug_info    0x0000000000005e4d     0x38bd build/meowmeow2/usart_sam_ba.o
+ .debug_info    0x000000000000970a      0xafc build/meowmeow2/utils.o
+ .debug_info    0x000000000000a206      0xf72 build/meowmeow2/selfmain.o
+ .debug_info    0x000000000000b178       0xef build/meowmeow2/selfdata.o
+
+.debug_abbrev   0x0000000000000000     0x1182
+ .debug_abbrev  0x0000000000000000      0x201 build/meowmeow2/flash_samd21.o
+ .debug_abbrev  0x0000000000000201      0x28f build/meowmeow2/init_samd21.o
+ .debug_abbrev  0x0000000000000490      0x2b4 build/meowmeow2/startup_samd21.o
+ .debug_abbrev  0x0000000000000744      0x41a build/meowmeow2/usart_sam_ba.o
+ .debug_abbrev  0x0000000000000b5e      0x2f3 build/meowmeow2/utils.o
+ .debug_abbrev  0x0000000000000e51      0x2b1 build/meowmeow2/selfmain.o
+ .debug_abbrev  0x0000000000001102       0x80 build/meowmeow2/selfdata.o
+
+.debug_loc      0x0000000000000000     0x12a4
+ .debug_loc     0x0000000000000000      0x497 build/meowmeow2/flash_samd21.o
+ .debug_loc     0x0000000000000497       0x6f build/meowmeow2/init_samd21.o
+ .debug_loc     0x0000000000000506      0x9aa build/meowmeow2/usart_sam_ba.o
+ .debug_loc     0x0000000000000eb0      0x199 build/meowmeow2/utils.o
+ .debug_loc     0x0000000000001049      0x25b build/meowmeow2/selfmain.o
+
+.debug_aranges  0x0000000000000000      0x1e0
+ .debug_aranges
+                0x0000000000000000       0x48 build/meowmeow2/flash_samd21.o
+ .debug_aranges
+                0x0000000000000048       0x38 build/meowmeow2/init_samd21.o
+ .debug_aranges
+                0x0000000000000080       0x30 build/meowmeow2/startup_samd21.o
+ .debug_aranges
+                0x00000000000000b0       0x88 build/meowmeow2/usart_sam_ba.o
+ .debug_aranges
+                0x0000000000000138       0x68 build/meowmeow2/utils.o
+ .debug_aranges
+                0x00000000000001a0       0x28 build/meowmeow2/selfmain.o
+ .debug_aranges
+                0x00000000000001c8       0x18 build/meowmeow2/selfdata.o
+
+.debug_ranges   0x0000000000000000      0x280
+ .debug_ranges  0x0000000000000000       0xa8 build/meowmeow2/flash_samd21.o
+ .debug_ranges  0x00000000000000a8       0x48 build/meowmeow2/init_samd21.o
+ .debug_ranges  0x00000000000000f0       0x20 build/meowmeow2/startup_samd21.o
+ .debug_ranges  0x0000000000000110       0x90 build/meowmeow2/usart_sam_ba.o
+ .debug_ranges  0x00000000000001a0       0x90 build/meowmeow2/utils.o
+ .debug_ranges  0x0000000000000230       0x50 build/meowmeow2/selfmain.o
+
+.debug_line     0x0000000000000000     0x1fe7
+ .debug_line    0x0000000000000000      0x491 build/meowmeow2/flash_samd21.o
+ .debug_line    0x0000000000000491      0x3c6 build/meowmeow2/init_samd21.o
+ .debug_line    0x0000000000000857      0x2df build/meowmeow2/startup_samd21.o
+ .debug_line    0x0000000000000b36      0x95c build/meowmeow2/usart_sam_ba.o
+ .debug_line    0x0000000000001492      0x508 build/meowmeow2/utils.o
+ .debug_line    0x000000000000199a      0x507 build/meowmeow2/selfmain.o
+ .debug_line    0x0000000000001ea1      0x146 build/meowmeow2/selfdata.o
+
+.debug_str      0x0000000000000000     0x270e
+ .debug_str     0x0000000000000000      0x35e build/meowmeow2/flash_samd21.o
+                                        0x3e8 (size before relaxing)
+ .debug_str     0x000000000000035e      0x6fe build/meowmeow2/init_samd21.o
+                                        0xa8a (size before relaxing)
+ .debug_str     0x0000000000000a5c      0xeef build/meowmeow2/startup_samd21.o
+                                       0x1373 (size before relaxing)
+ .debug_str     0x000000000000194b      0xc55 build/meowmeow2/usart_sam_ba.o
+                                        0xfb3 (size before relaxing)
+ .debug_str     0x00000000000025a0       0xe5 build/meowmeow2/utils.o
+                                        0x470 (size before relaxing)
+ .debug_str     0x0000000000002685       0x6e build/meowmeow2/selfmain.o
+                                        0x5e8 (size before relaxing)
+ .debug_str     0x00000000000026f3       0x1b build/meowmeow2/selfdata.o
+                                        0x1df (size before relaxing)
+
+.comment        0x0000000000000000       0x4d
+ .comment       0x0000000000000000       0x4d build/meowmeow2/flash_samd21.o
+                                         0x4e (size before relaxing)
+ .comment       0x000000000000004d       0x4e build/meowmeow2/init_samd21.o
+ .comment       0x000000000000004d       0x4e build/meowmeow2/startup_samd21.o
+ .comment       0x000000000000004d       0x4e build/meowmeow2/usart_sam_ba.o
+ .comment       0x000000000000004d       0x4e build/meowmeow2/utils.o
+ .comment       0x000000000000004d       0x4e build/meowmeow2/selfmain.o
+ .comment       0x000000000000004d       0x4e build/meowmeow2/selfdata.o
+
+.ARM.attributes
+                0x0000000000000000       0x2c
+ .ARM.attributes
+                0x0000000000000000       0x2c build/meowmeow2/flash_samd21.o
+ .ARM.attributes
+                0x000000000000002c       0x2c build/meowmeow2/init_samd21.o
+ .ARM.attributes
+                0x0000000000000058       0x2c build/meowmeow2/startup_samd21.o
+ .ARM.attributes
+                0x0000000000000084       0x2c build/meowmeow2/usart_sam_ba.o
+ .ARM.attributes
+                0x00000000000000b0       0x2c build/meowmeow2/utils.o
+ .ARM.attributes
+                0x00000000000000dc       0x2c build/meowmeow2/selfmain.o
+ .ARM.attributes
+                0x0000000000000108       0x32 build/meowmeow2/selfdata.o
+ .ARM.attributes
+                0x000000000000013a       0x2c /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(lib_a-memcpy-stub.o)
+ .ARM.attributes
+                0x0000000000000166       0x2c /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(lib_a-memset.o)
+
+.debug_frame    0x0000000000000000      0x45c
+ .debug_frame   0x0000000000000000       0xb8 build/meowmeow2/flash_samd21.o
+ .debug_frame   0x00000000000000b8       0x68 build/meowmeow2/init_samd21.o
+ .debug_frame   0x0000000000000120       0x4c build/meowmeow2/startup_samd21.o
+ .debug_frame   0x000000000000016c      0x188 build/meowmeow2/usart_sam_ba.o
+ .debug_frame   0x00000000000002f4       0xcc build/meowmeow2/utils.o
+ .debug_frame   0x00000000000003c0       0x54 build/meowmeow2/selfmain.o
+ .debug_frame   0x0000000000000414       0x28 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x000000000000043c       0x20 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(lib_a-memset.o)
+
+Cross Reference Table
+
+Symbol                                            File
+AC_Handler                                        build/meowmeow2/startup_samd21.o
+ADC_Handler                                       build/meowmeow2/startup_samd21.o
+DAC_Handler                                       build/meowmeow2/startup_samd21.o
+DMAC_Handler                                      build/meowmeow2/startup_samd21.o
+Dummy_Handler                                     build/meowmeow2/startup_samd21.o
+EIC_Handler                                       build/meowmeow2/startup_samd21.o
+EVSYS_Handler                                     build/meowmeow2/startup_samd21.o
+HardFault_Handler                                 build/meowmeow2/startup_samd21.o
+I2S_Handler                                       build/meowmeow2/startup_samd21.o
+NMI_Handler                                       build/meowmeow2/startup_samd21.o
+NVMCTRL_Handler                                   build/meowmeow2/startup_samd21.o
+PM_Handler                                        build/meowmeow2/startup_samd21.o
+PTC_Handler                                       build/meowmeow2/startup_samd21.o
+PendSV_Handler                                    build/meowmeow2/startup_samd21.o
+RGBLED_set_color                                  build/meowmeow2/utils.o
+RTC_Handler                                       build/meowmeow2/startup_samd21.o
+Reset_Handler                                     build/meowmeow2/startup_samd21.o
+SERCOM0_Handler                                   build/meowmeow2/startup_samd21.o
+SERCOM1_Handler                                   build/meowmeow2/startup_samd21.o
+SERCOM2_Handler                                   build/meowmeow2/startup_samd21.o
+SERCOM3_Handler                                   build/meowmeow2/startup_samd21.o
+SERCOM4_Handler                                   build/meowmeow2/startup_samd21.o
+SERCOM5_Handler                                   build/meowmeow2/startup_samd21.o
+SVC_Handler                                       build/meowmeow2/startup_samd21.o
+SYSCTRL_Handler                                   build/meowmeow2/startup_samd21.o
+SysTick_Handler                                   build/meowmeow2/init_samd21.o
+TC3_Handler                                       build/meowmeow2/startup_samd21.o
+TC4_Handler                                       build/meowmeow2/startup_samd21.o
+TC5_Handler                                       build/meowmeow2/startup_samd21.o
+TCC0_Handler                                      build/meowmeow2/startup_samd21.o
+TCC1_Handler                                      build/meowmeow2/startup_samd21.o
+TCC2_Handler                                      build/meowmeow2/startup_samd21.o
+USB_Handler                                       build/meowmeow2/startup_samd21.o
+WDT_Handler                                       build/meowmeow2/startup_samd21.o
+_erelocate                                        build/meowmeow2/startup_samd21.o
+_estack                                           build/meowmeow2/startup_samd21.o
+_etext                                            build/meowmeow2/startup_samd21.o
+_ezero                                            build/meowmeow2/startup_samd21.o
+_sfixed                                           build/meowmeow2/startup_samd21.o
+_srelocate                                        build/meowmeow2/startup_samd21.o
+_szero                                            build/meowmeow2/startup_samd21.o
+add_crc                                           build/meowmeow2/usart_sam_ba.o
+                                                  build/meowmeow2/selfmain.o
+arrowLogo                                         build/meowmeow2/images.o
+b_sharp_received                                  build/meowmeow2/usart_sam_ba.o
+bootloader                                        build/meowmeow2/selfdata.o
+                                                  build/meowmeow2/selfmain.o
+bootloader_crcs                                   build/meowmeow2/selfdata.o
+                                                  build/meowmeow2/selfmain.o
+buffer_rx_usart                                   build/meowmeow2/usart_sam_ba.o
+buffer_tx_usart                                   build/meowmeow2/usart_sam_ba.o
+copy_words                                        build/meowmeow2/flash_samd21.o
+delay                                             build/meowmeow2/utils.o
+                                                  build/meowmeow2/selfmain.o
+error_timeout                                     build/meowmeow2/usart_sam_ba.o
+exception_table                                   build/meowmeow2/startup_samd21.o
+fileLogo                                          build/meowmeow2/images.o
+flash_erase_row                                   build/meowmeow2/flash_samd21.o
+flash_erase_to_end                                build/meowmeow2/flash_samd21.o
+flash_write                                       build/meowmeow2/flash_samd21.o
+flash_write_row                                   build/meowmeow2/flash_samd21.o
+                                                  build/meowmeow2/selfmain.o
+flash_write_words                                 build/meowmeow2/flash_samd21.o
+                                                  build/meowmeow2/selfmain.o
+font8                                             build/meowmeow2/images.o
+g_interrupt_enabled                               build/meowmeow2/init_samd21.o
+getPacket                                         build/meowmeow2/usart_sam_ba.o
+idx_rx_read                                       build/meowmeow2/usart_sam_ba.o
+idx_rx_write                                      build/meowmeow2/usart_sam_ba.o
+idx_tx_read                                       build/meowmeow2/usart_sam_ba.o
+idx_tx_write                                      build/meowmeow2/usart_sam_ba.o
+led_init                                          build/meowmeow2/utils.o
+                                                  build/meowmeow2/selfmain.o
+led_signal                                        build/meowmeow2/utils.o
+led_tick                                          build/meowmeow2/utils.o
+                                                  build/meowmeow2/init_samd21.o
+led_tick_step                                     build/meowmeow2/utils.o
+main                                              build/meowmeow2/selfmain.o
+                                                  build/meowmeow2/startup_samd21.o
+memcpy                                            /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(lib_a-memcpy-stub.o)
+                                                  build/meowmeow2/selfmain.o
+                                                  build/meowmeow2/startup_samd21.o
+memset                                            /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(lib_a-memset.o)
+                                                  build/meowmeow2/startup_samd21.o
+mode_of_transfer                                  build/meowmeow2/usart_sam_ba.o
+pageBuf                                           build/meowmeow2/selfmain.o
+panic                                             build/meowmeow2/utils.o
+                                                  build/meowmeow2/selfmain.o
+pendriveLogo                                      build/meowmeow2/images.o
+resetHorizon                                      build/meowmeow2/utils.o
+resetIntoApp                                      build/meowmeow2/utils.o
+                                                  build/meowmeow2/selfmain.o
+resetIntoBootloader                               build/meowmeow2/utils.o
+                                                  build/meowmeow2/selfmain.o
+setBootProt                                       build/meowmeow2/selfmain.o
+size_of_data                                      build/meowmeow2/usart_sam_ba.o
+system_init                                       build/meowmeow2/init_samd21.o
+                                                  build/meowmeow2/selfmain.o
+timerHigh                                         build/meowmeow2/utils.o
+timerTick                                         build/meowmeow2/utils.o
+uart_basic_init                                   build/meowmeow2/usart_sam_ba.o
+uart_disable                                      build/meowmeow2/usart_sam_ba.o
+uart_get_sercom_index                             build/meowmeow2/usart_sam_ba.o
+uart_read_byte                                    build/meowmeow2/usart_sam_ba.o
+uart_write_byte                                   build/meowmeow2/usart_sam_ba.o
+usart_close                                       build/meowmeow2/usart_sam_ba.o
+usart_getc                                        build/meowmeow2/usart_sam_ba.o
+usart_getdata                                     build/meowmeow2/usart_sam_ba.o
+usart_getdata_xmd                                 build/meowmeow2/usart_sam_ba.o
+usart_is_rx_ready                                 build/meowmeow2/usart_sam_ba.o
+usart_open                                        build/meowmeow2/usart_sam_ba.o
+usart_putc                                        build/meowmeow2/usart_sam_ba.o
+usart_putdata                                     build/meowmeow2/usart_sam_ba.o
+usart_putdata_xmd                                 build/meowmeow2/usart_sam_ba.o
+usart_readc                                       build/meowmeow2/usart_sam_ba.o
+usart_sharp_received                              build/meowmeow2/usart_sam_ba.o
+writeNum                                          build/meowmeow2/utils.o
