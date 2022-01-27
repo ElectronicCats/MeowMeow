@@ -1,12 +1,14 @@
 /************************************************************
 ENGLISH
-MeowMeow2.ino - v1.0v
+MeowMeow2.ino - v2.0v
 Meow Meow - Using the Meow Meow you can make anything into a key 
 just by connecting a few alligator clips
 
 Andres Sabas @ Electronic Cats
 Original Creation Date: April 17, 2018
 https://github.com/ElectronicCats/MeowMeow
+
+Modification: 27 January 2022
 
 This example demonstrates how to use Meow Meow
 
@@ -25,9 +27,6 @@ Distributed as-is; no warranty is given.
 Based in the work by:
  Eric Rosenbaum, Jay Silver, and Jim Lindblom
  MIT Media Lab & Sparkfun
-
-Library Adafruit FreeTouch
-https://github.com/adafruit/Adafruit_FreeTouch
 
 ***********************************************************************/
 ////////////////////////
@@ -50,21 +49,11 @@ https://github.com/adafruit/Adafruit_FreeTouch
 
 #include "Keyboard.h"
 #include <Mouse.h>
-#include "Adafruit_FreeTouch.h"
+#include "Arduino_MCHPTouch.h"
 #include "settings.h"
 
-Adafruit_FreeTouch qt_0 = Adafruit_FreeTouch(A4, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // S
-Adafruit_FreeTouch qt_1 = Adafruit_FreeTouch(A5, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // D
-Adafruit_FreeTouch qt_2 = Adafruit_FreeTouch(A6, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Arrow LEFT
-Adafruit_FreeTouch qt_3 = Adafruit_FreeTouch(A7, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Arrow RIGHT
-Adafruit_FreeTouch qt_4 = Adafruit_FreeTouch(A8, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Arrow DOWN
-Adafruit_FreeTouch qt_5 = Adafruit_FreeTouch(A9, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Arrow UP
-Adafruit_FreeTouch qt_6 = Adafruit_FreeTouch(A10, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // W
-Adafruit_FreeTouch qt_7 = Adafruit_FreeTouch(A11, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // A
-Adafruit_FreeTouch qt_8 = Adafruit_FreeTouch(A12, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Click Mouse
-Adafruit_FreeTouch qt_9 = Adafruit_FreeTouch(A13, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // SPACE
-
-Adafruit_FreeTouch *p[10] = { &qt_0, &qt_1, &qt_2, &qt_3, &qt_4, &qt_5, &qt_6, &qt_7, &qt_8, &qt_9 };
+bool _available = false;
+boolean newMeasurement;
 
 byte byteCounter = 0;
 byte bitCounter = 0;
@@ -111,13 +100,22 @@ void setup() {
   #endif
 
   initializeInputs();
-  calibrate();
+  //calibrate();
  
   Keyboard.begin();
   digitalWrite(LED_BUILTIN,LOW);
 }
 
 void loop() {
+
+  // polling the sensor for new measure
+  TOUCH.poll();
+  if(TOUCH.available()) {
+    _available = true;
+  }
+  else{
+  _available =  false;
+  }
 
   updateMeasurementBuffers();
   updateBufferSums();
@@ -145,15 +143,19 @@ void updateMeasurementBuffers() {
     inputs[i].oldestMeasurement = (currentByte >> bitCounter) & 0x01; 
 
     // make the new measurement
-    long newState = (p[i]->measure());
-    boolean newMeasurement = ((abs(newState - inputs[i].touch) > CALIBRATION) ? 0 : 1);
+    if(_available) {
+      newMeasurement = TOUCH.read(i);
+    }
+
+    //long newState = (p[i]->measure());
+    //boolean newMeasurement = ((abs(newState - inputs[i].touch) > CALIBRATION) ? 0 : 1);
 
     #ifdef DEBUG
-      Serial.print(p[i]->measure());
+      Serial.print(TOUCH.read(i));
       Serial.print(",");
     #endif
     // invert so that true means the switch is closed
-    newMeasurement = !newMeasurement; 
+    //newMeasurement = !newMeasurement; 
     #ifdef DEBUG2
       Serial.print("Index:");
       Serial.print(i);
@@ -276,26 +278,14 @@ void initializeInputs() {
   pinMode(LED_BUILTIN, OUTPUT);
   digitalWrite(LED_BUILTIN,HIGH);
 
-  if (! qt_0.begin())  
-    Serial.println(F("Failed to begin pin A0 or"));
-  if (! qt_1.begin())  
-    Serial.println(F("Failed to begin pin A1 or D"));
-  if (! qt_2.begin())  
-    Serial.println(F("Failed to begin pin A2 or Arrow LEFT"));
-  if (! qt_3.begin())  
-    Serial.println(F("Failed to begin pin A3 or Arrow RIGHT"));
-  if (! qt_4.begin())  
-    Serial.println(F("Failed to begin pin A4 or Arrow DOWN"));
-  if (! qt_5.begin())  
-    Serial.println(F("Failed to begin pin A5 or Arrow UP"));
-  if (! qt_6.begin())  
-    Serial.println(F("Failed to begin pin A6 or W"));
-  if (! qt_7.begin())  
-    Serial.println(F("Failed to begin pin A7 or A"));
-  if (! qt_8.begin())  
-   Serial.println(F("Failed to begin pin A8 or Click Mouse"));
-  if (! qt_9.begin())  
-   Serial.println(F("Failed to begin pin A9 or SPACE"));
+  // QTouch initialization
+  if (!TOUCH.begin())
+  {
+    Serial.println("Error in sensors initialization!");
+    while (1)
+      ;
+  }
+  Serial.println("Touch initialization Done!");
    
   float thresholdPerc = SWITCH_THRESHOLD_OFFSET_PERC;
   float thresholdCenterBias = SWITCH_THRESHOLD_CENTER_BIAS/50.0;
@@ -482,10 +472,10 @@ The easiest way to do that is to restart the arduino sketch since calibration is
 when the chip is initialized. So, basically ... connect all your wires, electrodes, 
 fruit, etc...then start up the capacitive touch program!
 */
-void calibrate(){
+/*void calibrate(){
   for (int i=0; i<NUM_INPUTS; i++) {
     // make a new measurement for initial calibration
     long newState = (p[i]->measure());
     inputs[i].touch = newState;
   }
-}
+}*/
