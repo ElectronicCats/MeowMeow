@@ -1,184 +1,67 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# +3.3V-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue
+# ATSAMD21G18A-M-MCU_Microchip_SAMD
 #
-DEF +3.3V-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -150 50 H I C CNN
-F1 "+3.3V-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue" 0 140 50 H V C CNN
-F2 "" 0 0 50 H V C CNN
-F3 "" 0 0 50 H V C CNN
-DRAW
-P 2 0 1 0 -30 50 0 100 N
-P 2 0 1 0 0 0 0 100 N
-P 2 0 1 0 0 100 30 50 N
-X +3V3 1 0 0 0 U 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# AP2112K-3.3-Regulator_Linear-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue
-#
-DEF AP2112K-3.3-Regulator_Linear-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue U 0 10 Y Y 1 F N
-F0 "U" -200 225 50 H V L CNN
-F1 "AP2112K-3.3-Regulator_Linear-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue" 0 225 50 H V L CNN
-F2 "Package_TO_SOT_SMD:SOT-23-5" 0 325 50 H I C CNN
-F3 "" 0 100 50 H I C CNN
+DEF ATSAMD21G18A-M-MCU_Microchip_SAMD U 0 20 Y Y 1 F N
+F0 "U" -550 1850 50 H V C CNN
+F1 "ATSAMD21G18A-M-MCU_Microchip_SAMD" 650 1850 50 H V C CNN
+F2 "Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm_EP5.15x5.15mm" 1400 -1850 50 H I C CNN
+F3 "" 0 1000 50 H I C CNN
 $FPLIST
- SOT?23?5*
+ QFN*7x7mm*P0.5mm*
 $ENDFPLIST
 DRAW
-S -200 175 200 -200 0 1 10 f
-X VIN 1 -300 100 100 R 50 50 1 1 W
-X GND 2 0 -300 100 U 50 50 1 1 W
-X EN 3 -300 0 100 R 50 50 1 1 I
-X NC 4 300 0 100 L 50 50 1 1 N N
-X VOUT 5 300 100 100 L 50 50 1 1 w
-ENDDRAW
-ENDDEF
-#
-# AP2114-HA
-#
-DEF AP2114-HA U 0 40 Y Y 1 F N
-F0 "U" 0 300 50 H V C CNN
-F1 "AP2114-HA" 350 -300 50 H V C CNN
-F2 "" 0 300 50 H I C CNN
-F3 "" 0 300 50 H I C CNN
-DRAW
-S -200 200 250 -250 0 1 0 f
-X VIN 1 -300 100 100 R 50 50 1 1 I
-X GND 2 -50 -350 100 U 50 50 1 1 P
-X VOUT 3 350 100 100 L 50 50 1 1 O
-X GND 4 100 -350 100 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# CONN_01X01_FEMALE-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue
-#
-DEF CONN_01X01_FEMALE-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue P 0 40 Y N 1 F N
-F0 "P" 0 100 60 H V C CNN
-F1 "CONN_01X01_FEMALE-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue" 0 -100 60 H V C CNN
-F2 "" 0 0 60 H I C CNN
-F3 "" 0 0 60 H I C CNN
-DRAW
-A 150 0 50 901 -901 0 1 0 N 150 50 150 -50
-X 1 1 -100 0 200 R 50 50 1 1 B
-ENDDRAW
-ENDDEF
-#
-# C_Small-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue
-#
-DEF C_Small-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue C 0 10 N N 1 F N
-F0 "C" 10 70 50 H V L CNN
-F1 "C_Small-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue" 10 -80 50 H V L CNN
-F2 "" 0 0 50 H V C CNN
-F3 "" 0 0 50 H V C CNN
-$FPLIST
- C?
- C_????_*
- C_????
- SMD*_c
- Capacitor*
-$ENDFPLIST
-DRAW
-P 2 0 1 13 -60 -20 60 -20 N
-P 2 0 1 12 -60 20 60 20 N
-X ~ 1 0 100 80 D 50 50 1 1 P
-X ~ 2 0 -100 80 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# GND-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue
-#
-DEF GND-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -250 50 H I C CNN
-F1 "GND-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue" 0 -150 50 H V C CNN
-F2 "" 0 0 50 H V C CNN
-F3 "" 0 0 50 H V C CNN
-DRAW
-P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
-X GND 1 0 0 0 D 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# LED-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue
-#
-DEF LED-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue D 0 40 Y N 1 F N
-F0 "D" 0 100 50 H V C CNN
-F1 "LED-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue" 0 -100 50 H V C CNN
-F2 "" 0 0 50 H V C CNN
-F3 "" 0 0 50 H V C CNN
-$FPLIST
- LED*
-$ENDFPLIST
-DRAW
-P 2 0 1 8 -50 -50 -50 50 N
-P 2 0 1 0 -50 0 50 0 N
-P 4 0 1 8 50 -50 50 50 -50 0 50 -50 N
-P 5 0 1 0 -120 -30 -180 -90 -150 -90 -180 -90 -180 -60 N
-P 5 0 1 0 -70 -30 -130 -90 -100 -90 -130 -90 -130 -60 N
-X K 1 -150 0 100 R 50 50 1 1 P
-X A 2 150 0 100 L 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# R_Small-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue
-#
-DEF R_Small-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue R 0 10 N N 1 F N
-F0 "R" 30 20 50 H V L CNN
-F1 "R_Small-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue" 30 -40 50 H V L CNN
-F2 "" 0 0 50 H V C CNN
-F3 "" 0 0 50 H V C CNN
-$FPLIST
- Resistor_*
- R_*
-$ENDFPLIST
-DRAW
-S -30 70 30 -70 0 1 8 N
-X ~ 1 0 100 30 D 50 50 1 1 P
-X ~ 2 0 -100 30 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# SW_Push-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue
-#
-DEF SW_Push-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue SW 0 40 N N 1 F N
-F0 "SW" 50 100 50 H V L CNN
-F1 "SW_Push-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue" 0 -60 50 H V C CNN
-F2 "" 0 200 50 H V C CNN
-F3 "" 0 200 50 H V C CNN
-DRAW
-C -80 0 20 0 1 0 N
-C 80 0 20 0 1 0 N
-P 2 0 1 0 0 50 0 120 N
-P 2 0 1 0 100 50 -100 50 N
-X 1 1 -200 0 100 R 50 50 0 1 P
-X 2 2 200 0 100 L 50 50 0 1 P
-ENDDRAW
-ENDDEF
-#
-# USB_OTG-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue
-#
-DEF USB_OTG-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue P 0 40 Y Y 1 F N
-F0 "P" 325 -125 50 H V C CNN
-F1 "USB_OTG-MeowMeow-Meow-Meow-rescue-Meow-Meow-rescue-Meow-Meow-rescue" 0 200 50 H V C CNN
-F2 "" -50 -100 50 V V C CNN
-F3 "" -50 -100 50 V V C CNN
-$FPLIST
- USB*
-$ENDFPLIST
-DRAW
-S -250 -150 250 150 0 1 0 N
-S -205 -150 -195 -120 0 1 0 N
-S -105 -150 -95 -120 0 1 0 N
-S -5 -150 5 -120 0 1 0 N
-S 95 -150 105 -120 0 1 0 N
-S 195 -150 205 -120 0 1 0 N
-X VBUS 1 -200 -300 150 U 50 50 1 1 w
-X D- 2 -100 -300 150 U 50 50 1 1 P
-X D+ 3 0 -300 150 U 50 50 1 1 P
-X ID 4 100 -300 150 U 50 50 1 1 W
-X GND 5 200 -300 150 U 50 50 1 1 W
-X shield 6 400 100 150 L 50 50 1 1 P
+S -600 1800 600 -1800 0 1 10 f
+X PA00 1 -700 1600 100 R 50 50 1 1 B
+X PA05 10 -700 1100 100 R 50 50 1 1 B
+X PA06 11 -700 1000 100 R 50 50 1 1 B
+X PA07 12 -700 900 100 R 50 50 1 1 B
+X PA08 13 -700 800 100 R 50 50 1 1 B
+X PA09 14 -700 700 100 R 50 50 1 1 B
+X PA10 15 -700 600 100 R 50 50 1 1 B
+X PA11 16 -700 500 100 R 50 50 1 1 B
+X VDDIO 17 100 1900 100 D 50 50 1 1 W
+X GND 18 0 -1900 100 U 50 50 1 1 W
+X PB10 19 700 600 100 L 50 50 1 1 B
+X PA01 2 -700 1500 100 R 50 50 1 1 B
+X PB11 20 700 500 100 L 50 50 1 1 B
+X PA12 21 -700 400 100 R 50 50 1 1 B
+X PA13 22 -700 300 100 R 50 50 1 1 B
+X PA14 23 -700 200 100 R 50 50 1 1 B
+X PA15 24 -700 100 100 R 50 50 1 1 B
+X PA16 25 -700 0 100 R 50 50 1 1 B
+X PA17 26 -700 -100 100 R 50 50 1 1 B
+X PA18 27 -700 -200 100 R 50 50 1 1 B
+X PA19 28 -700 -300 100 R 50 50 1 1 B
+X PA20 29 -700 -400 100 R 50 50 1 1 B
+X PA02 3 -700 1400 100 R 50 50 1 1 B
+X PA21 30 -700 -500 100 R 50 50 1 1 B
+X PA22 31 -700 -600 100 R 50 50 1 1 B
+X PA23 32 -700 -700 100 R 50 50 1 1 B
+X PA24 33 -700 -800 100 R 50 50 1 1 B
+X PA25 34 -700 -900 100 R 50 50 1 1 B
+X GND 35 0 -1900 100 U 50 50 1 1 P N
+X VDDIO 36 0 1900 100 D 50 50 1 1 W
+X PB22 37 700 -600 100 L 50 50 1 1 B
+X PB23 38 700 -700 100 L 50 50 1 1 B
+X PA27 39 -700 -1100 100 R 50 50 1 1 B
+X PA03 4 -700 1300 100 R 50 50 1 1 B
+X ~{RESET} 40 -700 -1700 100 R 50 50 1 1 I
+X PA28 41 -700 -1200 100 R 50 50 1 1 B
+X GND 42 0 -1900 100 U 50 50 1 1 P N
+X VDDCORE 43 -300 1900 100 D 50 50 1 1 w
+X VDDIN 44 -100 1900 100 D 50 50 1 1 W
+X PA30 45 -700 -1400 100 R 50 50 1 1 B
+X PA31 46 -700 -1500 100 R 50 50 1 1 B
+X PB02 47 700 1400 100 L 50 50 1 1 B
+X PB03 48 700 1300 100 L 50 50 1 1 B
+X EP 49 600 -1700 100 L 50 50 1 1 N N
+X GNDANA 5 100 -1900 100 U 50 50 1 1 W
+X VDDANA 6 300 1900 100 D 50 50 1 1 W
+X PB08 7 700 800 100 L 50 50 1 1 B
+X PB09 8 700 700 100 L 50 50 1 1 B
+X PA04 9 -700 1200 100 R 50 50 1 1 B
 ENDDRAW
 ENDDEF
 #
