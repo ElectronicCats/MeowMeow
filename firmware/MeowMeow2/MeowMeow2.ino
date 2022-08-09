@@ -33,8 +33,8 @@ https://github.com/adafruit/Adafruit_FreeTouch
 ////////////////////////
 // DEBUG DEFINITIONS ////               
 /////////////////////////
-//#define DEBUG
-//#define DEBUG2 
+#define DEBUG
+#define DEBUG2 
 //#define DEBUG3
 //#define DEBUG_MOUSE
 
@@ -53,16 +53,16 @@ https://github.com/adafruit/Adafruit_FreeTouch
 #include "Adafruit_FreeTouch.h"
 #include "settings.h"
 
-Adafruit_FreeTouch qt_0 = Adafruit_FreeTouch(A4, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // S
-Adafruit_FreeTouch qt_1 = Adafruit_FreeTouch(A5, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // D
-Adafruit_FreeTouch qt_2 = Adafruit_FreeTouch(A6, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Arrow LEFT
-Adafruit_FreeTouch qt_3 = Adafruit_FreeTouch(A7, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Arrow RIGHT
-Adafruit_FreeTouch qt_4 = Adafruit_FreeTouch(A8, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Arrow DOWN
-Adafruit_FreeTouch qt_5 = Adafruit_FreeTouch(A9, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Arrow UP
-Adafruit_FreeTouch qt_6 = Adafruit_FreeTouch(A10, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // W
-Adafruit_FreeTouch qt_7 = Adafruit_FreeTouch(A11, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // A
-Adafruit_FreeTouch qt_8 = Adafruit_FreeTouch(A12, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Click Mouse
-Adafruit_FreeTouch qt_9 = Adafruit_FreeTouch(A13, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // SPACE
+Adafruit_FreeTouch qt_0 = Adafruit_FreeTouch(PTC_Y15, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // S
+Adafruit_FreeTouch qt_1 = Adafruit_FreeTouch(PTC_Y4, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // D
+Adafruit_FreeTouch qt_2 = Adafruit_FreeTouch(PTC_Y9, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Arrow LEFT
+Adafruit_FreeTouch qt_3 = Adafruit_FreeTouch(PTC_Y8, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Arrow RIGHT
+Adafruit_FreeTouch qt_4 = Adafruit_FreeTouch(PTC_Y2, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Arrow DOWN
+Adafruit_FreeTouch qt_5 = Adafruit_FreeTouch(PTC_Y3, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Arrow UP
+Adafruit_FreeTouch qt_6 = Adafruit_FreeTouch(PTC_Y0, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // W
+Adafruit_FreeTouch qt_7 = Adafruit_FreeTouch(PTC_Y1, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // A
+Adafruit_FreeTouch qt_8 = Adafruit_FreeTouch(PTC_Y6, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // Click Mouse
+Adafruit_FreeTouch qt_9 = Adafruit_FreeTouch(PTC_Y7, OVERSAMPLE_4, RESISTOR_50K, FREQ_MODE_NONE); // SPACE
 
 Adafruit_FreeTouch *p[10] = { &qt_0, &qt_1, &qt_2, &qt_3, &qt_4, &qt_5, &qt_6, &qt_7, &qt_8, &qt_9 };
 
@@ -98,8 +98,8 @@ MeowMeowInput inputs[NUM_INPUTS];
 // Pin Numbers
 // input pin numbers for pre-order production board
 int pinNumbers[NUM_INPUTS] = {
-  A4, A5, A6, A7, A8, A9,     // top of meow meow board
-  A10, A11, A12, A13        // left side of female header, KEYBOARD 
+  PTC_Y15, PTC_Y4, PTC_Y9, PTC_Y8, PTC_Y2, PTC_Y3,     // top of meow meow board
+  PTC_Y0, PTC_Y1, PTC_Y6, PTC_Y7        // left side of female header, KEPTC_YBOARD 
 };
     
 void setup() {
@@ -111,8 +111,9 @@ void setup() {
   #endif
 
   initializeInputs();
+  Serial.println("intialized");
   calibrate();
- 
+ Serial.println("calibrated");
   Keyboard.begin();
   digitalWrite(LED_BUILTIN,LOW);
 }
