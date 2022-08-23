@@ -40,7 +40,7 @@
   
 ## Manual
 
-Manual [Wiki](https://github.com/ElectronicCats/MeowMeow/wiki)
+Visita nuestra Wiki donde podras encontrar el manual 📖: [Wiki](https://github.com/ElectronicCats/MeowMeow/wiki)
 
 ## Licence
 
