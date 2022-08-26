@@ -1,6 +1,6 @@
 /************************************************************
 ENGLISH
-MeowMeow2.ino - v1.0v
+MeowMeow3.ino - v1.0v
 Meow Meow - Using the Meow Meow you can make anything into a key 
 just by connecting a few alligator clips
 
@@ -27,7 +27,7 @@ Based in the work by:
  MIT Media Lab & Sparkfun
 
 Library Adafruit FreeTouch
-https://github.com/adafruit/Adafruit_FreeTouch
+https://github.com/ElectronicCats/Adafruit_FreeTouch
 
 ***********************************************************************/
 ////////////////////////
