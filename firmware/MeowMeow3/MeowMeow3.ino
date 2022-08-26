@@ -28,7 +28,6 @@ Based in the work by:
 
 Library Adafruit FreeTouch
 https://github.com/ElectronicCats/Adafruit_FreeTouch
-
 ***********************************************************************/
 ////////////////////////
 // DEBUG DEFINITIONS ////               
@@ -95,6 +94,8 @@ MeowMeowInput;
 
 MeowMeowInput inputs[NUM_INPUTS];
 
+int countercalibrate=0;
+
 // Pin Numbers
 // input pin numbers for pre-order production board
 int pinNumbers[NUM_INPUTS] = {
@@ -103,6 +104,7 @@ int pinNumbers[NUM_INPUTS] = {
 };
     
 void setup() {
+  
   #ifdef DEBUG
   Serial.begin(115200);
   while (!Serial);
@@ -112,10 +114,23 @@ void setup() {
 
   initializeInputs();
   Serial.println("intialized");
-  calibrate();
- Serial.println("calibrated");
+  while(countercalibrate<100){
+    updateMeasurementBuffers();
+    updateBufferSums();
+    updateBufferIndex();
+    calibrate();
+    countercalibrate++;
+  }
+  Serial.println("calibrated");
   Keyboard.begin();
+  digitalWrite(LED_BUILTIN,HIGH);
+  delay(500);
   digitalWrite(LED_BUILTIN,LOW);
+  delay(500);
+  digitalWrite(LED_BUILTIN,HIGH);
+  delay(500);
+  digitalWrite(LED_BUILTIN,LOW);
+  delay(500);
 }
 
 void loop() {
@@ -129,6 +144,12 @@ void loop() {
   #ifdef DEBUG
     delay(100);
   #endif
+
+  #ifdef DEBUG2
+    delay(100);
+    Serial.println("countercalibrate");
+    Serial.println(countercalibrate);
+  #endif
   
 }
 
@@ -136,7 +157,7 @@ void loop() {
 // UPDATE MEASUREMENT BUFFERS
 //////////////////////////////
 void updateMeasurementBuffers() {
-
+  
   for (int i=0; i<NUM_INPUTS; i++) {
 
     // store the oldest measurement, which is the one at the current index,
@@ -147,15 +168,21 @@ void updateMeasurementBuffers() {
 
     // make the new measurement
     long newState = (p[i]->measure());
+    
     boolean newMeasurement = ((abs(newState - inputs[i].touch) > CALIBRATION) ? 0 : 1);
 
-    #ifdef DEBUG
+    #ifdef DEBUG2
+      Serial.print("SUMA ");
+      Serial.println(abs(newState - inputs[i].touch));
+      Serial.print("Measure ");
       Serial.print(p[i]->measure());
       Serial.print(",");
+      Serial.print("Calibration: ");
+      Serial.println(inputs[i].touch);
     #endif
     // invert so that true means the switch is closed
     newMeasurement = !newMeasurement; 
-    #ifdef DEBUG2
+    #ifdef DEBUG3
       Serial.print("Index:");
       Serial.print(i);
       Serial.println(newMeasurement);
@@ -169,16 +196,19 @@ void updateMeasurementBuffers() {
     } 
     else {
       currentByte &= ~(1<<bitCounter);
-      #ifdef DEBUG2
+      #ifdef DEBUG3
         Serial.print("Current AND");Serial.println(currentByte);
       #endif
     }
     inputs[i].measurementBuffer[byteCounter] = currentByte;
-    #ifdef DEBUG2
+    #ifdef DEBUG3
       Serial.println(inputs[i].measurementBuffer[byteCounter]);
     #endif
   }
   #ifdef DEBUG
+    Serial.println();
+  #endif
+  #ifdef DEBUG2da
     Serial.println();
   #endif
 }
@@ -194,18 +224,18 @@ void updateBufferSums() {
   for (int i=0; i<NUM_INPUTS; i++) {
     byte currentByte = inputs[i].measurementBuffer[byteCounter];
     boolean currentMeasurement = (currentByte >> bitCounter) & 0x01; 
-    #ifdef DEBUG2
+    #ifdef DEBUG3
       Serial.print("currentMeasurement:");Serial.println(currentMeasurement);
     #endif
     if (currentMeasurement) {
       inputs[i].bufferSum++;
-      #ifdef DEBUG2
+      #ifdef DEBUG3
         Serial.print("bufferSum++");Serial.println(inputs[i].bufferSum);
       #endif
     }
     if (inputs[i].oldestMeasurement) {
       inputs[i].bufferSum--;
-      #ifdef DEBUG2
+      #ifdef DEBUG3
         Serial.print("bufferSum--:");Serial.println(inputs[i].bufferSum);
       #endif
     }
@@ -486,7 +516,7 @@ fruit, etc...then start up the capacitive touch program!
 void calibrate(){
   for (int i=0; i<NUM_INPUTS; i++) {
     // make a new measurement for initial calibration
-    long newState = (p[i]->measure());
-    inputs[i].touch = newState;
+    long newStateCali = (p[i]->measure());
+    inputs[i].touch = newStateCali;
   }
 }

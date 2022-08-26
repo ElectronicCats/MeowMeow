@@ -65,7 +65,7 @@ int keyCodes[NUM_INPUTS] = {
 ////////////////////////
 // MOUSE MOTION /////////
 /////////////////////////
-#define CALIBRATION                   300   // number between 0 and 1000
+#define CALIBRATION                   140   // number between 0 and 1000
                                            // Initial calibration percentage
                                            // recommended values are between 20 and 150
                                            // default value is 50
