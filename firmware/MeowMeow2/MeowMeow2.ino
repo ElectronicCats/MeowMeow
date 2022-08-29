@@ -95,6 +95,8 @@ MeowMeowInput;
 
 MeowMeowInput inputs[NUM_INPUTS];
 
+int countercalibrate=0;
+
 // Pin Numbers
 // input pin numbers for pre-order production board
 int pinNumbers[NUM_INPUTS] = {
@@ -111,10 +113,25 @@ void setup() {
   #endif
 
   initializeInputs();
-  calibrate();
+  while(countercalibrate<100){
+    updateMeasurementBuffers();
+    updateBufferSums();
+    updateBufferIndex();
+    calibrate();
+    countercalibrate++;
+  }
+  Serial.println("calibrated");
+  Keyboard.begin();
+  digitalWrite(LED_BUILTIN,HIGH);
+  delay(500);
+  digitalWrite(LED_BUILTIN,LOW);
+  delay(500);
+  digitalWrite(LED_BUILTIN,HIGH);
+  delay(500);
+  digitalWrite(LED_BUILTIN,LOW);
+  delay(500);
  
   Keyboard.begin();
-  digitalWrite(LED_BUILTIN,LOW);
 }
 
 void loop() {
