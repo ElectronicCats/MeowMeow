@@ -107,6 +107,8 @@ int mouseMovementCounter = 0; // for sending mouse movement events at a slower i
 
 int mouseHoldCount[NUM_INPUTS]; // used to store mouse movement hold data
 
+int countercalibrate=0;
+
 /////////////////////////
 // STRUCT ///////////////
 /////////////////////////
@@ -143,7 +145,23 @@ void setup() {
   #endif
 
   initializeInputs();
-  calibrate();
+  while(countercalibrate<100){
+    updateMeasurementBuffers();
+    updateBufferSums();
+    updateBufferIndex();
+    calibrate();
+    countercalibrate++;
+  }
+  Serial.println("calibrated");
+  Keyboard.begin();
+  digitalWrite(LED_BUILTIN,HIGH);
+  delay(500);
+  digitalWrite(LED_BUILTIN,LOW);
+  delay(500);
+  digitalWrite(LED_BUILTIN,HIGH);
+  delay(500);
+  digitalWrite(LED_BUILTIN,LOW);
+  delay(500);
  
   Keyboard.begin();
   digitalWrite(LED_BUILTIN,LOW);
