@@ -4,9 +4,9 @@ daysUntilStale: 1
 daysUntilClose: 2
 # Issues with these labels will never be considered stale
 exemptLabels:
-- Bug
+  - Bug
 # Label to use when marking an issue as stale
-staleLabel: 
+staleLabel: wontfix
 # Comment to post when marking an issue as stale. Set to `false` to disable
 markComment: >
   This is a message to remind you that your request has been pending for 5 days and awaits your comments. 
@@ -17,9 +17,5 @@ markComment: >
   
   Kind regards,
   Electronic Cats Support Team
-
 # Comment to post when closing a stale issue. Set to `false` to disable
-closeComment: >
-  This issue was closed due no response from the user.
-  
-  If you have any other queries related to Electronic Cats products don't hesitate to contact us!
+closeComment: false
