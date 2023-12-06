@@ -46,7 +46,7 @@ Para personas de todas las edades, desde niños de 6 años hasta adultos, educad
 Visita nuestra Wiki donde podrás encontrar más información de como funciona Meow Meow 📖: [Wiki](https://github.com/ElectronicCats/MeowMeow/wiki)
 <p align=center>
   <a href="https://github.com/ElectronicCats/MeowMeow/wiki">
-  <img src="https://private-user-images.githubusercontent.com/107638696/285521005-d598276b-6fd0-4db0-812a-8525178fc928.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDEyMDYxMzUsIm5iZiI6MTcwMTIwNTgzNSwicGF0aCI6Ii8xMDc2Mzg2OTYvMjg1NTIxMDA1LWQ1OTgyNzZiLTZmZDAtNGRiMC04MTJhLTg1MjUxNzhmYzkyOC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBSVdOSllBWDRDU1ZFSDUzQSUyRjIwMjMxMTI4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDIzMTEyOFQyMTEwMzVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1iMTMzZmNiZDE0MGUyODU2YjBmMWE3YmQ3Y2Q1YjNjMzk5YWQ0ZDY2ZjhiNzhiMmRkOTY2ZThhYTkwMTQ5ZmRiJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.ngiOHkLjZmlLt5KHHMcloDuGZeMmZjRFn7bda-0bbiQ" width=70%>
+  <img src="https://github.com/ElectronicCats/MeowMeow/assets/107638696/de51acc8-651a-4a3e-bce8-31f31f472140" width=50%>
   </a>
 </p>
 
