@@ -1,14 +1,17 @@
 # Meow Meow
 <p align="center">
-  <img src="https://github.com/ElectronicCats/MeowMeow/raw/master/Recursos/meowmeow_logo.png" width=40%>
+  <img src="https://github.com/ElectronicCats/MeowMeow/raw/master/Recursos/meowmeow_logo.png" height=150>
   <p align=center>
-  <img src="https://github.com/ElectronicCats/MeowMeow/assets/107638696/bec30280-f490-44e8-9b78-9561c113cafe" width=70%>
+  <img src="https://github.com/ElectronicCats/MeowMeow/assets/107638696/bec30280-f490-44e8-9b78-9561c113cafe" height=300>
   </p>
   
 <p align=center>
 <a href="https://electroniccats.com/store/meowmeow/">
-  <img src="https://electroniccats.com/wp-content/uploads/badge_store.png" width="200" height="104" />
+  <img src="https://github.com/ElectronicCats/MeowMeow/assets/107638696/408fdcc6-563e-4254-af70-c55cc95184ef" height="104" />
 </a>
+  <a href="https://github.com/ElectronicCats/MeowMeow/wiki">
+    <img src="https://private-user-images.githubusercontent.com/44976441/290950602-6aa7f319-3256-442e-a00d-33c8126833ec.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDM2MjY0MTMsIm5iZiI6MTcwMzYyNjExMywicGF0aCI6Ii80NDk3NjQ0MS8yOTA5NTA2MDItNmFhN2YzMTktMzI1Ni00NDJlLWEwMGQtMzNjODEyNjgzM2VjLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFJV05KWUFYNENTVkVINTNBJTJGMjAyMzEyMjYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjMxMjI2VDIxMjgzM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTRjNWQyMzA0MzkxYWM5NWE5MzU4NmZhOWE4NDlmYmZjOGJkYThkYTdhMjA2M2RjNWI3NGQ4MjM2NTcxYmFjMTAmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.zDYSaCYIqC7sG8gRE60LSL7IK6v-QNzauKwIjrrx_l0" height=104>
+  </a>
 </p>
 
 
@@ -39,16 +42,6 @@ Para personas de todas las edades, desde niños de 6 años hasta adultos, educad
   O digamos que busca un juego Pac-Man en línea y dibujas un joystick con un lápiz. Entonces puedes jugar a Pac-Man tocando el dibujo. 
 
   El kit incluye todo lo que necesita: Meow Meow, cables caimán y cable USB. 
-
-  
-## Manual
-
-Visita nuestra Wiki donde podrás encontrar más información de como funciona Meow Meow 📖: [Wiki](https://github.com/ElectronicCats/MeowMeow/wiki)
-<p align=center>
-  <a href="https://github.com/ElectronicCats/MeowMeow/wiki">
-  <img src="https://private-user-images.githubusercontent.com/107638696/285521005-d598276b-6fd0-4db0-812a-8525178fc928.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDEyMDYxMzUsIm5iZiI6MTcwMTIwNTgzNSwicGF0aCI6Ii8xMDc2Mzg2OTYvMjg1NTIxMDA1LWQ1OTgyNzZiLTZmZDAtNGRiMC04MTJhLTg1MjUxNzhmYzkyOC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBSVdOSllBWDRDU1ZFSDUzQSUyRjIwMjMxMTI4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDIzMTEyOFQyMTEwMzVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1iMTMzZmNiZDE0MGUyODU2YjBmMWE3YmQ3Y2Q1YjNjMzk5YWQ0ZDY2ZjhiNzhiMmRkOTY2ZThhYTkwMTQ5ZmRiJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.ngiOHkLjZmlLt5KHHMcloDuGZeMmZjRFn7bda-0bbiQ" width=70%>
-  </a>
-</p>
 
 ## Licence
 
